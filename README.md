@@ -19,3 +19,5 @@ Here are the settings for the Pages project:
 As with any SvelteKit application, you can run `npm run dev` for SvelteKit's local development experience.
 
 Refer to [the SvelteKit documentation](https://kit.svelte.dev/) for any additional information.
+
+This repository is at start a copy of https://github.com/lukeed/pages-fullstack by https://github.com/lukeed.
