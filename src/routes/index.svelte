@@ -55,6 +55,6 @@
 		height: 100%;
 		top: 0;
 		display: block;
-		aspect-ratio: 495 / 2048;
+		aspect-ratio: 2048 / 495;
 	}
 </style>
