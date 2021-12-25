@@ -15,7 +15,7 @@
 		<div class="welcome">
 			<picture>
 				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
+				<img src="svelte-welcome.png" alt="Welcome" width="2048" height="495" />
 			</picture>
 		</div>
 
@@ -55,5 +55,6 @@
 		height: 100%;
 		top: 0;
 		display: block;
+		aspect-ratio: 495 / 2048;
 	}
 </style>
