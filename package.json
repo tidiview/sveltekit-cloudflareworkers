@@ -1,7 +1,7 @@
 {
   "name": "kit",
   "version": "0.0.1",
-  "licence": "MIT",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "svelte-kit dev",
