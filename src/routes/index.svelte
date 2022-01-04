@@ -4,6 +4,12 @@
 
 <script>
 	import Counter from '$lib/Counter.svelte';
+	import { onMount } from 'svelte';
+	let timer = 0;
+	onMount(() => {
+		let intervalId = setInterval (() => timer++, 1000);
+		return () => clearInterval(intervalId);
+	})
 </script>
 
 <svelte:head>
@@ -28,6 +34,9 @@
 	</h2>
 
 	<Counter />
+
+	<div>{timer}</div>
+
 </section>
 
 <style>

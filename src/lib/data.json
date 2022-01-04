@@ -1,0 +1,137 @@
+{
+    "section": [
+        "home",
+        "blog",
+        "docs",
+        "profile"
+    ],
+    "lang": [
+        "fr",
+        "ja",
+        "en"
+    ],
+    "home": [
+        "top",
+        "c-u",
+        "crypto",
+        "form",
+        "error",
+        "organisation",
+        "sitemap-index"
+    ],
+    "blog": [
+        "top",
+        "numerisation",
+        "radioactivite",
+        "liberalisme",
+        "chomsky",
+        "bokusi",
+        "robespierre",
+        "rousi",
+        "iohane",
+        "delamarchejapon",
+        "balavoine",
+        "rimbaud",
+        "syusigaku",
+        "iehamotomoto",
+        "miterrand",
+        "democratie",
+        "lacroix-riz",
+        "ihoujin",
+        "roiyarukakumei",
+        "6eme-republique",
+        "onnadaigaku",
+        "psyche",
+        "la-marseillaise",
+        "kakumei",
+        "benalla",
+        "diotime",
+        "priscus",
+        "fontenelle",
+        "marivaux",
+        "phedre",
+        "education-des-femmes"
+    ],
+    "profile": [
+        "top",
+        "id"
+    ],
+    "docs": [
+        "paris",
+        "versailles",
+        "reims",
+        "chateaux-de-la-loire",
+        "mont-saint-michel",
+        "bruges"
+    ],
+    "paris": [
+        "louvre",
+        "vendome"
+    ],
+    "versailles": [
+        "palais",
+        "jardins",
+        "trianon",
+        "marly"
+    ],
+    "reims": [
+        "remes",
+        "clovis",
+        "sacre",
+        "saint-remi"
+    ],
+    "chateaux-de-la-loire": [
+        "chambord",
+        "chenonceau",
+        "cheverny"
+    ],
+    "mont-saint-michel": [
+        "arch-michel"
+    ],
+    "bruges": [
+        "hopital-saint-jean"
+    ],
+    "louvre": [
+        "la-joconde"
+    ],
+    "vendome": [
+        "place"
+    ],
+    "palais": [
+        "hercule",
+        "darius"
+    ],
+    "jardins": [
+        "latone",
+        "phaeton"
+    ],
+    "trianon": [
+        "arachnee",
+        "tiresias",
+        "iris",
+        "flore"
+    ],
+    "marly": [
+        "pierre-denis-martin"
+    ],
+    "cheverny": [
+        "adonis",
+        "perseus"
+    ],
+    "arch-michel": [
+        "nom",
+        "apocalypse",
+        "autre-docs",
+        "legende-doree"
+    ],
+    "hopital-saint-jean": [
+        "saint-jean",
+        "sainte-ursule",
+        "martin"
+    ],
+    "la-joconde": [
+        "vasari",
+        "prado",
+        "gautier"
+    ]
+}
