@@ -1,8 +1,9 @@
 <script context="module">
 	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ fetch, params }) {
+	export async function load({ page, fetch }) {
 		// /api/${params.section}/${params.lang}/${params.path}/${params.slug}
-		const url = `/api/docs/ja/paris/louvre/la-joconde/vasari`;
+		// docs/ja/paris/louvre/la-joconde/vasari
+		const url = `/api${page.path}`;
 		const res = await fetch(url);
 
 		if (res.ok) {
@@ -27,14 +28,15 @@
     export let lang = data.params.lang;
     export let path = data.params.path;
     export let slug = data.params.slug;
-	// console.log(data);
+	console.log(data);
 </script>
 
 this is: <br/>
-<pre>"{section}" / "{lang}" / "{path}" / "{slug}"<br/></pre>
+<pre>{section}   /   {lang}   /   {path}   /   {slug}<br/></pre>
+<pre>[section]   /   [lang]   /   [...path]   /   [slug]<br/></pre>
 <br/>
 with:
-<pre>section: "{section}"</pre>
-<pre>lang: "{lang}"</pre>
-<pre>path: "{path}"</pre>
-<pre>slug: "{slug}"</pre>
+<pre>[section]: {section}</pre>
+<pre>[lang]: {lang}</pre>
+<pre>[...path]: {path}</pre>
+<pre>[slug]: {slug}</pre>
