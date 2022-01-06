@@ -32,11 +32,11 @@
 </script>
 
 this is: <br/>
-<pre>{section}   /   {lang}   /   {path}   /   {slug}<br/></pre>
-<pre>[section]   /   [lang]   /   [...path]   /   [slug]<br/></pre>
+<pre>{section}   /   {lang}    {#if path}/   {path}   {/if}/   {slug}<br/></pre>
+<pre>[section]   /   [lang]    {#if path}/   [...path]   {/if}/   [slug]<br/></pre>
 <br/>
 with:
 <pre>[section]: {section}</pre>
 <pre>[lang]: {lang}</pre>
-<pre>[...path]: {path}</pre>
+{#if path}<pre>[...path]: {path}</pre>{/if}
 <pre>[slug]: {slug}</pre>
