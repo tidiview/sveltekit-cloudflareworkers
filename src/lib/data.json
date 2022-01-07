@@ -16,8 +16,7 @@
         "crypto",
         "form",
         "error",
-        "organisation",
-        "sitemap-index"
+        "organisation"
     ],
     "blog": [
         "top",
@@ -76,8 +75,6 @@
     ],
     "reims": [
         "remes",
-        "clovis",
-        "sacre",
         "saint-remi"
     ],
     "chateaux-de-la-loire": [
@@ -98,8 +95,7 @@
         "place"
     ],
     "palais": [
-        "hercule",
-        "darius"
+        "hercule"
     ],
     "jardins": [
         "latone",

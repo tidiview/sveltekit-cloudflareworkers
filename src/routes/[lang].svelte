@@ -3,10 +3,7 @@
 
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ page, fetch }) {
-        const lang = page.params.lang === 'fr' ? 'fr' : page.params.lang === 'ja' ? 'ja' : page.params.lang === 'en' ? 'en' : null;
-        
-		console.log(page.params.lang, lang)
-
+        const lang = page.params.lang;
         if (!valid_langs.has(lang)) {
 			console.log(`invalid lang parameter ${lang}`);
 			return {
