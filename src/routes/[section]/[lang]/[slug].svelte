@@ -1,5 +1,5 @@
 <script context='module'>
-    const valid_sections = new Set(['blog', 'docs', 'profile']);
+    const valid_sections = new Set(['blog', 'docs']);
     const valid_langs = new Set(['fr', 'ja', 'en']);
 	const valid_slug = new Set(['bokusi', 'robespierre', 'rousi', 'iohane', 'rimbaud', 'syusigaku', 'iehamotomoto', 'ihoujin', 'roiyarukakumei', 'onnadaigaku', 'psyche', 'la-marseillaise', 'kakumei', 'benalla', 'diotime', 'priscus', 'fontenelle', 'marivaux', 'phedre', 'paris', 'versailles', 'reims', 'chateaux-de-la-loire', 'mont-saint-michel', 'bruges']);
 	
