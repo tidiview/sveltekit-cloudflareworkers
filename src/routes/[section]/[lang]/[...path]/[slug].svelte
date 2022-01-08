@@ -22,11 +22,12 @@
 		// docs/ja/paris/louvre/la-joconde/vasari
 		const url = `/api${page.path}`;
 		const res = await fetch(url);
+		const data = await res.json()
 
 		if (res.ok) {
 			return {
 				props: {
-					data : await res.json()
+					data
 				}
 			};
 		}
