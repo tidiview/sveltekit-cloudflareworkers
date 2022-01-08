@@ -21,7 +21,7 @@
 		
 		// /api/${params.section}/${params.lang}/${params.path}/${params.slug}
 		// docs/ja/paris/louvre/la-joconde/vasari
-		const url = `/api${page.path}`;
+		const url = `${page.path}.json`;
 		const res = await fetch(url);
 		const data = await res.json()
 

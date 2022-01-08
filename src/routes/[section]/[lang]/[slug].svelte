@@ -18,13 +18,14 @@
 		
 		// /api/${params.section}/${params.lang}/${params.slug}
 		// /bloog/ja/rousi
-		const url = `/api${page.path}`;
+		const url = `${page.path}.json`;
 		const res = await fetch(url);
+		const data = await res.json()
 
 		if (res.ok) {
 			return {
 				props: {
-					data : await res.json()
+					data
 				}
 			};
 		}
