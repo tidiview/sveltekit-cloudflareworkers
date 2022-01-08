@@ -6,6 +6,7 @@
 	
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ page, fetch }) {
+		
         const section = page.params.section;
         const lang = page.params.lang;
 		const path = page.params.path;
