@@ -104,26 +104,27 @@
 </script>
 
 <svelte:head>
-	<meta name="lang" property="lang" content="{lang}" />
 	<meta name="keywords" content="{keywords}" />
 
+	<meta name="description" content="{description}" property="og:description" />
 	<meta property="og:title" content="{title}" />
 	<meta property="og:site_name" content="francois-vidit.com" />
-	<meta property="og:url" content="https://francois-vidit.com/{section}/{lang}/{path}/{slug}" />
+	<meta property="og:url" content="/{section}/{lang}/{path}/{slug}" />
 	<meta property="og:type" content="article" />
-	<meta name="description" content="{description}" property="og:description" />
-	<meta name="image" content="https://francois-vidit.com/docs/ja/{path}/{slug}/{imageFileName}" property="og:image" /> 
-	<meta name="image_width" content="{imageWidth}" property="og:image:width" /> 
-	<meta name="image_height" content="{imageHeight}" property="og:image:height" /> 
-	<meta name="image_title" content="{imageTitle}" property="og:image:title" />
-	<meta name="image_legend" content="{imageLegend}" property="og:image:alt" /> 
-	<meta name="image_type" property="og:image:type" content="image/jpeg" />
 
-	<meta name="twitter:card" property="twitter:card" content="{twitterCard}" />
-	<meta name="twitter:site" property="twitter:site:id" content="@bf7afa37fa94ja" />
+	<meta name="image" content="https://francois-vidit.com/{section}/{lang}/{path}/{slug}/{imageFileName}" property="og:image" /> 
+	<meta content="{imageWidth}" property="og:image:width" /> 
+	<meta content="{imageHeight}" property="og:image:height" /> 
+	<meta content="{imageTitle}" property="og:image:title" />
+	<meta content="{imageLegend}" property="og:image:alt" /> 
+	<meta content="image/jpeg" property="og:image:type" />
+
+	<meta content="{twitterCard}" property="twitter:card" />
+	<meta content="@bf7afa37fa94ja" property="twitter:site:id" />
 
     <meta name="google" content="notranslate" />
-    <link rel="preload" as="image" href="https://francois-vidit.com/{path}/{lang}/{path}/{slug}/{imageFileName}">
+
+    <link rel="preload" as="image" href="https://francois-vidit.com/{path}/{lang}/{path}/{slug}/{imageFileName}" crossorigin>
 
 	{#each ['fr', 'ja', 'en'] as i}
 		{#if lang === i}
@@ -134,20 +135,25 @@
 </svelte:head>
 
 from [section] / [lang] / [...path] / [slug].svelte,<br/>
+
 this is: <br/>
 <pre>{section}   /   {lang}    {#if path}/   {path}   {/if}/   {slug}<br/>
 [section]   /   [lang]    {#if path}/   [...path]   {/if}/   [slug]</pre>
 <br/>
+
 with params
 <pre>[section]: {section}<br/>[lang]: {lang}<br/>{#if path}[...path]: {path}<br/>{/if}[slug]: {slug}</pre>
+
 with commonFrontmatter:
 <pre>[itemPage]: {itemPage}<br/>[imageFileName]: {imageFileName}<br/>[twitterCard]: {twitterCard}<br/>[sitemapChangefreq]: {sitemapChangefreq}<br/>[sitemapPriority]: {sitemapPriority}</pre>
+
 with frontmatter:
 <pre>[title]: {title}<br/>[length]: {titleLength}<br/>[menu]: {menu}</pre>
 <pre>[created]: {created}<br/>[date]: {date}<br/>[modified]: {modified}</pre>
 <pre>[description]: {description}<br/>[length]: {descriptionLength}<br/>[keywords]: {keywords}</pre>
 <pre>[imageTitle]: {imageTitle}<br/>[imageLegend]: {imageLegend}<br/>[imageLegendLength]: {imageLegendLength}</pre>
 <pre>[significantLinks]: {significantLinks}<br/>[specialty]: {specialty}</pre>
+
 and articleBody:
 <pre>[html body]: see below</pre>
 {@html body}
