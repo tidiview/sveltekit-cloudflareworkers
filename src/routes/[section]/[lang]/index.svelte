@@ -14,7 +14,7 @@
 			};
 		}
 		
-		// /api${page.path}
+		// ${page.path}
 		// /docs/ja
 		const url = `${page.path}.json`;
 		const res = await fetch(url);

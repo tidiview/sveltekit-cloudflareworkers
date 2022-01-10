@@ -20,8 +20,6 @@
 		// /blog/ja/rousi
 		const url = `${page.path}.json`;
 		const res = await fetch(url);
-		// const articleurl = await fetch(`/api/` + data.params.lang + `_` + data.params.slug + `.json`);
-		// const article = await articleurl.json();
 
 		if (res.ok) {
 			const data = await res.json();
