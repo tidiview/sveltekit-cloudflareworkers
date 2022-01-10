@@ -16,18 +16,29 @@
 			};
 		}
 		
-		// /api/${params.section}/${params.lang}/${params.slug}
-		// /bloog/ja/rousi
+		// /${params.section}/${params.lang}/${params.slug}.json
+		// /blog/ja/rousi
 		const url = `${page.path}.json`;
 		const res = await fetch(url);
-		const data = await res.json()
+		// const articleurl = await fetch(`/api/` + data.params.lang + `_` + data.params.slug + `.json`);
+		// const article = await articleurl.json();
 
 		if (res.ok) {
-			return {
-				props: {
-					data
-				}
-			};
+			const data = await res.json();
+
+			const url2 = `/` + data.params.slug + `.` + data.params.lang + `.json`;
+			const res2 = await fetch(url2);
+
+			if (res2.ok) {
+				const data2 = await res2.json();
+
+				return {
+					props: {
+						data,
+						data2
+					}
+				};
+			}
 		}
  
 		return {
@@ -43,7 +54,9 @@
 	export let section = data.params.section;
     export let lang = data.params.lang;
     export let slug = data.params.slug;
-	console.log(data);
+    export let data2;
+    export let test = data2.article.test; // = article.test;
+	console.log(data, data2);
 </script>
 
 from [section] / [lang] / [slug].svelte,<br/>
@@ -55,3 +68,4 @@ with:
 <pre>[section]: {section}</pre>
 <pre>[lang]: {lang}</pre>
 <pre>[slug]: {slug}</pre>
+<pre>[test]: {test}</pre>

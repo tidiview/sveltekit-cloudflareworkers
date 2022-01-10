@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "10-01-2021, 16:03",
+    "date": "10-01-2021, 16:03",
+    "modified": "10-01-2021, 16:03",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "joconde_700x1030.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
