@@ -5,8 +5,8 @@
 
     const valid_sections = new Set(['docs']);
     const valid_langs = new Set(['fr', 'ja', 'en']);
-	const valid_path = new Set(['paris', 'paris/louvre', 'paris/louvre/la-joconde', 'paris/vendome', 'versailles', 'versailles/palais', 'versailles/jardins', 'versailles/trianon', 'versailles/marly', 'reims', 'chateaux-de-la-loire', 'chateaux-de-la-loire/chenonceau', 'chateaux-de-la-loire/cheverny', 'mont-saint-michel', 'mont-saint-michel/arch-michel', 'bruges', 'bruges/hopital-saint-jean']);
-	const valid_slug = new Set(['louvre', 'la-joconde', 'vasari', 'gautier', 'vendome', 'place', 'palais', 'hercule', 'jardins', 'latone', 'phaeton', 'trianon', 'arachnee', 'tiresias', 'iris', 'flore', 'marly', 'pierre-denis-martin', 'remes', 'saint-remi', 'chenonceau', 'diane', 'cheverny', 'adonis', 'perseus', 'arch-michel', 'nom', 'apocalypse', 'autre-docs', 'legende-doree', 'hopital-saint-jean', 'saint-jean', 'sainte-ursule', 'martin']);
+	const valid_path = new Set(['paris', 'paris/louvre', 'paris/louvre/la-joconde', 'paris/place-vendome', 'versailles', 'versailles/palais', 'versailles/jardins', 'versailles/trianon', 'versailles/marly', 'reims', 'chateaux-de-la-loire', 'chateaux-de-la-loire/chenonceau', 'chateaux-de-la-loire/cheverny', 'mont-saint-michel', 'mont-saint-michel/arch-michel', 'bruges', 'bruges/hopital-saint-jean']);
+	const valid_slug = new Set(['louvre', 'la-joconde', 'vasari', 'gautier', 'place-vendome', 'palais', 'hercule', 'jardins', 'latone', 'phaeton', 'trianon', 'arachnee', 'tiresias', 'iris', 'flore', 'marly', 'pierre-denis-martin', 'remes', 'saint-remi', 'chenonceau', 'diane', 'cheverny', 'adonis', 'perseus', 'arch-michel', 'nom', 'apocalypse', 'autre-docs', 'legende-doree', 'hopital-saint-jean', 'saint-jean', 'sainte-ursule', 'martin']);
 	
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ page, fetch }) {
@@ -99,7 +99,10 @@
     	let imageLegend = metadata.imageLegend;let imageLegendLength = imageLegend.length;
     let significantLinks = frontmatter.significantLinks;
     let specialty = frontmatter.specialty;
-    let body = data3.articleBody;
+    let body = data3.articleBody; let bodyLength = body.length;
+	let body2 = data3.articleBody2; let body2Length; if (body2) {body2Length = body2.length};
+	let body3 = data3.articleBody3; let body3Length; if (body3) {body3Length =  body3.length};
+	let body4 = data3.articleBody4; let body4Length; if (body4) {body4Length = body4.length};
 	console.log(data, data2, data3);
 </script>
 
@@ -155,5 +158,5 @@ with frontmatter:
 <pre>[significantLinks]: {significantLinks}<br/>[specialty]: {specialty}</pre>
 
 and articleBody:
-<pre>[html body]: see below</pre>
-{@html body}
+<pre>[html body]: see below [bodyLength]: {bodyLength}{#if body2} [2]: {body2Length}{/if}{#if body3} [3]: {body3Length}{/if}{#if body4} [4]: {body4Length}{/if}</pre>
+{@html body + body2 + body3 + body4}
