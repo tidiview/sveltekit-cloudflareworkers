@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "11-01-2021, 13:40",
+    "date": "11-01-2021, 13:40",
+    "modified": "11-01-2021, 13:40",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "apollon_700x556.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
