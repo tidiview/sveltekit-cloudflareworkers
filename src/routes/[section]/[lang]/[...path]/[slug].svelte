@@ -58,6 +58,7 @@
 
 		const data3 = await res3.json();
 		return {
+			fallthrough: true,
 			props: {
 				data,
 				data2,
