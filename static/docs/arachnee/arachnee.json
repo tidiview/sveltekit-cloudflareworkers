@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "11-01-2021, 14:28",
+    "date": "11-01-2021, 14:28",
+    "modified": "11-01-2021, 14:28",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "arachnee_700x520.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
