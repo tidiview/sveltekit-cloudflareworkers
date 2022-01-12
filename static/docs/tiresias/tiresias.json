@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "12-01-2021, 21:36",
+    "date": "12-01-2021, 21:36",
+    "modified": "12-01-2021, 21:36",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "tiresias_700x501.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}

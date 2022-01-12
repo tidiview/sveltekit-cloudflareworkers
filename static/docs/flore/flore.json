@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "12-01-2021, 22:19",
+    "date": "12-01-2021, 22:19",
+    "modified": "12-01-2021, 22:19",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "flore_700x1152.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}

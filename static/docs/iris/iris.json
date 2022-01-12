@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "12-01-2021, 21:55",
+    "date": "12-01-2021, 21:55",
+    "modified": "12-01-2021, 21:55",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "iris_700x951.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
