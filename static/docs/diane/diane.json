@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "13-01-2021, 16:10",
+    "date": "13-01-2021, 16:10",
+    "modified": "13-01-2021, 16:10",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "diane_700x1050.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
