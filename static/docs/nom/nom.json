@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "13-01-2021, 21:07",
+    "date": "13-01-2021, 21:07",
+    "modified": "13-01-2021, 21:07",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "arch-michel_700x700.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}

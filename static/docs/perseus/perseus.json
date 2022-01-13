@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "13-01-2021, 20:23",
+    "date": "13-01-2021, 20:23",
+    "modified": "13-01-2021, 20:23",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "persee-focus_700x763.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
