@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "13-01-2021, 16:44",
+    "date": "13-01-2021, 16:44",
+    "modified": "13-01-2021, 16:44",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "adonis_700x676.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.9
+    }
+  }
+}
