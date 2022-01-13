@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "13-01-2021, 11:58",
+    "date": "13-01-2021, 11:58",
+    "modified": "13-01-2021, 11:58",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "gallia_700x490.png",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}

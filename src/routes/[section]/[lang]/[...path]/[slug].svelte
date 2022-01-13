@@ -82,6 +82,7 @@
 		let imageFileName = commonMetadata.imageFileName;
 			let imageWidth = Number(imageFileName.split('_')[1].split('x')[0]);
 			let imageHeight = Number(imageFileName.split('_')[1].split('x')[1].split('.')[0]);
+			let imageType = imageFileName.split('.')[1];
     	let twitterCard = commonMetadata.twitterCard;
 	let sitemap = commonFrontmatter.sitemap;
 		let sitemapChangefreq = sitemap.changefreq;
@@ -149,7 +150,7 @@ with params
 <pre>[section]: {section}<br/>[lang]: {lang}<br/>{#if path}[...path]: {path}<br/>{/if}[slug]: {slug}</pre>
 
 with commonFrontmatter:
-<pre>[itemPage]: {itemPage}<br/>[imageFileName]: {imageFileName}<br/>[twitterCard]: {twitterCard}<br/>[sitemapChangefreq]: {sitemapChangefreq}<br/>[sitemapPriority]: {sitemapPriority}</pre>
+<pre>[itemPage]: {itemPage}<br/>[imageFileName]: {imageFileName} [imageWidth]: {imageWidth} [imageHeight]: {imageHeight} [imageType]: {imageType}<br/>[twitterCard]: {twitterCard}<br/>[sitemapChangefreq]: {sitemapChangefreq}<br/>[sitemapPriority]: {sitemapPriority}</pre>
 
 with frontmatter:
 <pre>[title]: {title}<br/>[length]: {titleLength}<br/>[menu]: {menu}</pre>
