@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "13-01-2021, 12:30",
+    "date": "13-01-2021, 12:30",
+    "modified": "13-01-2021, 12:30",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "saint-remi_700x949.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
