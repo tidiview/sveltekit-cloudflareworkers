@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "14-01-2021, 14:43",
+    "date": "14-01-2021, 14:43",
+    "modified": "14-01-2021, 14:43",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "other-docs_700x426.png",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
