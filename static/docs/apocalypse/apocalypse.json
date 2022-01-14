@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "14-01-2021, 14:01",
+    "date": "14-01-2021, 14:01",
+    "modified": "14-01-2021, 14:01",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "apocalypse_700x694.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
