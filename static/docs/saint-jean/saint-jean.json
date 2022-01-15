@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "14-01-2021, 17:58",
+    "date": "14-01-2021, 17:58",
+    "modified": "14-01-2021, 17:58",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "saint-jean_700x348.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
