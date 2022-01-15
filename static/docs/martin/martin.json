@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "15-01-2021, 16:27",
+    "date": "15-01-2021, 16:27",
+    "modified": "15-01-2021, 16:27",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "martin3_700x461.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
