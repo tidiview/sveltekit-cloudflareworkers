@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "17-01-2021, 10:43",
+    "date": "17-01-2021, 10:43",
+    "modified": "17-01-2021, 10:43",
+    "itemPage": "BlogPosting",
+    "base64_background": "phedre",
+    "base64_itembackground": "phedre",
+    "svg_icon": "phedre",
+    "metadata": {
+      "imageFileName": "phedre_700x700.png",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
