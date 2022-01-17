@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "title": "Homepage",
+    "menu": "home",
+    "created": "01-05-2016, 08:30",
+    "date": "16-03-2020, 13:40",
+    "modified": "06-04-2020, 15:46",
+    "metadata": {
+      "description": "francois-vidit.com presents the activities of François Vidit, Tourism guide working from Paris, includes a blog or virtual notebook and provide references to get deeper into visits in french, japanese and english.",
+      "keywords": "guide in Paris, tourist guide in Paris, François Vidit, Francois Vidit, Louvre museum, Paris, Château de Versailles, Mont Saint-Michel, Châteaux de la Loire, Bruges, Reims, Champagne, France, blog, tourism, french guided tour from Paris, guided tours in french, guided tours in french language from Paris, french, japanese guided tour from Paris, guided tours in japanese from Paris, guided tours in japanese language from Paris, english guided tour from Paris, guided tours in english from Paris, guided tours in english language from Paris, english, personal page, CITYVISION",
+      "imageTitle": "the parterre of the Tuileries gardens from the Louvre",
+      "imageLegend": "View of the parterre of the Tuileries gardens from the Louvre."
+    },
+    "significantLinks": ["https://francois-vidit.com/blog/en", "https://francois-vidit.com/docs/en", "https://francois-vidit.com/profile/en"],
+    "specialty": ["guiding from Paris, France", "translation", "interpreting", "japanese language", "japanese", "guiding in japanese language from Paris, France", "guiding in japanese from Paris, France", "architecture", "history of France", "history of Japan", "franco-japanese history", "french and japanese history"]
+  },
+  "articleBody": "<!-- FR:179 JA:146 -->\n\n<article>\n\n<div id=\"home\"></div>\n<div id=\"bubblecontainer\" class=\"curtain-image flush-top-curtain\">\n\n  <div class=\"curtain-image-image\">\n\n    <div class=\"curtain-meta\">\n      <section id=\"landing-curtain-h1\">\n        <h1 title=\"☆ Welcome to my personal page!\">☆ Welcome to my personal page!</h1>\n\n        <p id=\"curtain-button\">\n          <a href=\"/ja\" class=\"curtain-button-side\" rel=\"nofollow bookmark\">\n            <span title=\"japonais\">\n              <ruby lang=\"ja\">\n                日本語\n                <rp>(</rp><rt lang=\"en\">japanese</rt><rp>)</rp>\n              </ruby>\n            </span>\n          </a> \n          <a class=\"curtain-button-center\" href=\"#topofpage\" rel=\"nofollow\">\n            <ruby lang=\"ja\">\n              <span title=\"英語\">english</span>\n              <rp>(</rp><rt lang=\"fr\">anglais</rt><rp>)</rp>\n            </ruby>\n          </a> \n          <a class=\"curtain-button-side\" href=\"/fr\" rel=\"nofollow bookmark\">\n            <ruby lang=\"fr\">\n              <span title=\"フランス語\">français</span>\n              <rp>(</rp><rt lang=\"en\">french</rt><rp>)</rp>\n            </ruby>\n          </a>\n        </p>\n\n        <div style=\"text-align:center;width:42px;height:64px;margin:auto;\">\n          <a href=\"#topofpage\" class=\"topofpage\" rel=\"nofollow\">\n            <svg class=\"svg-topofpage\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 42 64\"><path d=\"M3.55 16.627l17.413 19.215.037-.04.037.04L38.45 16.627 21 35.764 3.55 16.627z\" fill=\"none\" stroke=\"#fff\" opacity=\"0.6\" stroke-width=\"5.145\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n          </a>\n        </div>\n      </section>\n    </div>\n  </div>\n  <span id=\"topofpage\" class=\"curtain-content\"></span>\n</div>\n\n<div id=\"blog\"></div>\n<div id=\"curtain-blogue\" class=\"modular-row callout\" style=\"width: 100%;margin-top: -0.8rem;margin-left: 0;margin-bottom: 0;margin-right:0;padding-top: 6vh;padding-left: 0;padding-bottom: 2vh;padding-right: 0;background-color: #000;align-items: center;justify-content: center;text-align: center;\">\n  <p style=\"line-height: 5vh;font-size: 4vh; text-align: center;max-height: 5vh;min-height: 3vh;max-width: 25vw;min-width: 15vw;margin-top: 3vh;margin-right: auto;margin-bottom: 2vh;margin-left: auto;display: block;color:#E7E7E8;\">it's</p>\n\n  <a href= \"/blog/en\" rel=\"bookmark preload\">\n    <p style=\"max-width: 7vh;height: 7vh;line-height: 6.75vh;font-size: 4vh;text-align: center;margin-left: auto;margin-right: auto;margin-top: 6vh;border: none; background-color: crimson;border-radius: 50%;color:#E7E7E8;\">a</p>\n  </a>\n</div>\n\n<div id=\"docs\"></div>\n<div id=\"curtain-docs\" class=\"modular-row showcase\" style=\"\nwidth: 100%;\nmargin-top: -0.8rem;\nmargin-left: 0;\nmargin-bottom: 0;\nmargin-right:0;\npadding-top: 5vh;\npadding-left: 0;\npadding-bottom: 2vh;\npadding-right: 0;\nbackground-color: #efc94d;\nalign-items: center;\njustify-content: center;\ntext-align: center;\">\n  <a href=\"/docs/en\" rel=\"bookmark preload\">\n    <p style=\"max-width: 7vh;height: 7vh;line-height: 6.75vh;font-size: 4vh;text-align: center;margin-left: auto;margin-right: auto;margin-top: 2vh;border: none; background-color: crimson;border-radius: 50%;color:#efc94d;\"> </p>\n  </a>\n</div>\n\n<div id=\"profile\"></div>\n<div id=\"curtain-profil\" class=\"modular-row showcase\" style=\"\nwidth: 100%;\nmargin-top: -0.8rem;\nmargin-left: 0;\nmargin-bottom: 0;\nmargin-right:0;\npadding-top: 5vh;\npadding-left: 0;\npadding-bottom: 2vh;\npadding-right: 0;\nbackground-color: #B7E2E6;\nalign-items: center;\njustify-content: center;\ntext-align: center;\">\n  <a href= \"/profile/en\" rel=\"author me bookmark\">\n    <p style=\"max-width: 7vh;height: 7vh;line-height: 6.75vh;font-size: 4vh;text-align: center;margin-left: auto;margin-right: auto;margin-top: 2vh;border: none; background-color: crimson;border-radius: 50%;color:#E7E7E8;\">a</p>\n  </a>\n</div>\n\n<div id=\"real_time_schedule\"></div>\n\n<div id=\"contact\"></div>\n<div id=\"curtain-contact\" class=\"modular-row showcase\" style=\"padding-bottom: 20rem;\">\n  <h4>Contact</h4>\n\n  <p>This is a contact form for my site:</p>\n\n  <form name=\"contact2\" action=\"/en/home\" method=\"POST\" id=\"contact2\">\n    <div class=\"form-field\">\n\n      <div class=\"form-label\">\n        <label class=\"inline\" for=\"name\">Name<span class=\"required\">*</span></label>\n      </div>\n\n      <div class=\"form-data\" data-grav-field=\"text\" data-grav-disabled=\"true\" data-grav-default=\"null\">\n        <div class=\"form-input-wrapper\">\n          <input name=\"data[name]\" value=\"\" type=\"text\" class=\"curtain-contact-form\" id=\"name\" placeholder=\"Enter your name\" autocomplete=\"on\" required=\"required\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"form-field\">\n      <div class=\"form-label\"><label class=\"inline\" for=\"email\">Email<span class=\"required\">*</span></label>\n      </div>\n      <div class=\"form-data\" data-grav-field=\"email\" data-grav-disabled=\"true\" data-grav-default=\"null\">\n        <div class=\"form-input-wrapper\">\n          <input name=\"data[email]\" value=\"\" type=\"email\" class=\"curtain-contact-form\" id=\"email\" placeholder=\"Enter your email address\" required=\"required\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"form-field\">\n      <div class=\"form-label\">\n        <label class=\"inline\" for=\"message\">Message<span class=\"required\">*</span></label>\n      </div>\n      <div class=\"form-data\" data-grav-field=\"textarea\" data-grav-disabled=\"true\" data-grav-default=\"null\">\n        <div class=\"form-textarea-wrapper\">\n          <textarea name=\"data[message]\" class=\"curtain-contact-form\" id=\"message\" placeholder=\"Enter your message\" required=\"required\"></textarea>\n        </div>\n      </div>\n    </div>\n\n    <input type=\"hidden\" name=\"__unique_form_id__\" value=\"Y7aFReCZnWvEJMxI6b9L\" />\n\n    <div class=\"buttons\">\n      <button class=\"button\" type=\"submit\">Submit</button>\n      <button class=\"button\" type=\"reset\">Reset</button>\n    </div>\n\n    <input type=\"hidden\" name=\"__form-name__\" value=\"contact2\" />\n    <input type=\"hidden\" name=\"__unique_form_id__\" value=\"Y7aFReCZnWvEJMxI6b9L\" />\n    <input type=\"hidden\" name=\"__form-nonce__\" value=\"f86f4ca5eafdd0a96009549d26916d7b\" />\n\n  </form>\n</div>\n</article>",
+  "articleBody2": "",
+  "articleBody3": "",
+  "articleBody4": "",
+  "form": {
+    "action": "/home",
+    "name": "contact2",
+    "fields": [{
+      "name": "name",
+      "id": "name",
+      "label": "Name",
+      "classes": "curtain-contact-form",
+      "placeholder": "Enter your name",
+      "autofocus": "off",
+      "autocomplete": "on",
+      "type": "text",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "name": "email",
+      "id": "email",
+      "label": "Email",
+      "classes": "curtain-contact-form",
+      "placeholder": "Enter your email address",
+      "type": "email",
+      "validate": {
+        "rule": "email",
+        "required": true
+      }
+    },
+    {
+      "name": "message",
+      "id": "message",
+      "label": "Message",
+      "classes": "curtain-contact-form",
+      "placeholder": "Rédigez votre message",
+      "type": "textarea",
+      "validate": {
+        "required": true
+      }
+    }],
+    "buttons": [{
+      "type": "submit",
+      "value": "Submit"
+    },
+    {
+      "type": "reset",
+      "value": "Reset"
+    }],
+    "process": {
+      "email": {
+        "from": "",
+        "to": ["", ""],
+        "subject": "[Site Contact Form] {{ form.value.name|e }}",
+        "body": "{% include 'forms/data.html.twig' %}"
+      },
+      "save": {
+        "fileprefix": "contact-",
+        "dateformat": "Ymd-His-u",
+        "extension": "txt",
+        "body": "{% include 'forms/data.txt.twig' %}"
+      },
+      "message": "Thank you for getting in touch ♪",
+      "display": "thankyou"
+    }
+  }
+}

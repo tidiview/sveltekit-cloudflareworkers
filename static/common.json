@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "16-01-2021, 18:06",
+    "date": "16-01-2021, 18:06",
+    "modified": "16-01-2021, 18:06",
+    "itemPage": "Article",
+    "metadata": {
+      "imageFileName": "landing-curtain_1600x667.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
