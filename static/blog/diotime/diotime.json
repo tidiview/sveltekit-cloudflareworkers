@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "17-01-2021, 13:58",
+    "date": "17-01-2021, 13:58",
+    "modified": "17-01-2021, 13:58",
+    "itemPage": "BlogPosting",
+    "base64_background": "moucharabieh2",
+    "base64_itembackground": "upsidesphere",
+    "svg_icon": "lips",
+    "metadata": {
+      "imageFileName": "diotime_700x870.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
