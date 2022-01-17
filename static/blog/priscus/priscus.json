@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "17-01-2021, 18:07",
+    "date": "17-01-2021, 18:07",
+    "modified": "17-01-2021, 18:07",
+    "itemPage": "BlogPosting",
+    "base64_background": "motifbulles",
+    "base64_itembackground": "livres",
+    "svg_icon": "juifchretien",
+    "metadata": {
+      "imageFileName": "chilperic-et-gregoire-de-tours_640x553.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.9
+    }
+  }
+}
