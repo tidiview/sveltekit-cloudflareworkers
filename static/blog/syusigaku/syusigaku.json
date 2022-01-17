@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "17-01-2021, 11:46",
+    "date": "17-01-2021, 11:46",
+    "modified": "17-01-2021, 11:46",
+    "itemPage": "BlogPosting",
+    "base64_background": "3dstaircases",
+    "base64_itembackground": "spiralgalaxy",
+    "svg_icon": "spacegalaxy",
+    "metadata": {
+      "imageFileName": "syusi_700x1198.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
