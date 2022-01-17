@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "17-01-2021, 18:59",
+    "date": "17-01-2021, 18:59",
+    "modified": "17-01-2021, 18:59",
+    "itemPage": "BlogPosting",
+    "base64_background": "galaxystars",
+    "base64_itembackground": "spiralgalaxy",
+    "svg_icon": "galaxy",
+    "metadata": {
+      "imageFileName": "fontenelle_640x968.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.9
+    }
+  }
+}
