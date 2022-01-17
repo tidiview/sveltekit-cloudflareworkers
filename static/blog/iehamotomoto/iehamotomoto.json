@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "17-01-2021, 11:34",
+    "date": "17-01-2021, 11:34",
+    "modified": "17-01-2021, 11:34",
+    "itemPage": "BlogPosting",
+    "base64_background": "japtradhouse",
+    "base64_itembackground": "japhouse",
+    "svg_icon": "threedhouse",
+    "metadata": {
+      "imageFileName": "machinohukei_700x528.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
