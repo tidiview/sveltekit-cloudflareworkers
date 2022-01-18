@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "18-01-2021, 20:53",
+    "date": "18-01-2021, 20:53",
+    "modified": "18-01-2021, 20:53",
+    "itemPage": "BlogPosting",
+    "base64_background": "troisbarres",
+    "base64_itembackground": "traditionalwomanclothing",
+    "svg_icon": "kimonotraditional",
+    "metadata": {
+      "imageFileName": "onnadaigaku_700x550.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
