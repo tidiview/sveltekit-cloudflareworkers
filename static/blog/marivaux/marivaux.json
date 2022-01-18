@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "18-01-2021, 19:15",
+    "date": "18-01-2021, 19:15",
+    "modified": "18-01-2021, 19:15",
+    "itemPage": "BlogPosting",
+    "base64_background": "points",
+    "base64_itembackground": "ile",
+    "svg_icon": "island",
+    "metadata": {
+      "imageFileName": "l-ile-des-esclaves_642x1054.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.9
+    }
+  }
+}
