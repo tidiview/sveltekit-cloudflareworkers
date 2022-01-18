@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "18-01-2021, 20:44",
+    "date": "18-01-2021, 20:44",
+    "modified": "18-01-2021, 20:44",
+    "itemPage": "BlogPosting",
+    "base64_background": "caned-braided",
+    "base64_itembackground": "bourgeoisie",
+    "svg_icon": "wiseman",
+    "metadata": {
+      "imageFileName": "mozi_700x1011.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
