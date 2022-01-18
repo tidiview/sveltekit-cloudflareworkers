@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "18-01-2021, 20:22",
+    "date": "18-01-2021, 20:22",
+    "modified": "18-01-2021, 20:22",
+    "itemPage": "BlogPosting",
+    "base64_background": "bonnetphrygien",
+    "base64_itembackground": "hexagonevolume",
+    "svg_icon": "trompette",
+    "metadata": {
+      "imageFileName": "marseillaise_700x765.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
