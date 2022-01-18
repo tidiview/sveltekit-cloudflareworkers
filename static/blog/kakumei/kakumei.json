@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "18-01-2021, 20:32",
+    "date": "18-01-2021, 20:32",
+    "modified": "18-01-2021, 20:32",
+    "itemPage": "BlogPosting",
+    "base64_background": "cartons-ouverts",
+    "base64_itembackground": "hexagonedefleches",
+    "svg_icon": "troisengrenages",
+    "metadata": {
+      "imageFileName": "arrestation_700x476.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
