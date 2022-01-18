@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "18-01-2021, 20:07",
+    "date": "18-01-2021, 20:07",
+    "modified": "18-01-2021, 20:07",
+    "itemPage": "BlogPosting",
+    "base64_background": "clouds",
+    "base64_itembackground": "cloudsinthesky",
+    "svg_icon": "twoclouds",
+    "metadata": {
+      "imageFileName": "nuage_700x467.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
