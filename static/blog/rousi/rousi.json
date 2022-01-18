@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "18-01-2021, 19:51",
+    "date": "18-01-2021, 19:51",
+    "modified": "18-01-2021, 19:51",
+    "itemPage": "BlogPosting",
+    "base64_background": "imbricatedhexagon",
+    "base64_itembackground": "threedimensionalhexagone",
+    "svg_icon": "discoball",
+    "metadata": {
+      "imageFileName": "laotseu_700x865.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
