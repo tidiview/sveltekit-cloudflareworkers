@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "19-01-2021, 20:09",
+    "date": "19-01-2021, 20:09",
+    "modified": "19-01-2021, 20:09",
+    "itemPage": "BlogPosting",
+    "base64_background": "chevrons",
+    "base64_itembackground": "windindicator",
+    "svg_icon": "rakuda",
+    "metadata": {
+      "imageFileName": "iohane_797x530.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}

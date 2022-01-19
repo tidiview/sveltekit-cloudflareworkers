@@ -1,20 +1,20 @@
 {
   "frontmatter": {
-    "title": "Phedre",
-    "menu": "phedre",
-    "created": "13-02-2020, 11:28",
-    "date": "12-03-2020, 16:44",
-    "modified": "13-03-2020, 14:37",
+    "title": "The stranger",
+    "menu": "The stranger",
+    "created": "09-09-2016, 21:17",
+    "date": "02-11-2016, 09:13",
+    "modified": "02-11-2016, 09:13",
     "metadata": {
-      "description": "This extract from 246a to 248c of Plato's Phaedrus describes the nature of the soul as a power composed of a celestial winged carriage in order to participate in the celestial march.",
-      "keywords": "Phaedrus, Plato, 246a-248c, celestial winged chariot, nature of the soul",
-      "imageTitle": "Plato, Phaedrus, the celestial winged chariot",
-      "imageLegend": "Several powers composed by celestial winged carriages participate in the celestial walk."
+      "description": "Poem of Charles Baudelaire, the stranger.",
+      "keywords": "Charles Baudelaire, Baudelaire, the stranger",
+      "imageTitle": "clouds",
+      "imageLegend": "the marvelous passing clouds … up there!"
     },
-    "significantLinks": ["https://en.wikipedia.org/wiki/Plato", "https://en.wikipedia.org/wiki/Phaedrus_(dialogue)", "https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/blog/pages/01.home/31.Phedre/item.ja.md"],
-    "specialty": ["Phaedrus", "Plato", "246a-248c", "celestial winged chariot", "nature of the soul"]
+    "significantLinks": ["https://en.wikipedia.org/wiki/Charles_Baudelaire"],
+    "specialty": ["french poetry", "citizenship"]
   },
-  "articleBody": "",
+  "articleBody": "<!-- FR:150 JA:118 -->\n\n  <article>\n\n<header>\n  <p><time datetime=\"2016-09-09\">9 <abbr title=\"septembre\">Sep.</abbr> 2016</time></p>\n</header>\n\n<h1><cite>l'étranger</cite></h1>\n\n<div class=\"notices red\">\n  <p>A stranger is ordinarily a person that is coming from another country.</p>\n  <p>In the question-answers that follows, all is taking place as if the one that is answering is not the stranger of anybody else.</p>\n  <p>To enjoy with moderation!</p>\n</div>\n\n<h2 class=\"yellow\">Text of <cite>the stranger</cite></h2>\n\n<ol class=\"doc\">\n  <li value=\"1\">- Who do you love the best, enigmatic man, say?  your father, your mother, your sister or your brother?</li>\n  <li>- I have neither father, nor mother, nor sister, nor brother.</li>\n  <li>- Your friends?</li>\n  <li>- You are using here a word whose meaning remains unknown to me to this day.</li>\n  <li value=\"5\">- Your homeland?</li>\n  <li>- I do not know in which latitude it lies.</li>\n  <li>- Beauty?</li>\n  <li>- I would love her willingly, goddess and immortal.</li>\n  <li>- Gold?</li>\n  <li value=\"10\">- I hate it as you hate God.</li>\n  <li>- Eh! what do you love then, extraordinary stranger?</li>\n  <li value=\"12\">- I love the clouds… the passing clouds … up there … up there … the marvelous clouds!</li>\n</ol>\n\n<aside>\n  <div class=\"notices red\">\n    <p><a href=\"https://fr.wikipedia.org/wiki/Charles_Baudelaire\" title=\"https://fr.wikipedia.org/wiki/Charles_Baudelaire\">Charles Baudelaire</a>, \"the stranger\".</p>\n    <p><a href=\"https://francois-vidit.com/blog/fr/ikokujin\" title=\"l'étranger\">original text in french language</a>.</p>\n    <p>English translation: original translation. Can be reproduced with mention « original translation to english by <a href=\"https://francois-vidit.com/blog/en/ikokujin\" title=\"the stranger\">François Vidit</a> », link included.</p>\n  </div>\n</aside>\n\n</article>",
   "articleBody2": "",
   "articleBody3": "",
   "articleBody4": ""
