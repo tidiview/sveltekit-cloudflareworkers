@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "21-01-2021, 19:38",
+    "date": "21-01-2021, 19:38",
+    "modified": "21-01-2021, 19:38",
+    "itemPage": "BlogPosting",
+    "base64_background": "paillage",
+    "base64_itembackground": "lamourestaveugle",
+    "svg_icon": "sacenhexagone",
+    "metadata": {
+      "imageFileName": "etats_generaux_700x388.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
