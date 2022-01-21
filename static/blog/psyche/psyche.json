@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "21-01-2021, 19:13",
+    "date": "21-01-2021, 19:13",
+    "modified": "21-01-2021, 19:13",
+    "itemPage": "BlogPosting",
+    "base64_background": "lemonraisin",
+    "base64_itembackground": "",
+    "svg_icon": "bourgeoisie",
+    "metadata": {
+      "imageFileName": "psyche_700x870.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
