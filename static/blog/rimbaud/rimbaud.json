@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "21-01-2021, 20:00",
+    "date": "21-01-2021, 20:00",
+    "modified": "21-01-2021, 20:00",
+    "itemPage": "BlogPosting",
+    "base64_background": "rosegrey",
+    "base64_itembackground": "conscienceofmyself",
+    "svg_icon": "transformation",
+    "metadata": {
+      "imageFileName": "jeestunautre_700x561.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
