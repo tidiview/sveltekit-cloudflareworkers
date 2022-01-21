@@ -1,0 +1,19 @@
+{
+  "commonFrontmatter": {
+    "created": "21-01-2021, 20:52",
+    "date": "21-01-2021, 20:52",
+    "modified": "21-01-2021, 20:52",
+    "itemPage": "NewsArticle",
+    "base64_background": "cartons-ouverts",
+    "base64_itembackground": "hexagonedefleches",
+    "svg_icon": "troisengrenages",
+    "metadata": {
+      "imageFileName": "benalla_700x350.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "monthly",
+      "priority": 0.9
+    }
+  }
+}
