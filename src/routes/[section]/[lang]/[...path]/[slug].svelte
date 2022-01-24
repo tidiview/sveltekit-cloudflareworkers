@@ -117,7 +117,7 @@
 	<meta property="og:url" content="/{section}/{lang}/{path}/{slug}" />
 	<meta property="og:type" content="article" />
 
-	<meta name="image" content="https://francois-vidit.com/{section}/{lang}/{path}/{slug}/{imageFileName}" property="og:image" /> 
+	<meta name="image" content="/{slug}/{imageFileName}" property="og:image" /> 
 	<meta content="{imageWidth}" property="og:image:width" /> 
 	<meta content="{imageHeight}" property="og:image:height" /> 
 	<meta content="{imageTitle}" property="og:image:title" />
@@ -129,7 +129,7 @@
 
     <meta name="google" content="notranslate" />
 
-    <link rel="preload" as="image" href="https://francois-vidit.com/{path}/{lang}/{path}/{slug}/{imageFileName}" crossorigin>
+    <link rel="preload" as="image" href="/{slug}/{imageFileName}" crossorigin>
 
 	{#each ['fr', 'ja', 'en'] as i}
 		{#if lang === i}
@@ -162,3 +162,170 @@ with frontmatter:
 and articleBody:
 <pre>[html body]: see below [bodyLength]: {bodyLength}{#if body2} [2]: {body2Length}{/if}{#if body3} [3]: {body3Length}{/if}{#if body4} [4]: {body4Length}{/if}</pre>
 {@html body + body2 + body3 + body4}
+<style>
+	:global(.conversation) {
+    margin-block-end: 1em;
+    margin-block-start: 1em;
+    margin-inline-end: 16px;
+    margin-inline-start: 16px;
+  }
+
+  :global(.conversation:last-child) {
+    margin-block-end: 1em;
+  }
+
+  :global(ol.doc li[value]::marker) {
+    display: list-item;
+  }
+
+  :global(ol.doc li[value]) {
+    list-style-type:decimal;
+  }
+
+  :global(ol.doc li) {
+    list-style-type:none;
+  }
+
+  :global(ol.doc li p, ol.doc li p.conversation) {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+  }
+
+  :global(ol.doc-special li::marker) {
+    content: none;
+  }
+  
+  :global(ol.doc-special li[data-id]::marker) {
+    content: attr(data-id) ". ";
+  }
+
+  :global(ol.doc-three-rows) {
+    padding-inline-start: 0px;
+  }
+
+  :global(ol.doc-three-rows li) {
+    margin-top: 1em;
+    margin-block-end: 1em;
+    margin-block-start: 1em;
+    margin-inline-start: 163px;
+  }
+
+  :global(ol.doc-three-rows li[data-id]::before) {
+    content: attr(data-id) ". ";
+    position: absolute;
+    left: 1em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  :global(ol.doc-three-rows li[data-name]::marker) {
+    content: attr(data-name);
+    width: 100px;
+    font-variant-numeric: normal;
+  }
+
+  :global(ol.doc-three-rows li::marker) {
+    content: none;
+  }
+
+  :global(ol.year li p:first-child) {
+    text-indent: -44px;
+    margin-top: 1em;
+    margin-block-end: 1em;
+    margin-block-start: 1em;
+  }
+
+  :global(ol.year li) {
+    list-style-type: none;
+  }
+
+  :global(span.year-width) {
+    width: 44px;
+  }
+
+  :global(.puce) {
+    display: list-item;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-block-end: 1em;
+    margin-block-start: 1em;
+    margin-inline-start: 40px;   
+  }
+
+  :global(p.puce::marker) {
+    display: list-item;
+  }
+
+  :global(p.puce:last-child) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-block-end: 1em;
+  }
+
+  :global(p.puce:first-child) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-block-end: 1em;
+  }
+
+  :global(.no-puce) {
+    margin-top: 1em;
+    margin-block-end: 1em;
+    margin-block-start: 1em;
+    margin-inline-start: 40px;
+  }
+
+  :global(p.no-puce:last-child) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-block-end: 1em;
+  }
+
+  :global(p.no-puce:first-child) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-block-end: 1em;
+  }
+  
+  :global(p.single-li) {
+    display: list-item;
+    list-style-type: none;
+    margin-top: 1em;
+    margin-block-end: 1em;
+    margin-block-start: 0px;
+    margin-inline-start: 40px;
+  }
+  
+  :global(p.single-li::marker) {
+    content: attr(data-id) ". "
+  }
+
+
+  :global(h4.note) {
+    display: list-item;
+    counter-increment: h4;
+    margin-top: 1em;
+    margin-block-end: 0em;
+    margin-block-start: 0em;
+    margin-inline-start: 30px;
+    padding-inline-start: 10px;
+
+  }
+
+  :global(h4::marker) {
+    display: list-item;
+    content: counter(h4);
+  }
+
+  :global(h3) {
+    counter-reset: h4;
+  }
+
+  :global(address) {
+    display: inline;
+  }
+
+  :global(.top-space) {
+    margin-top: 1em;
+  }
+</style>
