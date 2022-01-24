@@ -129,8 +129,6 @@
 
     <meta name="google" content="notranslate" />
 
-    <link rel="preload" as="image" href="/{slug}/{imageFileName}" crossorigin>
-
 	{#each ['fr', 'ja', 'en'] as i}
 		{#if lang === i}
 		<link rel="canonical" href="https://francois-vidit.com/{section}/{i}/{path}/{slug}" hreflang="{i}" />
