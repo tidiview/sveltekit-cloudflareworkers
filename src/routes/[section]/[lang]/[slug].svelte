@@ -109,7 +109,7 @@
 	<meta property="og:url" content="/{section}/{lang}/{slug}" />
 	<meta property="og:type" content="article" />
 
-	<meta name="image" content="https://francois-vidit.com/{section}/{lang}/{slug}/{imageFileName}" property="og:image" /> 
+	<meta name="image" content="/{slug}/{imageFileName}" property="og:image" /> 
 	<meta content="{imageWidth}" property="og:image:width" /> 
 	<meta content="{imageHeight}" property="og:image:height" /> 
 	<meta content="{imageTitle}" property="og:image:title" />
@@ -120,8 +120,6 @@
 	<meta content="@bf7afa37fa94ja" property="twitter:site:id" />
 
     <meta name="google" content="notranslate" />
-
-    <link rel="preload" as="image" href="https://francois-vidit.com/{section}/{lang}/{slug}/{imageFileName}" crossorigin>
 
 	{#each ['fr', 'ja', 'en'] as i}
 		{#if lang === i}
