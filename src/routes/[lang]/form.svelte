@@ -12,8 +12,8 @@
 			};
 		}
 		
-		// ${params.lang}
-		// /ja
+		// ${params.lang}.form.json
+		// /ja/form
 		const url = `${page.path}.json`;
 		const res = await fetch(url);
 		const data = await res.json();
