@@ -1,0 +1,28 @@
+{
+    "rootTitle": "ホーム",
+    "docsTitle": "ドックス",
+    "pathLevelOneTitle": {
+        "paris": "パリ", 
+        "versailles": "ヴェルサイユ",
+        "reims": "ランス",
+        "chateaux-de-la-loire": "ロワール古城",
+        "mont-saint-michel": "もン・サン・ミッシェル",
+        "bruges": "ブルージュ"
+    },
+    "pathLevelTwoTitle": {
+        "louvre": "ルーブル",
+        "vendome": "ヴァンドーム",
+        "palais": "宮殿",
+        "jardins": "庭園",
+        "trianon": "トリアノン",
+        "marly": "マルリー",
+        "chenonceau": "シュノンソー",
+        "cheverny": "シュヴェルニー",
+        "arch-michel": "大天使ミカエル",
+        "hopital-saint-jean": "聖ヨハネ施療院"
+    },
+    "pathLevelThreeTitle": {
+        "la-joconde": "モナ・リザ",
+        "place": "ヴァンドーム広場"
+    }
+}

@@ -1,10 +1,10 @@
 <script context='module'>
 	// since there's no dynamic data here, we can prerender
 	// it so that it gets served as a static asset in prod
-	export const prerender = true;
+	export const prerender = false;
 
-    const valid_sections = new Set(['docs']);
-    const valid_langs = new Set(['fr', 'ja', 'en']);
+  const valid_sections = new Set(['docs']);
+  const valid_langs = new Set(['fr', 'ja', 'en']);
 	const valid_path = new Set(['paris', 'paris/louvre', 'paris/louvre/la-joconde', 'paris/place-vendome', 'versailles', 'versailles/palais', 'versailles/jardins', 'versailles/trianon', 'versailles/marly', 'reims', 'chateaux-de-la-loire', 'chateaux-de-la-loire/chenonceau', 'chateaux-de-la-loire/cheverny', 'mont-saint-michel', 'mont-saint-michel/arch-michel', 'bruges', 'bruges/hopital-saint-jean']);
 	const valid_slug = new Set(['louvre', 'la-joconde', 'vasari', 'gautier', 'place-vendome', 'palais', 'hercule', 'jardins', 'latone', 'phaeton', 'trianon', 'arachnee', 'tiresias', 'iris', 'flore', 'marly', 'pierre-denis-martin', 'remes', 'saint-remi', 'chenonceau', 'diane', 'cheverny', 'adonis', 'perseus', 'arch-michel', 'nom', 'apocalypse', 'autre-docs', 'legende-doree', 'hopital-saint-jean', 'saint-jean', 'sainte-ursule', 'martin']);
 	
@@ -13,8 +13,12 @@
 		
         const section = page.params.section;
         const lang = page.params.lang;
-		const path = page.params.path;
+		    const path = page.params.path;
         const slug = page.params.slug;
+        var paramsString = page.query;
+        var searchParams = new URLSearchParams(paramsString);
+        const queryPage = searchParams.get('page');
+
         if (!valid_langs.has(lang) || !valid_sections.has(section) || !valid_path.has(path) || !valid_slug.has(slug)) {
 			console.log(`invalid parameter: or section: ${section} or lang: ${lang} or path: ${path} or slug: ${slug}`);
 			return {
@@ -23,18 +27,19 @@
 			};
 		}
 		
-		// /${params.section}/${params.lang}/${params.path}/${params.slug}.json
-		// docs/ja/paris/louvre/la-joconde/vasari
-		const url = `${page.path}.json`;
-		const res = await fetch(url);
+		// /section/lang/path/slug.json
+		// docs/ja/paris/louvre/la-joconde/vasari.json
+		const url1 = `/` + section + `/` + lang + `/`  + path + `/`  + slug + `.json`;
+		const res = await fetch(url1);
 
 		if (!res.ok)
 			return {
 				status: res.status,
-				error: new Error(`Could not load ${url}`)
+				error: new Error(`Could not load ${url1}`)
 			};
 
 		const data = await res.json()
+
 		// docs/vasari.json
 		const url2 = `/` + data.params.section + `/` + data.params.slug + `/` + data.params.slug + `.json`;
 		const res2 = await fetch(url2);
@@ -46,8 +51,9 @@
 			}
 
 		const data2 = await res2.json();
+
 		// docs/vasari.ja.json
-		const url3 = `/` + data.params.section + `/` + data.params.slug + `/` + data.params.slug + `.` + data.params.lang + `.json`;
+		const url3 = queryPage? `/` + data.params.section + `/` + data.params.slug + `/` + data.params.slug + queryPage + `.` + data.params.lang + `.json` : `/` + data.params.section + `/` + data.params.slug + `/` + data.params.slug + `.` + data.params.lang + `.json`;
 		const res3 = await fetch(url3);
 
 		if (!res3.ok)
@@ -57,12 +63,25 @@
 		}
 
 		const data3 = await res3.json();
+
+		// docs/path.ja.json
+		const url4 = `/` + data.params.section + `/` + data.params.lang + `.json`;
+		const res4 = await fetch(url4);
+
+		if (!res4.ok)
+		return {
+			status: res4.status,
+			error: new Error(`Could not load ${url4}`)
+		}
+		const data4 = await res4.json();
+
 		return {
 			fallthrough: true,
 			props: {
 				data,
 				data2,
-				data3
+				data3,
+        data4
 			}
 		};
 	}
@@ -71,9 +90,10 @@
 <script>
 	export let data;
     let params = data.params;
-	let section = params.section;
+	  let section = params.section;
     let lang = params.lang;
     let path = params.path;
+    let pathLevelDepth = path.split('/').length;
     let slug = params.slug;
 	export let data2;
 	let commonFrontmatter = data2.commonFrontmatter;
@@ -87,7 +107,7 @@
 	let sitemap = commonFrontmatter.sitemap;
 		let sitemapChangefreq = sitemap.changefreq;
 		let sitemapPriority = sitemap.priority;
-    export let data3;
+  export let data3;
 	let frontmatter = data3.frontmatter
     let title = frontmatter.title;let titleLength = title.length;
     let menu = frontmatter.menu;
@@ -105,7 +125,12 @@
 	let body2 = data3.articleBody2; let body2Length; if (body2) {body2Length = body2.length};
 	let body3 = data3.articleBody3; let body3Length; if (body3) {body3Length =  body3.length};
 	let body4 = data3.articleBody4; let body4Length; if (body4) {body4Length = body4.length};
-	console.log(data, data2, data3);
+  export let data4;
+  let rootTitle = data4.rootTitle;
+  let sectionTitle = data4.docsTitle;
+  let pathLevelOneTitle = data4.pathLevelOneTitle;
+  let pathLevelTwoTitle = data4.pathLevelTwoTitle;
+  let pathLevelThreeTitle = data4.pathLevelThreeTitle;
 </script>
 
 <svelte:head>
@@ -134,11 +159,12 @@
 		<link rel="canonical" href="https://francois-vidit.com/{section}/{i}/{path}/{slug}" hreflang="{i}" />
 		{/if}
 		<link rel="alternate" href="https://francois-vidit.com/{section}/{i}/{path}/{slug}" hreflang="{i}" />
-    {/each}
+  {/each}
 </svelte:head>
 
-from [section] / [lang] / [...path] / [slug].svelte,<br/>
 
+
+from [section] / [lang] / [...path] / [slug].svelte,<br/>
 this is: <br/>
 <pre>{section}   /   {lang}    {#if path}/   {path}   {/if}/   {slug}<br/>
 [section]   /   [lang]    {#if path}/   [...path]   {/if}/   [slug]</pre>
@@ -159,7 +185,21 @@ with frontmatter:
 
 and articleBody:
 <pre>[html body]: see below [bodyLength]: {bodyLength}{#if body2} [2]: {body2Length}{/if}{#if body3} [3]: {body3Length}{/if}{#if body4} [4]: {body4Length}{/if}</pre>
+
+<nav aria-label="Breadcrumb">
+  <ul class="breadcrumb">
+    {#each [ {name: rootTitle, url: '/' + lang}, {name: sectionTitle, url: '/' + section + '/' + lang}, 
+      {name: pathLevelOneTitle[path.split('/')[0]], url: '/' + section + '/' + lang + '/' + path.split('/')[0]}, {name: pathLevelTwoTitle[path.split('/')[1]], url: '/' + section + '/' + lang + '/' + path.split('/')[0] + '/' + path.split('/')[1]}, 
+      {name: pathLevelThreeTitle[path.split('/')[2]], url: '/' + section + '/' + lang + '/' + path.split('/')[0] + '/' + path.split('/')[1] + '/' + path.split('/')[2]} ] as { name, url }, i}
+      {#if i < pathLevelDepth + 2}
+        <li><a href={url}>{name}</a></li>
+      {/if}
+    {/each}
+  </ul>
+</nav>
+
 {@html body + body2 + body3 + body4}
+
 <style>
 	:global(.conversation) {
     margin-block-end: 1em;
@@ -325,5 +365,18 @@ and articleBody:
 
   :global(.top-space) {
     margin-top: 1em;
+  }
+
+  :global(ul.breadcrumb) {
+    list-style: none;
+  }
+
+  :global(ul.breadcrumb li) {
+    display: inline;
+  }
+
+  :global(ul.breadcrumb li+li:before) {
+    content: ">";
+    padding: 10px; 
   }
 </style>

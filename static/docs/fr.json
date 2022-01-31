@@ -1,0 +1,28 @@
+{
+    "rootTitle": "accueil",
+    "docsTitle": "docs",
+    "pathLevelOneTitle": {
+        "paris": "paris", 
+        "versailles": "versailles",
+        "reims": "reims",
+        "chateaux-de-la-loire": "chateaux-de-la-loire",
+        "mont-saint-michel": "mont saint-michel",
+        "bruges": "bruges"
+    },
+    "pathLevelTwoTitle": {
+        "louvre": "louvre",
+        "vendome": "vendôme",
+        "palais": "palais",
+        "jardins": "jardins",
+        "trianon": "trianon",
+        "marly": "marly",
+        "chenonceau": "chenonceau",
+        "cheverny": "cheverny",
+        "arch-michel": "archange saint michel",
+        "hopital-saint-jean": "hopital saint-jean"
+    },
+    "pathLevelThreeTitle": {
+        "la-joconde": "la joconde",
+        "place": "place vendôme"
+    }
+}
