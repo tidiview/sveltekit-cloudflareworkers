@@ -1,0 +1,17 @@
+{
+  "frontmatter": {
+    "title": "Paris",
+    "menu": "paris",
+    "created": "05-01-2017, 23:13",
+    "date": "05-01-2017, 23:13",
+    "modified": "01-03-2018, 10:17",
+    "metadata": {
+      "description": "documents qui permettent d'approfondir la compréhension de la formation, de l'histoire, de la culture de la ville de Paris.",
+      "imageTitle": "Paris",
+      "imageLegend": "Le Pont Neuf et la rive gauche selon le Plan de Turgot de 1734"
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/01.paris/chapter.fr.md"],
+    "specialty": ["Paris"]
+  },
+  "articleBody": ""
+}
