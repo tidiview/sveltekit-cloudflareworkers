@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Reims",
+    "menu": "reims",
+    "created": "22-10-2017, 00:02",
+    "date": "22-10-2017, 00:02",
+    "modified": "08-09-2018, 21:58",
+    "metadata": {
+      "description": "documents présentés pour approfondir la compréhension de plusieurs monuments et parties emblématiques de l'histoire de Reims.",
+      "keywords": "Reims, Christianisme, Gaule, Les Rèmes, Jules César, saint Remi, Baptème de Clovis",
+      "imageTitle": "Façade de la Cathédrale Notre-Dame de Reims",
+      "imageLegend": "Vue depuis le Parvis de la cathédrale."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/03.reims/chapter.fr.md"],
+    "specialty": ["Histoire de France", "Période romaine", "Antiquité Tardive", "Reims", "Christianisme", "Gaule", "Les Rèmes", "Jules César", "saint Remi", "Baptème de Clovis"]
+  },
+  "articleBody": ""
+}

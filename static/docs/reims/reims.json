@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "01-02-2021, 21:32",
+    "date": "01-02-2021, 21:32",
+    "modified": "01-02-2021, 21:32",
+    "itemPage": "CollectionPage",
+    "metadata": {
+      "imageFileName": "reims_700x1050.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.3
+    }
+  }
+}

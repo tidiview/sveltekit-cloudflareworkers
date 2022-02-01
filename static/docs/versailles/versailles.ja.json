@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "ヴェルサイユ",
+    "menu": "ヴェルサイユ",
+    "created": "15-01-2016, 07:10",
+    "date": "04-06-2017, 21:38",
+    "modified": "02-03-2018, 17:58",
+    "metadata": {
+      "description": "ヴェルサイユ宮殿（宮殿であれ、庭園であれ、あるいはトリアノンであれ）にある芸術作品の理解を深める資料が提供されています。",
+      "keywords": "ヴェルサイユ宮殿",
+      "imageTitle": "ヴェルサイユ宮殿",
+      "imageLegend": "空から庭園側のヴェルサイユ宮殿セクション写真。"
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/02.versailles/chapter.ja.md"],
+    "specialty": ["フランス歴史", "神話", "ローマ帝国文学", "宮廷文化", "ヴェルサイユ宮殿"]
+  },
+  "articleBody": ""
+}

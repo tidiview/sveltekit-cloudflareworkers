@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "01-02-2021, 21:42",
+    "date": "01-02-2021, 21:42",
+    "modified": "01-02-2021, 21:42",
+    "itemPage": "CollectionPage",
+    "metadata": {
+      "imageFileName": "chateaux-de-la-loire_700x499.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.3
+    }
+  }
+}

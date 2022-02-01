@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Versailles",
+    "menu": "versailles",
+    "created": "15-01-2016, 07:10",
+    "date": "19-08-2016, 17:38",
+    "modified": "02-03-2018, 17:14",
+    "metadata": {
+      "description": "documents qui permettent d'approfondir la compréhension d'œuvres présentées au Château de Versailles, que ce soit dans le palais, les jardins ou à Trianon.",
+      "keywords": "Château de Versailles",
+      "imageTitle": "Château de Versailles",
+      "imageLegend": "Le Château de Versailles vue depuis le ciel côté jardins vers le palais."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/02.versailles/chapter.fr.md"],
+    "specialty": ["Histoire de France", "Mythologie", "Culture de cour", "Littérature de l'Empire Romain", "Littérature romaine impériale", "Château de Versailles"]
+  },
+  "articleBody": ""
+}

@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Castles of the Loire",
+    "menu": "chateaux-de-la-loire",
+    "created": "15-01-2016, 07:10",
+    "date": "15-01-2016, 12:26",
+    "modified": "02-03-2018, 20:52",
+    "metadata": {
+      "description": "documents that allow to deepen the understanding of some works exhibited in the castles of Chenonceau or Cheverny.",
+      "keywords": "Castles of the Loire",
+      "imageTitle": "Castle of la Bretesche",
+      "imageLegend": "View of the Castle of la Bretesche, Missillac."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/04.chateaux-de-la-loire/chapter.en.md"],
+    "specialty": ["History of France", "Mythology", "Culture of royal french court", "Litterature of the Roman Empire", "Roman Imperial Litterature"]
+  },
+  "articleBody": ""
+}

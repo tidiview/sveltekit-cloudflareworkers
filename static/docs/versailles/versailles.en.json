@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Versailles",
+    "menu": "versailles",
+    "created": "15-01-2016, 07:10",
+    "date": "02-03-2018, 17:23",
+    "modified": "20-03-2018, 23:56",
+    "metadata": {
+      "description": "documents that allow to deepen the understanding of works presented at the Palace of Versailles, whether in the palace, the gardens or Trianon.",
+      "keywords": "Château de Versailles",
+      "imageTitle": "Palace of Versailles",
+      "imageLegend": "View of the Palace of Versailles from the sky on the gardens side."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/01.paris/chapter.en.md"],
+    "specialty": ["Paris"]
+  },
+  "articleBody": ""
+}
