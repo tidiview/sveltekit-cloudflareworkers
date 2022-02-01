@@ -184,7 +184,7 @@ with frontmatter:
 <pre>[significantLinks]: {significantLinks}<br/>[specialty]: {specialty}</pre>
 
 and articleBody:
-<pre>[html body]: see below [bodyLength]: {bodyLength}{#if body2} [2]: {body2Length}{/if}{#if body3} [3]: {body3Length}{/if}{#if body4} [4]: {body4Length}{/if}</pre>
+<pre>[html body]: see below [bodyLength]: {bodyLength}{#if body2 !== undefined} [2]: {body2Length}{/if}{#if body3 !== undefined} [3]: {body3Length}{/if}{#if body4 !== undefined} [4]: {body4Length}{/if}</pre>
 
 <nav aria-label="Breadcrumb">
   <ul class="breadcrumb">
@@ -198,7 +198,15 @@ and articleBody:
   </ul>
 </nav>
 
-{@html body + body2 + body3 + body4}
+{#if body4 !== undefined}
+  {@html body + body2 + body3 + body4}
+{:else if body3 !== undefined}
+  {@html body + body2 + body3}
+{:else if body2 !== undefined}
+  {@html body + body2}
+{:else}
+  {@html body}
+{/if}
 
 <style>
 	:global(.conversation) {
