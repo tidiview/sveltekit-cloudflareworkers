@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Mont Saint-Michel",
+    "menu": "mont saint-michel",
+    "created": "15-01-2016, 07:10",
+    "date": "04-03-2018, 12:15",
+    "modified": "20-03-2018, 23:58",
+    "metadata": {
+      "description": "documents are presented to deepen the history and understanding of Mont Saint-Michel.",
+      "keywords": "Mont-Saint-Michel",
+      "imageTitle": "Mont-Saint-Michel",
+      "imageLegend": "Photography of the Mont-Saint-Michel."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/05.mont-saint-michel/chapter.en.md"],
+    "specialty": ["History of France", "Religious history", "Biblic history"]
+  },
+  "articleBody": ""
+}

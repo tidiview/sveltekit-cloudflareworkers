@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Mont Saint-Michel",
+    "menu": "mont saint-michel",
+    "created": "15-01-2016, 07:10",
+    "date": "19-08-2016, 17:58",
+    "modified": "04-03-2018, 12:06",
+    "metadata": {
+      "description": "des documents qui permettent d'approfondir l'histoire et la compréhension du Mont Saint-Michel.",
+      "keywords": "Mont-Saint-Michel, Archange Michel",
+      "imageTitle": "Mont-Saint-Michel",
+      "imageLegend": "Photographie du Mont-Saint-Michel."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/05.mont-saint-michel/chapter.fr.md"],
+    "specialty": ["Histoire de France", "Histoire religieuse", "Histoire biblique"]
+  },
+  "articleBody": ""
+}
