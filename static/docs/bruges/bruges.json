@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "03-02-2021, 19:39",
+    "date": "03-02-2021, 19:39",
+    "modified": "03-02-2021, 19:39",
+    "itemPage": "CollectionPage",
+    "metadata": {
+      "imageFileName": "paris_700x423.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.3
+    }
+  }
+}
