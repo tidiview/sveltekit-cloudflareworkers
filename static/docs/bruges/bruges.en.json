@@ -1,18 +1,18 @@
 {
   "frontmatter": {
-    "title": "Paris",
-    "menu": "paris",
+    "title": "Bruges",
+    "menu": "bruges",
     "created": "05-01-2017, 23:13",
-    "date": "05-01-2017, 23:13",
-    "modified": "01-03-2018, 10:18",
+    "date": "02-03-2017, 16:43",
+    "modified": "20-03-2017, 23:59",
     "metadata": {
-      "description": "In the Paris section, documents are presented which allow to deepen understanding of the formation, history and culture of the city of Paris. For example, documents showing the state in the 17 th century of Place Vendôme.",
-      "keywords": "Paris",
-      "imageTitle": "Paris",
-      "imageLegend": "photography of the section of Paris of site francois-vidit.com."
+      "description": "documents are presented to deepen the understanding of several emblematic works of art of the city of Bruges.",
+      "keywords": "Bruges",
+      "imageTitle": "Bruges",
+      "imageLegend": "View of the Belfry of Bruges from Little Venice."
     },
-    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/01.paris/chapter.en.md"],
-    "specialty": ["Paris"]
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/06.bruges/chapter.en.md"],
+    "specialty": ["Belgium", "Burgundian Netherlands", "Flanders", "West Flanders", "Bruges"]
   },
   "articleBody": ""
 }

@@ -9,10 +9,10 @@
       "description": "documents qui permettent d'approfondir la compréhension de plusieurs œuvres d'art emblématiques de la ville de Bruges.",
       "keywords": "Bruges",
       "imageTitle": "Bruges",
-      "imageLegend": "View of the Belfry of Bruges from Little Venice."
+      "imageLegend": "Vue du beffroi de Bruges depuis la Petite Venise."
     },
-    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/06.bruges/chapter.en.md"],
-    "specialty": ["Belgium", "Burgundian Netherlands", "Flanders", "West Flanders", "Bruges"]
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/06.bruges/chapter.fr.md"],
+    "specialty": ["Belgique", "Pays-Bas Bourguignons", "Flandres", "Flandres Occidentale", "Bruges"]
   },
   "articleBody": ""
 }
