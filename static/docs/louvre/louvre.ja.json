@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "ルーブル",
+    "menu": "ルーブル",
+    "created": "05-01-2017, 23:13",
+    "date": "13-07-2017, 23:13",
+    "modified": "23-01-2018, 22:09",
+    "metadata": {
+      "description": "francois-vidit.com サイトのルーブルセクションの目次。",
+      "keywords": "Louvre",
+      "imageTitle": "Louvre",
+      "imageLegend": "夜、リシュリュー通路からのルーブル美術館のマルリー中庭の風景。"
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/01.paris/01.louvre/chapter.ja.md"],
+    "specialty": ["フランス", "イル・ド・フランス", "パリ", "ルーブル"]
+  },
+  "articleBody": ""
+}

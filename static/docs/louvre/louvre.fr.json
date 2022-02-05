@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Louvre",
+    "menu": "louvre",
+    "created": "05-01-2017, 23:13",
+    "date": "05-01-2017, 23:13",
+    "modified": "23-01-2018, 22:10",
+    "metadata": {
+      "description": "sommaire de la section Louvre du site francois-vidit.com.",
+      "keywords": "Louvre",
+      "imageTitle": "Louvre",
+      "imageLegend": "View of the Cour Marly of the Louvre, at night, from the passage Richelieu."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/01.paris/01.louvre/chapter.en.md"],
+    "specialty": ["France", "Île-de-France", "Paris", "Louvre"]
+  },
+  "articleBody": ""
+}

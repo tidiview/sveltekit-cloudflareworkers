@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "05-02-2021, 13:59",
+    "date": "05-02-2021, 13:59",
+    "modified": "05-02-2021, 13:59",
+    "itemPage": "CollectionPage",
+    "metadata": {
+      "imageFileName": "louvre_700x525.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.3
+    }
+  }
+}
