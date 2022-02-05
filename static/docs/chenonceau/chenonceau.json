@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "05-02-2021, 16:33",
+    "date": "05-02-2021, 16:33",
+    "modified": "05-02-2021, 16:33",
+    "itemPage": "CollectionPage",
+    "metadata": {
+      "imageFileName": "chenonceau_700x350.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.3
+    }
+  }
+}
