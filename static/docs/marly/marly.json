@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "05-02-2021, 16:15",
+    "date": "05-02-2021, 16:15",
+    "modified": "05-02-2021, 16:15",
+    "itemPage": "CollectionPage",
+    "metadata": {
+      "imageFileName": "marly_700x634.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.3
+    }
+  }
+}

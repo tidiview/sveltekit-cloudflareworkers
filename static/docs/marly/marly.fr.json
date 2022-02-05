@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Marly",
+    "menu": "marly",
+    "created": "05-03-2018, 16:19",
+    "date": "05-03-2018, 16:19",
+    "modified": "24-03-2018, 20:57",
+    "metadata": {
+      "description": "documents qui permettent d'approfondir la compréhension du Domaine de Marly.",
+      "keywords": "Marly, Château de Marly, Domaine de Marly",
+      "imageTitle": "Vue du Château de Marly",
+      "imageLegend": "Pierre-Denis MARTIN, Vue générale du Château de Marly, prise de l’abreuvoir, 1723."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/01.paris/chapter.fr.md"],
+    "specialty": ["Histoire de France", "Culture de cour", "Marly", "Domaine de Marly", "Château de Marly"]
+  },
+  "articleBody": ""
+}
