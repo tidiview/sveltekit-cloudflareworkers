@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "The Palace",
+    "menu": "palace",
+    "created": "15-01-2016, 07:10",
+    "date": "13-07-2017, 23:13",
+    "modified": "02-03-2018, 18:03",
+    "metadata": {
+      "description": "documents are presented which allow you to deepen the understanding of works presented in the Palace of the Château de Versailles.",
+      "keywords": "Château de Versailles, Palace of Versailles",
+      "imageTitle": "Palace of Versailles",
+      "imageLegend": "Aerial View of the Palace of Versailles from the Marble Courtyard side."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/02.versailles/01.palace/chapter.en.md"],
+    "specialty": ["History of France", "Mythology", "Culture of royal french court", "Litterature of the Roman Empire", "Roman Imperial Litterature", "Palace of Versailles"]
+  },
+  "articleBody": ""
+}

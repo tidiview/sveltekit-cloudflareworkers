@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "05-02-2021, 14:30",
+    "date": "05-02-2021, 14:30",
+    "modified": "05-02-2021, 14:30",
+    "itemPage": "CollectionPage",
+    "metadata": {
+      "imageFileName": "palais_700x375.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.3
+    }
+  }
+}

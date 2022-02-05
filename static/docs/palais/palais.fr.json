@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Le château",
+    "menu": "château",
+    "created": "15-01-2016, 07:10",
+    "date": "05-01-2017, 23:13",
+    "modified": "02-03-2018, 18:00",
+    "metadata": {
+      "description": "documents qui permettent d'approfondir la compréhension d'œuvres présentées dans le Palais du Château de Versailles.",
+      "keywords": "Château de Versailles",
+      "imageTitle": "Château de Versailles",
+      "imageLegend": "Vue du Château de Versailles depuis le ciel côté Cour de Marbre."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/02.versailles/01.palace/chapter.fr.md"],
+    "specialty": ["Histoire de France", "Mythologie", "Culture de cour", "Littérature de l'Empire Romain", "Littérature romaine impériale", "Château de Versailles"]
+  },
+  "articleBody": ""
+}
