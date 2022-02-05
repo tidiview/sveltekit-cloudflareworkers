@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Jardins",
+    "menu": "jardins",
+    "created": "02-01-2017, 21:54",
+    "date": "10-01-2017, 09:54",
+    "modified": "11-02-2018, 14:57",
+    "metadata": {
+      "description": "extraits de textes de la littérature impériale romaine, afin d'approfondir les sujets mythologiques de différentes œuvres des jardins du Palais de Versailles.",
+      "keywords": "Château de Versailles, Versailles, Jardins, Mythologie",
+      "imageTitle": "L'Orangerie des Jardins du Château de Versailles",
+      "imageLegend": "Vue de l'Orangerie depuis le parterre."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/02.versailles/02.jardins/chapter.fr.md"],
+    "specialty": ["Histoire de France", "Mythologie", "Culture de cour", "Littérature de l'Empire Romain", "Littérature romaine impériale", "Château de Versailles", "Jardins"]
+  },
+  "articleBody": ""
+}

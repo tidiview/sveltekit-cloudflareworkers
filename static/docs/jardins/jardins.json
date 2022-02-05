@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "05-02-2021, 14:46",
+    "date": "05-02-2021, 14:46",
+    "modified": "05-02-2021, 14:46",
+    "itemPage": "CollectionPage",
+    "metadata": {
+      "imageFileName": "jardins_700x467.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.3
+    }
+  }
+}

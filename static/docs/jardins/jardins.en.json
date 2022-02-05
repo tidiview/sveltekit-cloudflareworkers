@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Gardens",
+    "menu": "gardens",
+    "created": "02-01-2017, 21:54",
+    "date": "10-01-2017, 09:54",
+    "modified": "11-02-2018, 15:00",
+    "metadata": {
+      "description": "documents that put in relation sculptures exposed in the gardens of the Palace of Versailles and texts of imperial roman litterature.",
+      "keywords": "Château de Versailles, Versailles, Gardens",
+      "imageTitle": "Gardens of Orangerie of the Château de Versailles",
+      "imageLegend": "View of the Orangery from the parterre."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/02.versailles/02.jardins/chapter.en.md"],
+    "specialty": ["History of France", "Mythology", "Culture of royal french court", "Litterature of the Roman Empire", "Roman Imperial Litterature", "Palace of Versailles", "Gardens"]
+  },
+  "articleBody": ""
+}
