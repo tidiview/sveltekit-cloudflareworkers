@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Trianon",
+    "menu": "trianon",
+    "created": "02-01-2017, 21:54",
+    "date": "11-02-2018, 14:47",
+    "modified": "20-03-2018, 23:57",
+    "metadata": {
+      "description": "extracts of texts from Roman imperial literature in order to deepen the mythological subjects of different works at Trianon.",
+      "keywords": "Palace of Versailles, Grand Trianon",
+      "imageTitle": "Grand Trianon",
+      "imageLegend": "photography of the section of Paris of site francois-vidit.com."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/01.paris/chapter.en.md"],
+    "specialty": ["Paris"]
+  },
+  "articleBody": ""
+}

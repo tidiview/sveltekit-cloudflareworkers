@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Trianon",
+    "menu": "trianon",
+    "created": "02-01-2017, 21:54",
+    "date": "02-01-2017, 21:54",
+    "modified": "11-02-2018, 14:47",
+    "metadata": {
+      "description": "extraits de textes de la littérature impériale romaine afin d'approfondir les sujets mythologiques de différentes œuvres à Trianon.",
+      "keywords": "Château de Versailles, Trianon",
+      "imageTitle": "Le Péristyle du Grand Trianon",
+      "imageLegend": "Transversal view of the Peristyle of the Grand Trianon from the south wing."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/02.versailles/03.trianon/chapter.en.md"],
+    "specialty": ["History of France", "Mythology", "Culture of royal french court", "Litterature of the Roman Empire", "Roman Imperial Litterature", "Palace of Versailles", "Trianon"]
+  },
+  "articleBody": ""
+}

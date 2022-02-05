@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "05-02-2021, 15:16",
+    "date": "05-02-2021, 15:16",
+    "modified": "05-02-2021, 15:16",
+    "itemPage": "CollectionPage",
+    "metadata": {
+      "imageFileName": "trianon_700x467.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.3
+    }
+  }
+}
