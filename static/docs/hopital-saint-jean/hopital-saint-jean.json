@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "06-02-2021, 13:33",
+    "date": "06-02-2021, 13:33",
+    "modified": "06-02-2021, 13:33",
+    "itemPage": "CollectionPage",
+    "metadata": {
+      "imageFileName": "bruges_700x466.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.3
+    }
+  }
+}

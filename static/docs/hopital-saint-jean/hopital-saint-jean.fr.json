@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Bruges",
+    "menu": "bruges",
+    "created": "05-01-2017, 23:13",
+    "date": "05-01-2017, 23:13",
+    "modified": "02-03-2017, 16:55",
+    "metadata": {
+      "description": "documents qui permettent d'approfondir la compréhension de plusieurs œuvres d'art emblématiques de la ville de Bruges.",
+      "keywords": "Bruges",
+      "imageTitle": "Bruges",
+      "imageLegend": "Vue du beffroi de Bruges depuis la Petite Venise."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/06.bruges/chapter.fr.md"],
+    "specialty": ["Belgique", "Pays-Bas Bourguignons", "Flandres", "Flandres Occidentale", "Bruges"]
+  },
+  "articleBody": ""
+}

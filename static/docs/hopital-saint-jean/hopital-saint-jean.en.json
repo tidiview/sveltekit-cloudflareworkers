@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Bruges",
+    "menu": "bruges",
+    "created": "05-01-2017, 23:13",
+    "date": "02-03-2017, 16:43",
+    "modified": "20-03-2017, 23:59",
+    "metadata": {
+      "description": "documents are presented to deepen the understanding of several emblematic works of art of the city of Bruges.",
+      "keywords": "Bruges",
+      "imageTitle": "Bruges",
+      "imageLegend": "View of the Belfry of Bruges from Little Venice."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/06.bruges/chapter.en.md"],
+    "specialty": ["Belgium", "Burgundian Netherlands", "Flanders", "West Flanders", "Bruges"]
+  },
+  "articleBody": ""
+}
