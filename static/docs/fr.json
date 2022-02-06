@@ -5,13 +5,12 @@
         "paris": "paris", 
         "versailles": "versailles",
         "reims": "reims",
-        "chateaux-de-la-loire": "chateaux-de-la-loire",
+        "chateaux-de-la-loire": "chateaux de la loire",
         "mont-saint-michel": "mont saint-michel",
         "bruges": "bruges"
     },
     "pathLevelTwoTitle": {
         "louvre": "louvre",
-        "vendome": "vendôme",
         "palais": "palais",
         "jardins": "jardins",
         "trianon": "trianon",
@@ -22,7 +21,6 @@
         "hopital-saint-jean": "hopital saint-jean"
     },
     "pathLevelThreeTitle": {
-        "la-joconde": "la joconde",
-        "place": "place vendôme"
+        "la-joconde": "la joconde"
     }
 }
