@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/01.paris/chapter.en.md"],
     "specialty": ["Paris"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/en/paris/louvre\" rel=\"bookmark\">louvre</a>\n        <ul>\n            <li>\n                <a href=\"/docs/en/paris/louvre/la-joconde\" rel=\"bookmark\">the mona lisa</a>\n                <ul>\n                    <li>\n                        <a href=\"/docs/en/paris/louvre/la-joconde/vasari\" rel=\"bookmark\">vasari</a>\n                    </li>\n                    <li>\n                        <a href=\"/docs/en/paris/louvre/la-joconde/gautier\" rel=\"bookmark\">gautier</a>\n                    </li>\n                </ul>\n            </li>\n        </ul>\n    </li>\n    <li>\n        <a href=\"/docs/en/paris/place-vendome\" rel=\"bookmark\">place vendôme</a>\n    </li>\n</ol>"
 }
