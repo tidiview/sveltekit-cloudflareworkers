@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "06-02-2021, 13:46",
+    "date": "06-02-2021, 13:46",
+    "modified": "06-02-2021, 13:46",
+    "itemPage": "CollectionPage",
+    "metadata": {
+      "imageFileName": "joconde_700x1030.jpg",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.3
+    }
+  }
+}

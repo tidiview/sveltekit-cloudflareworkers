@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "La Joconde",
+    "menu": "la joconde",
+    "created": "06-01-2019, 12:21",
+    "date": "06-01-2019, 12:21",
+    "modified": "06-01-2019, 12:21",
+    "metadata": {
+      "description": "documents that provide a deeper understanding of Leonardo da Vinci's masterpiece, the Mona Lisa.",
+      "keywords": "The Joconde, La Gioconda, Mona Lisa",
+      "imageTitle": "Mona Lisa",
+      "imageLegend": "Portrait of Lisa Gerardini, spouse of Francesco del Giocondo said «Mona Lisa, la Gioconda» or «the Joconde»."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/01.paris/01.louvre/la-joconde/chapter.en.md"],
+    "specialty": ["France", "Île-de-France", "Paris", "Louvre", "Mona Lisa"]
+  },
+  "articleBody": ""
+}
