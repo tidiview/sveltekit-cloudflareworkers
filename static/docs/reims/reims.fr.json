@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/03.reims/chapter.fr.md"],
     "specialty": ["Histoire de France", "Période romaine", "Antiquité Tardive", "Reims", "Christianisme", "Gaule", "Les Rèmes", "Jules César", "saint Remi", "Baptème de Clovis"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/fr/reims/remes\" rel=\"bookmark\">les rèmes</a>\n    </li>\n    <li>\n        <a href=\"/docs/fr/reims/saint-remi\" rel=\"bookmark\">saint remi</a>\n    </li>\n</ol>"
 }

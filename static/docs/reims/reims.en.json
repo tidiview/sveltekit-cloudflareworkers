@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/03.reims/chapter.en.md"],
     "specialty": ["History of France", "Late Antiquity", "Christianism", "Reims", "Saint Remigius", "Baptism of Clovis", "The Remi", "Julius Cesar"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/en/reims/remes\" rel=\"bookmark\">the remi</a>\n    </li>\n    <li>\n        <a href=\"/docs/en/reims/saint-remi\" rel=\"bookmark\">saint remigius</a>\n    </li>\n</ol>"
 }

@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/03.reims/chapter.ja.md"],
     "specialty": ["フランス歴史", "ローマ時代", "古代末期", "ガリア", "ランス", "レミ族", "サン＝レミ", "聖レミギウス", "ユリウス・カエサル", "ガリア戦記", "クロヴィス１世", "クロヴィスの洗礼", "ランス・ノートルダム大聖堂"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/ja/reims/remes\" rel=\"bookmark\">レミ族</a>\n    </li>\n    <li>\n        <a href=\"/docs/ja/reims/saint-remi\" rel=\"bookmark\">サン＝レミ</a>\n    </li>\n</ol>"
 }
