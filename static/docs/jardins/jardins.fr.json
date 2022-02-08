@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/02.versailles/02.jardins/chapter.fr.md"],
     "specialty": ["Histoire de France", "Mythologie", "Culture de cour", "Littérature de l'Empire Romain", "Littérature romaine impériale", "Château de Versailles", "Jardins"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/fr/versailles/jardins/latone\" rel=\"bookmark\">latone</a>\n    </li>\n    <li>\n        <a href=\"/docs/fr/versailles/jardins/phaeton\" rel=\"bookmark\">phaéton</a>\n    </li>\n</ol>"
 }
