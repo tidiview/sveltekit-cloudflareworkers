@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/05.mont-saint-michel/01.arch-michel/chapter.fr.md"],
     "specialty": ["Histoire de France", "Histoire religieuse", "Histoire biblique", "Archange Saint Michel"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/fr/mont-saint-michel/arch-michel/nom\" rel=\"bookmark\">nom de michel</a>\n    </li>\n    <li>\n        <a href=\"/docs/fr/mont-saint-michel/arch-michel/apocalypse\" rel=\"bookmark\">apocalypse</a>\n    </li>\n    <li>\n        <a href=\"/docs/fr/mont-saint-michel/arch-michel/autre-docs\" rel=\"bookmark\">ancien testament</a>\n    </li>\n    <li>\n        <a href=\"/docs/fr/mont-saint-michel/arch-michel/legende-doree\" rel=\"bookmark\">légende dorée</a>\n    </li>\n</ol>"
 }

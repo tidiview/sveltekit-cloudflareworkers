@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/05.mont-saint-michel/01.arch-michel/chapter.ja.md"],
     "specialty": ["フランス歴史", "宗教歴史", "聖書歴史", "大天使ミカエル"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/ja/mont-saint-michel/arch-michel/nom\" rel=\"bookmark\">カエルとの名</a>\n    </li>\n    <li>\n        <a href=\"/docs/ja/mont-saint-michel/arch-michel/apocalypse\" rel=\"bookmark\">黙示録</a>\n    </li>\n    <li>\n        <a href=\"/docs/ja/mont-saint-michel/arch-michel/autre-docs\" rel=\"bookmark\">ダニエル書</a>\n    </li>\n    <li>\n        <a href=\"/docs/ja/mont-saint-michel/arch-michel/legende-doree\" rel=\"bookmark\">黄金伝説</a>\n    </li>\n</ol>"
 }

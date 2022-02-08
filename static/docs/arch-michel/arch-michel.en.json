@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/05.mont-saint-michel/01.arch-michel/chapter.en.md"],
     "specialty": ["History of France", "Religious history", "Biblic history", "Archangel Michael"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/en/mont-saint-michel/arch-michel/nom\" rel=\"bookmark\">name of michael</a>\n    </li>\n    <li>\n        <a href=\"/docs/en/mont-saint-michel/arch-michel/apocalypse\" rel=\"bookmark\">revelation</a>\n    </li>\n    <li>\n        <a href=\"/docs/en/mont-saint-michel/arch-michel/autre-docs\" rel=\"bookmark\">other sources</a>\n    </li>\n    <li>\n        <a href=\"/docs/en/mont-saint-michel/arch-michel/legende-doree\" rel=\"bookmark\">golden legend</a>\n    </li>\n</ol>"
 }
