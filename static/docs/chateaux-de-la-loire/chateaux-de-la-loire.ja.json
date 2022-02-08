@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/01.paris/chapter.ja.md"],
     "specialty": ["パリ"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/ja/chateaux-de-la-loire/chenonceau\" rel=\"bookmark\">シュノンソー</a>\n        <ul>\n            <li>\n                <a href=\"/docs/ja/chateaux-de-la-loire/chenonceau/diane\" rel=\"bookmark\">ディアヌ</a>\n            </li>\n        </ul>\n    </li>\n    <li>\n        <a href=\"/docs/ja/chateaux-de-la-loire/cheverny\" rel=\"bookmark\">シュヴェルニー</a>\n        <ul>\n            <li>\n                <a href=\"/docs/ja/chateaux-de-la-loire/cheverny/adonis\" rel=\"bookmark\">アドニス</a>\n            </li>\n            <li>\n                <a href=\"/docs/ja/chateaux-de-la-loire/cheverny/perseus\" rel=\"bookmark\">ペルセウス</a>\n            </li>\n        </ul>\n    </li>\n</ol>"
 }
