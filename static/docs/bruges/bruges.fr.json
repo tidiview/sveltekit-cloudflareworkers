@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/06.bruges/chapter.fr.md"],
     "specialty": ["Belgique", "Pays-Bas Bourguignons", "Flandres", "Flandres Occidentale", "Bruges"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/fr/bruges/hopital-saint-jean\" rel=\"bookmark\">hopital-saint-jean</a>\n        <ul>\n            <li>\n                <a href=\"/docs/fr/bruges/hopital-saint-jean/saint-jean\" rel=\"bookmark\">saint-jean</a>\n            </li>\n            <li>\n                <a href=\"/docs/fr/bruges/hopital-saint-jean/saint-ursule\" rel=\"bookmark\">sainte ursule</a>\n            </li>\n            <li>\n                <a href=\"/docs/fr/bruges/hopital-saint-jean/martin\" rel=\"bookmark\">maarten van nieuwenhove</a>\n            </li>\n        </ul>\n    </li>\n</ol>"
 }

@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/06.bruges/chapter.ja.md"],
     "specialty": ["ベルギー", "ブルゴーニュ領ネーデルラント", "フランドル", "ウェスト=フランデレン州", "ブルージュ", "ブルッヘ"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/ja/bruges/hopital-saint-jean\" rel=\"bookmark\">聖ヨハネ施療院</a>\n        <ul>\n            <li>\n                <a href=\"/docs/ja/bruges/hopital-saint-jean/saint-jean\" rel=\"bookmark\">聖ヨハネ</a>\n            </li>\n            <li>\n                <a href=\"/docs/ja/bruges/hopital-saint-jean/saint-ursule\" rel=\"bookmark\">聖ウルスラ</a>\n            </li>\n            <li>\n                <a href=\"/docs/ja/bruges/hopital-saint-jean/martin\" rel=\"bookmark\">マールテン・ファン・ニューウェンホーフェ</a>\n            </li>\n        </ul>\n    </li>\n</ol>"
 }
