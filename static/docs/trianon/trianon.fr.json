@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/02.versailles/03.trianon/chapter.en.md"],
     "specialty": ["History of France", "Mythology", "Culture of royal french court", "Litterature of the Roman Empire", "Roman Imperial Litterature", "Palace of Versailles", "Trianon"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/fr/versailles/trianon/arachnee\" rel=\"bookmark\">arachnée</a>\n    </li>\n    <li>\n        <a href=\"/docs/fr/versailles/trianon/tiresias\" rel=\"bookmark\">tirésias</a>\n    </li>\n    <li>\n        <a href=\"/docs/fr/versailles/trianon/iris\" rel=\"bookmark\">iris</a>\n    </li>\n    <li>\n        <a href=\"/docs/fr/versailles/trianon/flore\" rel=\"bookmark\">flore</a>\n    </li>\n</ol>"
 }

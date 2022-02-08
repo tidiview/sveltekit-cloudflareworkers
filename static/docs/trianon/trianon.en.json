@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/01.paris/chapter.en.md"],
     "specialty": ["Paris"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/en/versailles/trianon/arachnee\" rel=\"bookmark\">arachne</a>\n    </li>\n    <li>\n        <a href=\"/docs/en/versailles/trianon/tiresias\" rel=\"bookmark\">tiresias</a>\n    </li>\n    <li>\n        <a href=\"/docs/en/versailles/trianon/iris\" rel=\"bookmark\">iris</a>\n    </li>\n    <li>\n        <a href=\"/docs/en/versailles/trianon/flore\" rel=\"bookmark\">flora</a>\n    </li>\n</ol>"
 }

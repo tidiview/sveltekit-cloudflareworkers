@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/02.versailles/03.trianon/chapter.ja.md"],
     "specialty": ["フランス歴史", "神話", "ローマ帝国文学", "宮廷文化", "大トリアノン宮殿"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/ja/versailles/trianon/arachnee\" rel=\"bookmark\">アラクネ</a>\n    </li>\n    <li>\n        <a href=\"/docs/ja/versailles/trianon/tiresias\" rel=\"bookmark\">テイレシアス</a>\n    </li>\n    <li>\n        <a href=\"/docs/ja/versailles/trianon/iris\" rel=\"bookmark\">イリス</a>\n    </li>\n    <li>\n        <a href=\"/docs/ja/versailles/trianon/flore\" rel=\"bookmark\">フロラ</a>\n    </li>\n</ol>"
 }
