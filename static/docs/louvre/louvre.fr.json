@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/01.paris/01.louvre/chapter.en.md"],
     "specialty": ["France", "Île-de-France", "Paris", "Louvre"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/fr/paris/louvre/la-joconde\" rel=\"bookmark\">la joconde</a>\n        <ul>\n            <li>\n                <a href=\"/docs/fr/paris/louvre/la-joconde/vasari\" rel=\"bookmark\">selon vasari</a>\n            </li>\n            <li>\n                <a href=\"/docs/fr/paris/louvre/la-joconde/gautier\" rel=\"bookmark\">selon gautier</a>\n            </li>\n        </ul>\n    </li>\n</ol>"
 }
