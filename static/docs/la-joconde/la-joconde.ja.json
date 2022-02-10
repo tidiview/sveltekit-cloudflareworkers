@@ -14,5 +14,5 @@
     "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/master/user/sites/docs/pages/01.home/01.paris/chapter.ja.md"],
     "specialty": ["パリ"]
   },
-  "articleBody": ""
+  "articleBody": "<ol>\n    <li>\n        <a href=\"/docs/ja/paris/louvre/la-joconde/vasari\" rel=\"bookmark\">ヴァザーリにおいて</a>\n    </li>\n    <li>\n        <a href=\"/docs/ja/paris/louvre/la-joconde/gautier\" rel=\"bookmark\">ゴーティエにおいて</a>\n    </li>\n</ol>"
 }
