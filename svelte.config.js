@@ -1,7 +1,12 @@
-import adapter from '@sveltejs/adapter-cloudflare';
+import cloudflare from '@sveltejs/adapter-cloudflare';
 
-export default {
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
 	kit: {
-		adapter: adapter()
+		// hydrate the <div id="svelte"> element in src/app.html
+		target: '#svelte',
+		adapter: cloudflare(),
 	}
 };
+
+export default config;
