@@ -94,9 +94,6 @@
     let significantLinks = frontmatter.significantLinks;
     let specialty = frontmatter.specialty;
     let body = data3.articleBody; let bodyLength = body.length;
-	let body2 = data3.articleBody2; let body2Length; if (body2) {body2Length = body2.length};
-	let body3 = data3.articleBody3; let body3Length; if (body3) {body3Length =  body3.length};
-	let body4 = data3.articleBody4; let body4Length; if (body4) {body4Length = body4.length};
 	console.log(data, data2, data3);
 </script>
 
@@ -148,8 +145,8 @@ with frontmatter:
 <pre>[significantLinks]: {significantLinks}<br/>[specialty]: {specialty}</pre>
 
 and articleBody:
-<pre>[html body]: see below [bodyLength]: {bodyLength}{#if body2} [2]: {body2Length}{/if}{#if body3} [3]: {body3Length}{/if}{#if body4} [4]: {body4Length}{/if}</pre>
-{@html body + body2 + body3 + body4}
+<pre>[html body]: see below [bodyLength]: {bodyLength}</pre>
+{@html body}
 
 <style>
 	:global(.conversation) {
