@@ -98,6 +98,7 @@
 </script>
 
 <svelte:head>
+  <title>{title} | francois-vidit.com</title>
 	<meta name="keywords" content="{keywords}" />
 
 	<meta name="description" content="{description}" property="og:description" />

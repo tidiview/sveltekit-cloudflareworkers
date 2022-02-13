@@ -52,7 +52,7 @@
 
 		const data2 = await res2.json();
 
-		// docs/vasari.ja.json
+		// docs/vasari.ja.json or docs/vasari2.ja.json
 		const url3 = queryPage? `/` + data.params.section + `/` + data.params.slug + `/` + data.params.slug + queryPage + `.` + data.params.lang + `.json` : `/` + data.params.section + `/` + data.params.slug + `/` + data.params.slug + `.` + data.params.lang + `.json`;
 		const res3 = await fetch(url3);
 
@@ -64,7 +64,7 @@
 
 		const data3 = await res3.json();
 
-		// docs/ja.json
+		// docs/ja.json breadcrumb
 		const url4 = `/` + data.params.section + `/` + data.params.lang + `.json`;
 		const res4 = await fetch(url4);
 
@@ -134,6 +134,7 @@
 </script>
 
 <svelte:head>
+  <title>{title} | francois-vidit.com</title>
 	<meta name="keywords" content="{keywords}" />
 
 	<meta name="description" content="{description}" property="og:description" />
