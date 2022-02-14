@@ -64,8 +64,8 @@
 
 		const data3 = await res3.json();
 
-		// docs/ja.json breadcrumb
-		const url4 = `/` + data.params.section + `/` + data.params.lang + `.json`;
+		// docs/breadcrumb.ja.json breadcrumb
+		const url4 = `/` + data.params.section + `/breadcrumb.` + data.params.lang + `.json`;
 		const res4 = await fetch(url4);
 
 		if (!res4.ok)
