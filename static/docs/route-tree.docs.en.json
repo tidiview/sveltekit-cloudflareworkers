@@ -1,0 +1,188 @@
+[{
+	"name": "paris",
+	"url": "/docs/en/paris",
+	"children": [
+		{
+			"name": "louvre",
+			"url": "/docs/en/paris/louvre",
+			"children": [
+				{
+					"name": "the mona lisa",
+					"url": "/docs/en/paris/louvre/la-joconde",
+					"children": [
+						{
+							"name": "according to vasari",
+							"url": "/docs/en/paris/louvre/la-joconde/vasari"
+						},
+						{
+							"name": "according to gautier",
+							"url": "/docs/en/paris/louvre/la-joconde/gautier"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "place vendôme",
+			"url": "/docs/en/paris/place-vendome"
+		}
+	]
+},
+{
+	"name": "versailles",
+	"url": "/docs/en/versailles",
+	"children": [
+		{
+			"name": "palace",
+			"url": "/docs/en/palais",
+			"children": [
+				{
+					"name": "hercules",
+					"url": "/docs/en/versailles/palais/hercule"
+				}
+			]
+		},
+		{
+			"name": "gardens",
+			"url": "/docs/en/jardins",
+			"children": [
+				{
+					"name": "latona",
+					"url": "/docs/en/versailles/jardins/latone"
+				},
+				{
+					"name": "phaethon",
+					"url": "/docs/en/versailles/jardins/phaeton"
+				}
+			]
+		},
+		{
+			"name": "trianon",
+			"url": "/docs/en/trianon",
+			"children": [
+				{
+					"name": "arachne",
+					"url": "/docs/en/versailles/trianon/arachnee"
+				},
+				{
+					"name": "tiresias",
+					"url": "/docs/en/versailles/trianon/tiresias"
+				},
+				{
+					"name": "iris",
+					"url": "/docs/en/versailles/trianon/iris"
+				},
+				{
+					"name": "flora",
+					"url": "/docs/en/versailles/trianon/flore"
+				}
+			]
+		},
+		{
+			"name": "marly",
+			"url": "/docs/en/marly",
+			"children": [
+				{
+					"name": "2 general views",
+					"url": "/docs/en/versailles/marly/perre-denis-martin"
+				}
+			]
+		}
+	]
+},
+{
+	"name": "reims",
+	"url": "/docs/en/reims",
+	"children": [
+		{
+			"name": "the remi",
+			"url": "/docs/en/remes"
+		},
+		{
+			"name": "saint remigius",
+			"url": "/docs/en/saint-remi"
+		}
+	]
+},
+{
+	"name": "loire valley castles",
+	"url": "/docs/en/chateaux-de-la-loire",
+	"children": [
+		{
+			"name": "chenonceau",
+			"url": "/docs/en/chateaux-de-la-loire/chenonceau",
+			"children": [
+				{
+					"name": "diana",
+					"url": "/docs/en/chateaux-de-la-loire/chenonceau/diane"
+				}
+			]
+		},
+		{
+			"name": "cheverny",
+			"url": "/docs/en/chateaux-de-la-loire/cheverny",
+			"children": [
+				{
+					"name": "adonis",
+					"url": "/docs/en/chateaux-de-la-loire/cheverny/adonis"
+				},
+				{
+					"name": "perseus",
+					"url": "/docs/en/chateaux-de-la-loire/cheverny/perseus"
+				}
+			]
+		}
+	]
+},
+{
+	"name": "mont saint-michel",
+	"url": "/docs/en/mont-saint-michel",
+	"children": [
+		{
+			"name": "archangel michael",
+			"url": "/docs/en/mont-saint-michel/nom",
+			"children": [
+				{
+					"name": "name of michael",
+					"url": "/docs/en/mont-saint-michel/nom"
+				},
+				{
+					"name": "revelation",
+					"url": "/docs/en/mont-saint-michel/apocalypse"
+				},
+				{
+					"name": "other sources",
+					"url": "/docs/en/mont-saint-michel/autres-docs"
+				},
+				{
+					"name": "legenda aurea",
+					"url": "/docs/en/mont-saint-michel/legende-doree"
+				}
+			]
+		}
+	]
+},
+{
+	"name": "bruges",
+	"url": "/docs/en/bruges",
+	"children": [
+		{
+			"name": "old saint john's hospital",
+			"url": "/docs/en/bruges/hopital-saint-jean",
+			"children": [
+				{
+					"name": "saint john",
+					"url": "/docs/en/bruges/hopital-saint-jean"
+				},
+				{
+					"name": "saint ursula",
+					"url": "/docs/en/bruges/hopital-saint-jean/sainte-ursule"
+				},
+				{
+					"name": "martin van nieuwenhove",
+					"url": "/docs/en/bruges/hopital-saint-jean/martin"
+				}
+			]
+		}
+	]
+}]

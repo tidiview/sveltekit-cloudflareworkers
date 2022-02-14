@@ -1,0 +1,188 @@
+[{
+	"name": "パリ",
+	"url": "/docs/ja/paris",
+	"children": [
+		{
+			"name": "ルーブル",
+			"url": "/docs/ja/paris/louvre",
+			"children": [
+				{
+					"name": "モナ・リザ",
+					"url": "/docs/ja/paris/louvre/la-joconde",
+					"children": [
+						{
+							"name": "ヴァザーリにおいて",
+							"url": "/docs/ja/paris/louvre/la-joconde/vasari"
+						},
+						{
+							"name": "ゴーティエにおいて",
+							"url": "/docs/ja/paris/louvre/la-joconde/gautier"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ヴァンドーム広場",
+			"url": "/docs/ja/paris/place-vendome"
+		}
+	]
+},
+{
+	"name": "ヴェルサイユ",
+	"url": "/docs/ja/versailles",
+	"children": [
+		{
+			"name": "宮殿",
+			"url": "/docs/ja/palais",
+			"children": [
+				{
+					"name": "ヘラクレス",
+					"url": "/docs/ja/versailles/palais/hercule"
+				}
+			]
+		},
+		{
+			"name": "庭園",
+			"url": "/docs/ja/jardins",
+			"children": [
+				{
+					"name": "ラトナ",
+					"url": "/docs/ja/versailles/jardins/latone"
+				},
+				{
+					"name": "パエトン",
+					"url": "/docs/ja/versailles/jardins/phaeton"
+				}
+			]
+		},
+		{
+			"name": "トリアノン",
+			"url": "/docs/ja/trianon",
+			"children": [
+				{
+					"name": "アラクネ",
+					"url": "/docs/ja/versailles/trianon/arachnee"
+				},
+				{
+					"name": "テイレシアス",
+					"url": "/docs/ja/versailles/trianon/tiresias"
+				},
+				{
+					"name": "イリス",
+					"url": "/docs/ja/versailles/trianon/iris"
+				},
+				{
+					"name": "フロラ",
+					"url": "/docs/ja/versailles/trianon/flore"
+				}
+			]
+		},
+		{
+			"name": "マルリー",
+			"url": "/docs/ja/marly",
+			"children": [
+				{
+					"name": "全体景観の２枚",
+					"url": "/docs/ja/versailles/marly/perre-denis-martin"
+				}
+			]
+		}
+	]
+},
+{
+	"name": "ランス",
+	"url": "/docs/ja/reims",
+	"children": [
+		{
+			"name": "レミ族",
+			"url": "/docs/ja/remes"
+		},
+		{
+			"name": "サン＝レミ",
+			"url": "/docs/ja/saint-remi"
+		}
+	]
+},
+{
+	"name": "ロワール古城",
+	"url": "/docs/ja/chateaux-de-la-loire",
+	"children": [
+		{
+			"name": "シュノンソー",
+			"url": "/docs/ja/chateaux-de-la-loire/chenonceau",
+			"children": [
+				{
+					"name": "ディアヌ",
+					"url": "/docs/ja/chateaux-de-la-loire/chenonceau/diane"
+				}
+			]
+		},
+		{
+			"name": "シュヴェルニー",
+			"url": "/docs/ja/chateaux-de-la-loire/cheverny",
+			"children": [
+				{
+					"name": "アドニス",
+					"url": "/docs/ja/chateaux-de-la-loire/cheverny/adonis"
+				},
+				{
+					"name": "ペルセウス",
+					"url": "/docs/ja/chateaux-de-la-loire/cheverny/perseus"
+				}
+			]
+		}
+	]
+},
+{
+	"name": "モン・サン・ミッシェル",
+	"url": "/docs/ja/mont-saint-michel",
+	"children": [
+		{
+			"name": "大天使ミカエル",
+			"url": "/docs/ja/mont-saint-michel/nom",
+			"children": [
+				{
+					"name": "ミカエルとの名",
+					"url": "/docs/ja/mont-saint-michel/nom"
+				},
+				{
+					"name": "黙示録",
+					"url": "/docs/ja/mont-saint-michel/apocalypse"
+				},
+				{
+					"name": "ダニエル書",
+					"url": "/docs/ja/mont-saint-michel/autres-docs"
+				},
+				{
+					"name": "黄金伝説",
+					"url": "/docs/ja/mont-saint-michel/legende-doree"
+				}
+			]
+		}
+	]
+},
+{
+	"name": "ブルージュ",
+	"url": "/docs/ja/bruges",
+	"children": [
+		{
+			"name": "聖ヨハネ施療院",
+			"url": "/docs/ja/bruges/hopital-saint-jean",
+			"children": [
+				{
+					"name": "聖ヨハネ",
+					"url": "/docs/ja/bruges/hopital-saint-jean"
+				},
+				{
+					"name": "聖ウルスラ",
+					"url": "/docs/ja/bruges/hopital-saint-jean/sainte-ursule"
+				},
+				{
+					"name": "マールテン・ファン・ニューウェンホーフェ",
+					"url": "/docs/ja/bruges/hopital-saint-jean/martin"
+				}
+			]
+		}
+	]
+}]
