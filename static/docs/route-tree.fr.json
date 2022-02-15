@@ -1,0 +1,263 @@
+{
+    "name": "Accueil",
+    "url": "/fr",
+    "children": [
+        {
+            "name": "blog",
+            "url": "/blog/fr",
+            "children": [
+                {
+                    "name": "phèdre",
+                    "url": "/blog/fr/phedre"
+                },
+                {
+                    "name": "marivaux",
+                    "url": "/blog/fr/marivaux"
+                },
+                {
+                    "name": "priscus",
+                    "url": "/blog/fr/priscus"
+                },
+                {
+                    "name": "diotime",
+                    "url": "/blog/fr/diotime"
+                },
+                {
+                    "name": "fontenelle",
+                    "url": "/blog/fr/fontenelle"
+                },
+                {
+                    "name": "ihoujin",
+                    "url": "/blog/fr/ihoujin"
+                },
+                {
+                    "name": "rousi",
+                    "url": "/blog/fr/rousi"
+                },
+                {
+                    "name": "louis xiv",
+                    "url": "/blog/fr/louis-xiv"
+                }
+            ]
+        },
+        {
+            "name": "docs",
+            "url": "/docs/fr",
+            "children": [
+                {
+                    "name": "paris",
+                    "url": "/docs/fr/paris",
+                    "children": [
+                        {
+                            "name": "louvre",
+                            "url": "/docs/fr/paris/louvre",
+                            "children": [
+                                {
+                                    "name": "la joconde",
+                                    "url": "/docs/fr/paris/louvre/la-joconde",
+                                    "children": [
+                                        {
+                                            "name": "La joconde selon vasari",
+                                            "url": "/docs/fr/paris/louvre/la-joconde/vasari"
+                                        },
+                                        {
+                                            "name": "La joconde selon gautier",
+                                            "url": "/docs/fr/paris/louvre/la-joconde/gautier"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "place vendome",
+                            "url": "/docs/fr/paris/place-vendome"
+                        }
+                    ]
+                },
+                {
+                    "name": "versailles",
+                    "url": "/docs/fr/versailles",
+                    "children": [
+                        {
+                            "name": "palais",
+                            "url": "/docs/fr/palais",
+                            "children": [
+                                {
+                                    "name": "hercule",
+                                    "url": "/docs/fr/versailles/palais/hercule"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "jardins",
+                            "url": "/docs/fr/jardins",
+                            "children": [
+                                {
+                                    "name": "Phaéton",
+                                    "url": "/docs/fr/versailles/jardins/phaeton"
+                                },
+                                {
+                                    "name": "Latone",
+                                    "url": "/docs/fr/versailles/jardins/latone"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "trianon",
+                            "url": "/docs/fr/trianon",
+                            "children": [
+                                {
+                                    "name": "arachnée",
+                                    "url": "/docs/fr/versailles/trianon/arachnee"
+                                },
+                                {
+                                    "name": "tiresias",
+                                    "url": "/docs/fr/versailles/trianon/tiresias"
+                                },
+                                {
+                                    "name": "iris",
+                                    "url": "/docs/fr/versailles/trianon/iris"
+                                },
+                                {
+                                    "name": "flore",
+                                    "url": "/docs/fr/versailles/trianon/flore"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "marly",
+                            "url": "/docs/fr/marly",
+                            "children": [
+                                {
+                                    "name": "marly selon pierre-denis martin",
+                                    "url": "/docs/fr/versailles/marly/perre-denis-martin"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "reims",
+                    "url": "/docs/fr/reims",
+                    "children": [
+                        {
+                            "name": "les rèmes",
+                            "url": "/docs/fr/remes"
+                        },
+                        {
+                            "name": "saint remi",
+                            "url": "/docs/fr/saint-remi"
+                        }
+                    ]
+                },
+                {
+                    "name": "chateaux de la loire",
+                    "url": "/docs/fr/chateaux-de-la-loire",
+                    "children": [
+                        {
+                            "name": "chenonceau",
+                            "url": "/docs/fr/chateaux-de-la-loire/chenonceau",
+                            "children": [
+                                {
+                                    "name": "diane",
+                                    "url": "/docs/fr/chateaux-de-la-loire/chenonceau/diane"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "cheverny",
+                            "url": "/docs/fr/chateaux-de-la-loire/cheverny",
+                            "children": [
+                                {
+                                    "name": "adonis",
+                                    "url": "/docs/fr/chateaux-de-la-loire/cheverny/adonis"
+                                },
+                                {
+                                    "name": "persée",
+                                    "url": "/docs/fr/chateaux-de-la-loire/cheverny/persee"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "mont saint-michel",
+                    "url": "/docs/fr/mont-saint-michel",
+                    "children": [
+                        {
+                            "name": "archange saint michel",
+                            "url": "/docs/fr/mont-saint-michel/nom",
+                            "children": [
+                                {
+                                    "name": "nom de michel",
+                                    "url": "/docs/fr/mont-saint-michel/nom"
+                                },
+                                {
+                                    "name": "apocalypse",
+                                    "url": "/docs/fr/mont-saint-michel/apocalypse"
+                                },
+                                {
+                                    "name": "ancien testament",
+                                    "url": "/docs/fr/mont-saint-michel/autres-docs"
+                                },
+                                {
+                                    "name": "légende dorée",
+                                    "url": "/docs/fr/mont-saint-michel/legende-doree"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "bruges",
+                    "url": "/docs/fr/bruges",
+                    "children": [
+                        {
+                            "name": "hopital saint-jean",
+                            "url": "/docs/fr/bruges/hopital-saint-jean",
+                            "children": [
+                                {
+                                    "name": "saint jean",
+                                    "url": "/docs/fr/bruges/hopital-saint-jean"
+                                },
+                                {
+                                    "name": "sainte ursule",
+                                    "url": "/docs/fr/bruges/hopital-saint-jean/sainte-ursule"
+                                },
+                                {
+                                    "name": "maarten van nieuwenhove",
+                                    "url": "/docs/fr/bruges/hopital-saint-jean/martin"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "profile",
+            "url": "/profile/fr"
+        },
+        {
+            "name": "c-u",
+            "url": "/c-u/fr"
+        },
+        {
+            "name": "crypto",
+            "url": "/crypto/fr"
+        },
+        {
+            "name": "error",
+            "url": "/error/fr"
+        },
+        {
+            "name": "form",
+            "url": "/form/fr"
+        },
+        {
+            "name": "organisation",
+            "url": "/organisation/fr"
+        }
+    ]
+
+}
