@@ -56,7 +56,7 @@
     export let lang = data.params.lang;
 	export let data2;
 		let indexData2 = data2.length;
-	console.log(data, data2, indexData2);
+	console.log(data, data2);
 </script>
 
 from [section] / [lang] / index.svelte,<br/>

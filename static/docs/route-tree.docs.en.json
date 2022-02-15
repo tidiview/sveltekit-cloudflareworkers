@@ -84,7 +84,7 @@
 			"children": [
 				{
 					"name": "2 general views",
-					"url": "/docs/en/versailles/marly/perre-denis-martin"
+					"url": "/docs/en/versailles/marly/pierre-denis-martin"
 				}
 			]
 		}
@@ -96,11 +96,11 @@
 	"children": [
 		{
 			"name": "the remi",
-			"url": "/docs/en/remes"
+			"url": "/docs/en/reims/remes"
 		},
 		{
 			"name": "saint remigius",
-			"url": "/docs/en/saint-remi"
+			"url": "/docs/en/reims/saint-remi"
 		}
 	]
 },
@@ -140,23 +140,23 @@
 	"children": [
 		{
 			"name": "archangel michael",
-			"url": "/docs/en/mont-saint-michel/nom",
+			"url": "/docs/en/mont-saint-michel/arch-michel",
 			"children": [
 				{
 					"name": "name of michael",
-					"url": "/docs/en/mont-saint-michel/nom"
+					"url": "/docs/en/mont-saint-michel/arch-michel/nom"
 				},
 				{
 					"name": "revelation",
-					"url": "/docs/en/mont-saint-michel/apocalypse"
+					"url": "/docs/en/mont-saint-michel/arch-michel/apocalypse"
 				},
 				{
 					"name": "other sources",
-					"url": "/docs/en/mont-saint-michel/autres-docs"
+					"url": "/docs/en/mont-saint-michel/arch-michel/autre-docs"
 				},
 				{
 					"name": "legenda aurea",
-					"url": "/docs/en/mont-saint-michel/legende-doree"
+					"url": "/docs/en/mont-saint-michel/arch-michel/legende-doree"
 				}
 			]
 		}

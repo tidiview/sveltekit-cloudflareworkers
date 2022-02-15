@@ -84,7 +84,7 @@
 			"children": [
 				{
 					"name": "全体景観の２枚",
-					"url": "/docs/ja/versailles/marly/perre-denis-martin"
+					"url": "/docs/ja/versailles/marly/pierre-denis-martin"
 				}
 			]
 		}
@@ -96,11 +96,11 @@
 	"children": [
 		{
 			"name": "レミ族",
-			"url": "/docs/ja/remes"
+			"url": "/docs/ja/reims/remes"
 		},
 		{
 			"name": "サン＝レミ",
-			"url": "/docs/ja/saint-remi"
+			"url": "/docs/ja/reims/saint-remi"
 		}
 	]
 },
@@ -140,23 +140,23 @@
 	"children": [
 		{
 			"name": "大天使ミカエル",
-			"url": "/docs/ja/mont-saint-michel/nom",
+			"url": "/docs/ja/mont-saint-michel/arch-michel",
 			"children": [
 				{
 					"name": "ミカエルとの名",
-					"url": "/docs/ja/mont-saint-michel/nom"
+					"url": "/docs/ja/mont-saint-michel/arch-michel/nom"
 				},
 				{
 					"name": "黙示録",
-					"url": "/docs/ja/mont-saint-michel/apocalypse"
+					"url": "/docs/ja/mont-saint-michel/arch-michel/apocalypse"
 				},
 				{
 					"name": "ダニエル書",
-					"url": "/docs/ja/mont-saint-michel/autres-docs"
+					"url": "/docs/ja/mont-saint-michel/arch-michel/autre-docs"
 				},
 				{
 					"name": "黄金伝説",
-					"url": "/docs/ja/mont-saint-michel/legende-doree"
+					"url": "/docs/ja/mont-saint-michel/arch-michel/legende-doree"
 				}
 			]
 		}

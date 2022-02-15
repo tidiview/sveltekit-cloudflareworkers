@@ -122,9 +122,6 @@
     let significantLinks = frontmatter.significantLinks;
     let specialty = frontmatter.specialty;
     let body = data3.articleBody; let bodyLength = body.length;
-	let body2 = data3.articleBody2; let body2Length; if (body2) {body2Length = body2.length};
-	let body3 = data3.articleBody3; let body3Length; if (body3) {body3Length =  body3.length};
-	let body4 = data3.articleBody4; let body4Length; if (body4) {body4Length = body4.length};
   export let data4;
   let rootTitle = data4.rootTitle;
   let sectionTitle = data4.docsTitle;
@@ -185,9 +182,9 @@ with frontmatter:
 <pre>[significantLinks]: {significantLinks}<br/>[specialty]: {specialty}</pre>
 
 and articleBody:
-<pre>[html body]: see below [bodyLength]: {bodyLength}{#if body2 !== undefined} [2]: {body2Length}{/if}{#if body3 !== undefined} [3]: {body3Length}{/if}{#if body4 !== undefined} [4]: {body4Length}{/if}</pre>
+<pre>[html body]: see below [bodyLength]: {bodyLength}</pre>
 
-<nav aria-label="Breadcrumb">
+<nav aria-label="breadcrumb">
   <ul class="breadcrumb">
     {#each [ {name: rootTitle, url: '/' + lang}, {name: sectionTitle, url: '/' + section + '/' + lang}, 
       {name: pathLevelOneTitle[path.split('/')[0]], url: '/' + section + '/' + lang + '/' + path.split('/')[0]}, {name: pathLevelTwoTitle[path.split('/')[1]], url: '/' + section + '/' + lang + '/' + path.split('/')[0] + '/' + path.split('/')[1]}, 
@@ -199,15 +196,8 @@ and articleBody:
   </ul>
 </nav>
 
-{#if body4 !== undefined}
-  {@html body + body2 + body3 + body4}
-{:else if body3 !== undefined}
-  {@html body + body2 + body3}
-{:else if body2 !== undefined}
-  {@html body + body2}
-{:else}
-  {@html body}
-{/if}
+{@html body}
+
 
 <style>
 	:global(.conversation) {
