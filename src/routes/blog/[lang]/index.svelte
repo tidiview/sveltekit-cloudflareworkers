@@ -54,7 +54,7 @@
     export let data;
     export let section = data.params.section;
     export let lang = data.params.lang;
-	export let data2;
+	// export let data2;
 </script>
 
 from [section] / [lang] / index.svelte,<br/>
