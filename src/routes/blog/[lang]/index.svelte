@@ -1,13 +1,12 @@
 <script context="module">
-    const valid_sections = new Set(['blog', 'docs', 'profile']);
     const valid_langs = new Set(['fr', 'ja', 'en']);
 
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ page, fetch }) {
         const section = 'blog';
         const lang = page.params.lang;
-        if (!valid_sections.has(section) || !valid_langs.has(lang)) {
-			console.log(`invalid parameter section: ${section} or lang: ${lang}`);
+        if ( !valid_langs.has(lang)) {
+			console.log(`invalid parameter lang: ${lang}`);
 			return {
 				status: 404,
 				error: 'Not found'
@@ -15,7 +14,7 @@
 		}
 		
 		// ${page.path}
-		// /docs/ja
+		// /blog/ja
 		const url = `/blog/` + lang + `.json`;
 		const res = await fetch(url);
 		
@@ -27,7 +26,7 @@
 		
 		const data = await res.json();
 		
-		// docs/route-tree.docs.ja.json
+		// blog/route-tree.blog.ja.json
 		const url2 = `/blog/route-tree.` + section + `.` + lang  + `.json`;
 		const res2 = await fetch(url2);
 
@@ -67,43 +66,4 @@ with:
 <pre>[section]: {section}</pre>
 <pre>[lang]: {lang}</pre>
 
-{#if section === 'docs'}
-<ol>
-	{#each data2 as data2}
-	<li>
-		<a href="{data2['url']}" rel="bookmark">{data2['name']}</a>
-	</li>
-	{#if data2['children']}
-		<ul>
-			{#each data2['children'] as children}
-			<li>
-				<a href="{children['url']}" rel="bookmark">{children['name']}</a>
-			</li>
-			{#if children['children']}
-			<ul>
-				{#each children['children'] as children2}
-				<li>
-					<a href="{children2['url']}">{children2['name']}</a>
-				</li>
-				{#if children2['children']}
-					<ul>
-					{#each children2['children'] as children3}
-						<li>
-							<a href="{children3['url']}">{children3['name']}</a>
-						</li>
-					{/each}
-					</ul>
-				{/if}
-				{/each}
-			</ul>
-			{/if}
-			{/each}
-		</ul>
-	{/if}
-	{/each}
-</ol>
-{:else if section === 'blog'}
-	prout blog
-{:else if section === 'profile'}
-	prout profile
-{/if}
+prout blog
