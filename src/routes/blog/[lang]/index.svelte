@@ -4,7 +4,7 @@
 
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ page, fetch }) {
-        const section = page.params.section;
+        const section = 'blog';
         const lang = page.params.lang;
         if (!valid_sections.has(section) || !valid_langs.has(lang)) {
 			console.log(`invalid parameter section: ${section} or lang: ${lang}`);
@@ -16,7 +16,7 @@
 		
 		// ${page.path}
 		// /docs/ja
-		const url = `/` + section + `/` + lang + `.json`;
+		const url = `/blog/` + lang + `.json`;
 		const res = await fetch(url);
 		
 		if (!res.ok)
@@ -28,7 +28,7 @@
 		const data = await res.json();
 		
 		// docs/route-tree.docs.ja.json
-		const url2 = `/` + section + `/route-tree.` + section + `.` + lang  + `.json`;
+		const url2 = `/blog/route-tree.` + section + `.` + lang  + `.json`;
 		const res2 = await fetch(url2);
 
 		if (!res2.ok)
@@ -42,6 +42,7 @@
 		return {
 			props: {
 				data,
+				section: 'blog',
 				data2
 			}
 		};
@@ -55,8 +56,6 @@
     export let section = data.params.section;
     export let lang = data.params.lang;
 	export let data2;
-		let indexData2 = data2.length;
-	console.log(data, data2);
 </script>
 
 from [section] / [lang] / index.svelte,<br/>
@@ -68,6 +67,7 @@ with:
 <pre>[section]: {section}</pre>
 <pre>[lang]: {lang}</pre>
 
+{#if section === 'docs'}
 <ol>
 	{#each data2 as data2}
 	<li>
@@ -102,3 +102,8 @@ with:
 	{/if}
 	{/each}
 </ol>
+{:else if section === 'blog'}
+	prout blog
+{:else if section === 'profile'}
+	prout profile
+{/if}
