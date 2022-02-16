@@ -1,13 +1,12 @@
 <script context="module">
-    const valid_sections = new Set(['blog', 'docs', 'profile']);
     const valid_langs = new Set(['fr', 'ja', 'en']);
 
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ page, fetch }) {
 		const section = 'docs';
         const lang = page.params.lang;
-        if (!valid_sections.has(section) || !valid_langs.has(lang)) {
-			console.log(`invalid parameter section: ${section} or lang: ${lang}`);
+        if ( !valid_langs.has(lang)) {
+			console.log(`invalid parameter or lang: ${lang}`);
 			return {
 				status: 404,
 				error: 'Not found'
@@ -67,7 +66,6 @@ with:
 <pre>[section]: {section}</pre>
 <pre>[lang]: {lang}</pre>
 
-{#if section === 'docs'}
 <ol>
 	{#each data2 as data2}
 	<li>
@@ -102,8 +100,3 @@ with:
 	{/if}
 	{/each}
 </ol>
-{:else if section === 'blog'}
-	prout blog
-{:else if section === 'profile'}
-	prout profile
-{/if}
