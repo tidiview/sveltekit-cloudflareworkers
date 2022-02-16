@@ -5,10 +5,6 @@
 	export async function load({ page, fetch }) {
         
 		const lang = page.params.lang;
-		var paramsString = page.query;
-		var searchParams = new URLSearchParams(paramsString);
-		const queryPage = searchParams.get('page');
-		console.log(queryPage);
         
 		if (!valid_langs.has(lang)) {
 			console.log(`invalid lang parameter ${lang}`);
@@ -18,23 +14,38 @@
 			};
 		}
 		
-		// /${params.lang}
-		// /ja
+		// /${params.lang}.json
+		// /ja.json
 		const url1 = `${lang}.json`;
 		const res = await fetch(url1);
-		const data = await res.json();
 
-		if (res.ok) {
+		if (!res.ok) {
 			return {
-				props: {
-					data
-				}
+			status: res.status,
+			error: new Error(`Could not load ${url1}`)
 			};
 		}
+
+		const data = await res.json();
+
+		// home.[lang].json
+		// home.ja.json
+		const url2 = `/home.` + data.params.lang + `.json`;
+		const res2 = await fetch(url2);
+
+		if (!res2.ok)
+			return {
+				status: res2.status,
+				error: new Error(`Could not load ${url2}`)
+			}
+
+		const data2 = await res2.json();
  
 		return {
-			status: res.status,
-			error: new Error(`Could not load ${url}`)
+			props: {
+				data,
+				data2
+			}
 		};
 
 	}
@@ -43,7 +54,9 @@
 <script>
     export let data;
     export let lang = data.params.lang;
-	console.log(data);
+    export let data2;
+    export let articleBody = data2.articleBody;
+	console.log(articleBody)
 </script>
 
 this is: <br/>
@@ -52,3 +65,5 @@ this is: <br/>
 <br/>
 with:
 <pre>[lang]: {lang}</pre>
+
+{@html articleBody}
