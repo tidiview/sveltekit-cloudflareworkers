@@ -137,12 +137,16 @@
     let body = data3.articleBody; let bodyLength = body.length;
   export let data4;
   let rootTitle = data4.rootTitle;
+  let rootUrl = "/" + lang;
   let sectionTitle = data4.docsTitle;
-  let pathLevelOneTitle = data4.pathLevelOneTitle;
-  let pathLevelTwoTitle = data4.pathLevelTwoTitle;
-  let pathLevelThreeTitle = data4.pathLevelThreeTitle;
-  let page = ;
-  const pageSchema = `<script type="application/ld+json">` + JSON.stringify([{ "@context": "http://schema.org", "@type": ["WebPageElement", itemPage], "url": url, "description": description, "significantLink": significantLinks, "specialty": specialty, "datePublished": formatToDateIso(date), "dateModified": formatToDateIso(modified), "mainEntityOfPage": { "@type": "ItemPage", url }, "headline": title, "author": { "@type": "Person", "name": "François VIDIT", "url": "https://francois-vidit.com/profile/" + lang }, "image": {	"@type": "ImageObject", "url": imageUrl, "name": imageFileName,	"width": imageWidth,	"height": imageHeight }, 	"publisher": { "@type": "Organization", "name": "francois-vidit.com", "logo": { "@type": "ImageObject", "url": "/francois-vidit-com_600x60.png"}}}, { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{		"@type": "ListItem", "position": 1, "item": { "@id": "/" + lang, "@type": "CollectionPage", "name": rootTitle } }, { "@type": "ListItem", "position": 2, "item": { "@id": "/docs/" + lang, "@type": "CollectionPage", "name": sectionTitle } }, { "@type": "ListItem", "position": 3, "item": {  "@id": '/' + section + '/' + lang + '/' + path.split('/')[0], "@type": "CollectionPage", "name": pathLevelOneTitle[path.split('/')[0]] } }, { "@type": "ListItem",   "position": 4, "item": { "@id": '/' + section + '/' + lang + '/' + path.split('/')[0] + '/' + path.split('/')[1], "@type": "CollectionPage",	"name": pathLevelTwoTitle[path.split('/')[1]] }	}, { "@type": "ListItem", "position": 5, "item": { "@id": '/' + section + '/' + lang + '/' + path.split('/')[0] + '/' + path.split('/')[1] + '/' + path.split('/')[2], "@type": "CollectionPage", "name": pathLevelThreeTitle[path.split('/')[2]] } }, { "@type": "ListItem", "position": 6, "item": { "@type": "ItemPage", "name": title }	}]
+  let sectionUrl = "/docs/" + lang;
+  let pathLevelOneTitle = data4.pathLevelOneTitle[path.split('/')[0]];
+  let pathLevelOneUrl = '/' + section + '/' + lang + '/' + path.split('/')[0];
+  let pathLevelTwoTitle = data4.pathLevelTwoTitle[path.split('/')[1]];
+  let pathLevelTwoUrl = '/' + section + '/' + lang + '/' + path.split('/')[0] + '/' + path.split('/')[1];
+  let pathLevelThreeTitle = data4.pathLevelThreeTitle[path.split('/')[2]];
+  let pathLevelThreeUrl = '/' + section + '/' + lang + '/' + path.split('/')[0] + '/' + path.split('/')[1] + '/' + path.split('/')[2];
+  const pageSchema = `<script type="application/ld+json">` + JSON.stringify([{ "@context": "http://schema.org", "@type": ["WebPageElement", itemPage], "url": url, "description": description, "significantLink": significantLinks, "specialty": specialty, "datePublished": formatToDateIso(date), "dateModified": formatToDateIso(modified), "mainEntityOfPage": { "@type": "ItemPage", url }, "headline": title, "author": { "@type": "Person", "name": "François VIDIT", "url": "https://francois-vidit.com/profile/" + lang }, "image": {	"@type": "ImageObject", "url": imageUrl, "name": imageFileName,	"width": imageWidth,	"height": imageHeight }, 	"publisher": { "@type": "Organization", "name": "francois-vidit.com", "logo": { "@type": "ImageObject", "url": "/francois-vidit-com_600x60.png"}}}, { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{		"@type": "ListItem", "position": 1, "item": { "@id": rootUrl, "@type": "CollectionPage", "name": rootTitle } }, { "@type": "ListItem", "position": 2, "item": { "@id": sectionUrl, "@type": "CollectionPage", "name": sectionTitle } }, { "@type": "ListItem", "position": 3, "item": {  "@id": pathLevelOneUrl, "@type": "CollectionPage", "name": pathLevelOneTitle } }, { "@type": "ListItem",   "position": 4, "item": { "@id": pathLevelTwoUrl, "@type": "CollectionPage",	"name": pathLevelTwoTitle }	}, { "@type": "ListItem", "position": 5, "item": { "@id": pathLevelThreeUrl, "@type": "CollectionPage", "name": pathLevelThreeTitle } }, { "@type": "ListItem", "position": 6, "item": { "@type": "ItemPage", "name": title }	}]
 }]) + `<\/script>`;
 </script>
 
@@ -204,9 +208,7 @@ and articleBody:
 
 <nav aria-label="breadcrumb">
   <ul class="breadcrumb">
-    {#each [ {name: rootTitle, url: '/' + lang}, {name: sectionTitle, url: '/' + section + '/' + lang}, 
-      {name: pathLevelOneTitle[path.split('/')[0]], url: '/' + section + '/' + lang + '/' + path.split('/')[0]}, {name: pathLevelTwoTitle[path.split('/')[1]], url: '/' + section + '/' + lang + '/' + path.split('/')[0] + '/' + path.split('/')[1]}, 
-      {name: pathLevelThreeTitle[path.split('/')[2]], url: '/' + section + '/' + lang + '/' + path.split('/')[0] + '/' + path.split('/')[1] + '/' + path.split('/')[2]} ] as { name, url }, i}
+    {#each [ {name: rootTitle, url: rootUrl}, {name: sectionTitle, url: sectionUrl}, {name: pathLevelOneTitle, url: pathLevelOneUrl}, {name: pathLevelTwoTitle, url: pathLevelTwoUrl}, {name: pathLevelThreeTitle, url: pathLevelThreeUrl} ] as { name, url }, i}
       {#if i < pathLevelDepth + 2}
         <li><a href={url}>{name}</a></li>
       {/if}
