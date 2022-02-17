@@ -100,6 +100,7 @@
     let itemPage = commonFrontmatter.itemPage;
 	let commonMetadata = commonFrontmatter.metadata;
 		let imageFileName = commonMetadata.imageFileName;
+      let imageUrl = "/" + slug + "/" + imageFileName;
 			let imageWidth = Number(imageFileName.split('_')[1].split('x')[0]);
 			let imageHeight = Number(imageFileName.split('_')[1].split('x')[1].split('.')[0]);
 			let imageType = imageFileName.split('.')[1];
@@ -113,7 +114,19 @@
     let menu = frontmatter.menu;
     let created = frontmatter.created;
     let date = frontmatter.date;
+    function formatToDateIso(someDate) {
+      const dateDay = String(someDate.split('-')[0]);
+      const dateMonth = String(someDate.split('-')[1]);
+      const dateYear = String(someDate.split('-')[2].split(',')[0]);
+      const dateHour = String(someDate.split(':')[0].split(' ')[1]);
+      const dateMinute = String(someDate.split(':')[1].split(',')[0]);
+      const timezoneOffset = '+01:00';
+      // String such as 2019-01-11T12:37:00+01:00
+      const dateISO = dateYear + '-' + dateMonth + '-' + dateDay + 'T' + dateHour + ':' + dateMinute + ':00' + timezoneOffset;
+      return dateISO;
+    };    
     let modified = frontmatter.modified;
+    let url = "/" + section  + "/" + lang + "/" + path + "/" + slug;
 	let metadata = frontmatter.metadata;
 		let description = metadata.description;let descriptionLength = description.length;
     	let keywords = metadata.keywords;
@@ -128,6 +141,8 @@
   let pathLevelOneTitle = data4.pathLevelOneTitle;
   let pathLevelTwoTitle = data4.pathLevelTwoTitle;
   let pathLevelThreeTitle = data4.pathLevelThreeTitle;
+  const pageSchema = `<script type="application/ld+json">` + JSON.stringify([{ "@context": "http://schema.org", "@type": ["WebPageElement", itemPage], "url": url, "description": description, "significantLink": significantLinks, "specialty": specialty, "datePublished": formatToDateIso(date), "dateModified": formatToDateIso(modified), "mainEntityOfPage": { "@type": "ItemPage", url }, "headline": title, "author": { "@type": "Person", "name": "François VIDIT", "url": "https://francois-vidit.com/profile/" + lang }, "image": {	"@type": "ImageObject", "url": imageUrl, "name": imageFileName,	"width": imageWidth,	"height": imageHeight }, 	"publisher": { "@type": "Organization", "name": "francois-vidit.com", "logo": { "@type": "ImageObject", "url": "/francois-vidit-com_600x60.png"}}}, { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{		"@type": "ListItem", "position": 1, "item": { "@id": "/ja", "@type": "CollectionPage", "name": "ホーム" } }, { "@type": "ListItem", "position": 2, "item": { "@id": "/docs,ja", "@type": "CollectionPage", "name": "ドックス" } }, { "@type": "ListItem", "position": 3, "item": {  "@id": "/docs/ja/paris", "@type": "CollectionPage", "name": "パリ" } }, { "@type": "ListItem",   "position": 4, "item": { "@id": "/docs/ja/paris/louvre", "@type": "CollectionPage",	"name": "ルーブル" }	}, { "@type": "ListItem", "position": 5, "item": { "@id": "/docs/ja/paris/louvre/la-joconde", "@type": "CollectionPage", "name": "モナ・リザ" }	}, { "@type": "ListItem", "position": 6, "item": { "@type": "ItemPage", "name": "ジョルジョ・ヴァザーリにおいてのモナ・リザ" }	}]
+}]) + `<\/script>`;
 </script>
 
 <svelte:head>
@@ -137,10 +152,10 @@
 	<meta name="description" content="{description}" property="og:description" />
 	<meta property="og:title" content="{title}" />
 	<meta property="og:site_name" content="francois-vidit.com" />
-	<meta property="og:url" content="/{section}/{lang}/{path}/{slug}" />
+	<meta property="og:url" content="{url}" />
 	<meta property="og:type" content="article" />
 
-	<meta name="image" content="/{slug}/{imageFileName}" property="og:image" /> 
+	<meta name="image" content="{imageUrl}" property="og:image" /> 
 	<meta content="{imageWidth}" property="og:image:width" /> 
 	<meta content="{imageHeight}" property="og:image:height" /> 
 	<meta content="{imageTitle}" property="og:image:title" />
@@ -158,6 +173,8 @@
 		{/if}
 		<link rel="alternate" href="https://francois-vidit.com/{section}/{i}/{path}/{slug}" hreflang="{i}" />
   {/each}
+
+  {@html pageSchema}
 </svelte:head>
 
 
