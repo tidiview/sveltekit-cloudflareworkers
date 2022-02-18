@@ -29,7 +29,7 @@
 		
 		// /section/lang/path/slug.json
 		// docs/ja/paris/louvre/la-joconde/vasari.json
-		const url1 = `/` + section + `/` + lang + `/`  + path + `/`  + slug + `.json`;
+		const url1 = '/' + section + '/' + lang + '/'  + path + '/'  + slug + '.json';
 		const res = await fetch(url1);
 
 		if (!res.ok)
@@ -41,7 +41,7 @@
 		const data = await res.json()
 
 		// docs/vasari.json
-		const url2 = `/` + data.params.section + `/` + data.params.slug + `/` + data.params.slug + `.json`;
+		const url2 = '/' + data.params.section + '/' + data.params.slug + '/' + data.params.slug + '.json';
 		const res2 = await fetch(url2);
 
 		if (!res2.ok)
@@ -53,7 +53,7 @@
 		const data2 = await res2.json();
 
 		// docs/vasari.ja.json or docs/vasari2.ja.json
-		const url3 = queryPage? `/` + data.params.section + `/` + data.params.slug + `/` + data.params.slug + queryPage + `.` + data.params.lang + `.json` : `/` + data.params.section + `/` + data.params.slug + `/` + data.params.slug + `.` + data.params.lang + `.json`;
+		const url3 = queryPage? '/' + data.params.section + '/' + data.params.slug + '/' + data.params.slug + queryPage + '.' + data.params.lang + '.json' : '/' + data.params.section + '/' + data.params.slug + '/' + data.params.slug + '.' + data.params.lang + '.json';
 		const res3 = await fetch(url3);
 
 		if (!res3.ok)
@@ -65,7 +65,7 @@
 		const data3 = await res3.json();
 
 		// docs/breadcrumb.ja.json breadcrumb
-		const url4 = `/` + data.params.section + `/breadcrumb.` + data.params.lang + `.json`;
+		const url4 = '/' + data.params.section + '/breadcrumb.' + data.params.lang + '.json';
 		const res4 = await fetch(url4);
 
 		if (!res4.ok)
@@ -100,7 +100,7 @@
     const itemPage = commonFrontmatter.itemPage;
 	const commonMetadata = commonFrontmatter.metadata;
 		const imageFileName = commonMetadata.imageFileName;
-      const imageUrl = "/" + slug + "/" + imageFileName;
+      const imageUrl = '/' + slug + '/' + imageFileName;
 			const imageWidth = Number(imageFileName.split('_')[1].split('x')[0]);
 			const imageHeight = Number(imageFileName.split('_')[1].split('x')[1].split('.')[0]);
 			const imageType = imageFileName.split('.')[1];
@@ -126,7 +126,7 @@
       return dateISO;
     };    
     const modified = frontmatter.modified;
-    const url = "/" + section  + "/" + lang + "/" + path + "/" + slug;
+    const url = '/' + section  + '/' + lang + '/' + path + '/' + slug;
 	const metadata = frontmatter.metadata;
 		const description = metadata.description;const descriptionLength = description.length;
     	const keywords = metadata.keywords;
@@ -137,9 +137,9 @@
     const body = data3.articleBody; let bodyLength = body.length;
   export let data4;
   const rootTitle = data4.rootTitle;
-  const rootUrl = "/" + lang;
+  const rootUrl = '/' + lang;
   const sectionTitle = data4.docsTitle;
-  const sectionUrl = "/docs/" + lang;
+  const sectionUrl = '/docs/' + lang;
   const pathLevelOneTitle = data4.pathLevelOneTitle[path.split('/')[0]];
   const pathLevelOneUrl = '/' + section + '/' + lang + '/' + path.split('/')[0];
   const pathLevelTwoTitle = data4.pathLevelTwoTitle[path.split('/')[1]];
@@ -150,10 +150,10 @@
   const langUrlArrayLink = [];
   const langUrlArrayRelated = [];
   for (let i of ['fr', 'ja', 'en']) {
-    let langUrlPrefix = `<link rel="`;
-    let langUrlMiddle = `" href="`;
-    let langUrlLink = `https://francois-vidit.com/` + section + `/` + i + `/` + path + `/` + slug;
-    let langUrlHreflang = `" hreflang="` + i + `" />`;
+    let langUrlPrefix = '<link rel="';
+    let langUrlMiddle = '" href="';
+    let langUrlLink = '/' + section + '/' + i + '/' + path + '/' + slug;
+    let langUrlHreflang = '" hreflang="' + i + '" />';
     const langUrlAlternate = langUrlPrefix + 'alternate' + langUrlMiddle + langUrlLink + langUrlHreflang;
     if ( lang === i) {
       langUrlCanonical = langUrlPrefix + 'canonical' + langUrlMiddle + langUrlLink + langUrlHreflang;
@@ -164,7 +164,7 @@
     };
     langUrlArrayLink.push(langUrlAlternate);
   }
-  const pageSchema = `<script type="application/ld+json">` + JSON.stringify([{ "@context": "http://schema.org", "@type": ["WebPageElement", itemPage], "url": url, "description": description, "relatedLink": langUrlArrayRelated, "significantLink": significantLinks, "specialty": specialty, "datePublished": formatToDateIso(date), "dateModified": formatToDateIso(modified), "mainEntityOfPage": { "@type": "ItemPage", url }, "headline": title, "author": { "@type": "Person", "name": "François VIDIT", "url": "https://francois-vidit.com/profile/" + lang }, "image": {	"@type": "ImageObject", "url": imageUrl, "name": imageFileName,	"width": imageWidth,	"height": imageHeight }, 	"publisher": { "@type": "Organization", "name": "francois-vidit.com", "logo": { "@type": "ImageObject", "url": "/francois-vidit-com_600x60.png"}}}, { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{		"@type": "ListItem", "position": 1, "item": { "@id": rootUrl, "@type": "CollectionPage", "name": rootTitle } }, { "@type": "ListItem", "position": 2, "item": { "@id": sectionUrl, "@type": "CollectionPage", "name": sectionTitle } }, { "@type": "ListItem", "position": 3, "item": {  "@id": pathLevelOneUrl, "@type": "CollectionPage", "name": pathLevelOneTitle } }, { "@type": "ListItem",   "position": 4, "item": { "@id": pathLevelTwoUrl, "@type": "CollectionPage",	"name": pathLevelTwoTitle }	}, { "@type": "ListItem", "position": 5, "item": { "@id": pathLevelThreeUrl, "@type": "CollectionPage", "name": pathLevelThreeTitle } }, { "@type": "ListItem", "position": 6, "item": { "@type": "ItemPage", "name": title }	}]}]) + `<\/script>`;
+  const pageSchema = `<script type="application/ld+json">` + JSON.stringify([{ "@context": "http://schema.org", "@type": ["WebPageElement", itemPage], "url": url, "description": description, "relatedLink": langUrlArrayRelated, "significantLink": significantLinks, "specialty": specialty, "datePublished": formatToDateIso(date), "dateModified": formatToDateIso(modified), "mainEntityOfPage": { "@type": "ItemPage", url }, "headline": title, "author": { "@type": "Person", "name": "François VIDIT", "url": "/profile/" + lang }, "image": {	"@type": "ImageObject", "url": imageUrl, "name": imageFileName,	"width": imageWidth,	"height": imageHeight }, 	"publisher": { "@type": "Organization", "name": "francois-vidit.com", "logo": { "@type": "ImageObject", "url": "/francois-vidit-com_600x60.png"}}}, { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{		"@type": "ListItem", "position": 1, "item": { "@id": rootUrl, "@type": "CollectionPage", "name": rootTitle } }, { "@type": "ListItem", "position": 2, "item": { "@id": sectionUrl, "@type": "CollectionPage", "name": sectionTitle } }, { "@type": "ListItem", "position": 3, "item": {  "@id": pathLevelOneUrl, "@type": "CollectionPage", "name": pathLevelOneTitle } }, { "@type": "ListItem",   "position": 4, "item": { "@id": pathLevelTwoUrl, "@type": "CollectionPage",	"name": pathLevelTwoTitle }	}, { "@type": "ListItem", "position": 5, "item": { "@id": pathLevelThreeUrl, "@type": "CollectionPage", "name": pathLevelThreeTitle } }, { "@type": "ListItem", "position": 6, "item": { "@type": "ItemPage", "name": title }	}]}]) + `<\/script>`;
 </script>
 
 <svelte:head>
