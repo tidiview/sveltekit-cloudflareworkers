@@ -53,7 +53,7 @@
 		const data2 = await res2.json();
 
 		// docs/vasari.ja.json or docs/vasari2.ja.json
-		const url3 = queryPage? '/' + data.params.section + '/' + data.params.slug + '/' + data.params.slug + queryPage + '.' + data.params.lang + '.json' : '/' + data.params.section + '/' + data.params.slug + '/' + data.params.slug + '.' + data.params.lang + '.json';
+		const url3 = queryPage ? '/' + data.params.section + '/' + data.params.slug + '/' + data.params.slug + queryPage + '.' + data.params.lang + '.json' : '/' + data.params.section + '/' + data.params.slug + '/' + data.params.slug + '.' + data.params.lang + '.json';
 		const res3 = await fetch(url3);
 
 		if (!res3.ok)
@@ -62,6 +62,7 @@
 			error: new Error(`Could not load ${url3}`)
 		}
 
+    const pageNumber = queryPage;
 		const data3 = await res3.json();
 
 		// docs/breadcrumb.ja.json breadcrumb
@@ -81,6 +82,7 @@
 				data,
 				data2,
 				data3,
+        pageNumber,
         data4
 			}
 		};
@@ -97,6 +99,7 @@
     const slug = params.slug;
 	export let data2;
 	const commonFrontmatter = data2.commonFrontmatter;
+    const totalPageNumber = Number(commonFrontmatter.totalPageNumber);
     const itemPage = commonFrontmatter.itemPage;
 	const commonMetadata = commonFrontmatter.metadata;
 		const imageFileName = commonMetadata.imageFileName;
@@ -109,7 +112,7 @@
 		const sitemapChangefreq = sitemap.changefreq;
 		const sitemapPriority = sitemap.priority;
   export let data3;
-	const frontmatter = data3.frontmatter
+	const frontmatter = data3.frontmatter;
     const title = frontmatter.title;const titleLength = title.length;
     const menu = frontmatter.menu;
     const created = frontmatter.created;
@@ -135,6 +138,27 @@
     const significantLinks = frontmatter.significantLinks;
     const specialty = frontmatter.specialty;
     const body = data3.articleBody; let bodyLength = body.length;
+  
+  export let pageNumber;
+    let pagination = [];
+    if ( totalPageNumber !== undefined ) {
+      if ( pageNumber == undefined ) {
+        pagination = [0, 1, 2];
+      }
+      else if ( Number(pageNumber) === Number(totalPageNumber) ) {
+        pagination = [Number(totalPageNumber) - 1, Number(totalPageNumber), 0];
+
+      }
+      else {
+        pagination = [Number(pageNumber) - 1, Number(pageNumber), Number(pageNumber) + 1]
+      }
+    };
+    const paginationPreviousPageUrl = pagination[0] === 0 ? url : url + '?page=' + pagination[0]; console.log(paginationPreviousPageUrl);
+    const paginationCurrentPageUrl = pagination[1] === 0 ? url : url + '?page=' + pagination[1]; console.log(paginationCurrentPageUrl);
+    const paginationNextPageUrl = pagination[2] === 0 ? null : url + '?page=' + pagination[2]; console.log(paginationNextPageUrl);
+    const wordNext = {fr: 'suivant', ja: '次', en: 'next'};
+    const wordPrevious = {fr: 'précédent', ja: '前', en: 'previous'};
+    
   export let data4;
   const rootTitle = data4.rootTitle;
   const rootUrl = '/' + lang;
@@ -226,6 +250,26 @@ and articleBody:
     {/each}
   </ul>
 </nav>
+
+{#if totalPageNumber !== undefined }
+  <nav aria-label="pagination">
+    <ul class="pagination">
+      {#if pagination[0] !== 0 }
+      {#if pagination[0] >= 2 }
+      <li><a href={url}>1</a></li>
+      {#if pagination[0] >= 3 }<li class="gap">…</li>{/if}
+      {/if}
+      <li><a href={paginationPreviousPageUrl} rel="preload previous">{wordPrevious[lang]} &laquo; {pagination[0]}</a></li>
+      {/if}
+      <li><a href={paginationCurrentPageUrl}>{pagination[1]}</a></li>
+      {#if pagination[2] !== 0 }
+      <li><a href={paginationNextPageUrl} rel="preload next">{pagination[2]} &raquo; {wordNext[lang]}</li>
+      {#if pagination[2] <= totalPageNumber - 2}<li class="gap">…</li>{/if}
+      {#if pagination[2] <= totalPageNumber - 1}<li class="gap"><a href={url + '?page=' + totalPageNumber}>{totalPageNumber}</a></li>{/if}
+    {/if}
+    </ul>
+  </nav>
+{/if}
 
 {@html body}
 
