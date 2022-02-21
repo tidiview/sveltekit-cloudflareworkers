@@ -261,11 +261,13 @@ and articleBody:
       <li><a href={url}>1</a></li>
       {#if pagination[0] >= 3 }<li>…</li>{/if}
       {/if}
-      <li><a href={paginationPreviousPageUrl} rel="preload previous">{wordPrevious[lang]} &laquo; {pagination[0]}</a></li>
+      <li><a href={paginationPreviousPageUrl} rel="preload previous">&laquo; {wordPrevious[lang]}</a></li>
+      <li><a href={paginationPreviousPageUrl}>{pagination[0]}</a></li>
       {/if}
-      <li><a href={paginationCurrentPageUrl}>{pagination[1]}</a></li>
+      <li> {pagination[1]}</li>
       {#if pagination[2] !== 0 }
-      <li><a href={paginationNextPageUrl} rel="preload next">{pagination[2]} &raquo; {wordNext[lang]}</li>
+      <li><a href={paginationNextPageUrl} rel="preload next">{pagination[2]}</li>
+        <li><a href={paginationNextPageUrl}>{wordNext[lang]} &raquo;</li>
       {#if pagination[2] <= totalPageNumber - 2}<li>…</li>{/if}
       {#if pagination[2] <= totalPageNumber - 1}<li><a href={url + '?page=' + totalPageNumber}>{totalPageNumber}</a></li>{/if}
     {/if}
@@ -443,16 +445,30 @@ and articleBody:
     margin-top: 1em;
   }
 
-  :global(ul.breadcrumb) {
+  :global(ul.breadcrumb, ul.pagination) {
     list-style: none;
   }
 
-  :global(ul.breadcrumb li) {
+  :global(ul.breadcrumb li, ul.pagination li) {
     display: inline;
   }
 
   :global(ul.breadcrumb li+li:before) {
     content: ">";
     padding: 10px; 
+  }
+
+  :global(ul.pagination li) {
+    text-align: center;
+    padding: 4px 5px;
+  }
+
+  :global(ul.pagination li+li:before) {
+    content: " ";
+  }
+
+  :global(ul.pagination li a) {
+    border: 1px solid #444;
+    padding: 10px;
   }
 </style>
