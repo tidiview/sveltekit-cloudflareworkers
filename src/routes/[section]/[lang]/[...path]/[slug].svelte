@@ -153,12 +153,13 @@
         pagination = [Number(pageNumber) - 1, Number(pageNumber), Number(pageNumber) + 1]
       }
     };
-    const paginationPreviousPageUrl = pagination[0] === 0 ? url : url + '?page=' + pagination[0]; console.log(paginationPreviousPageUrl);
-    const paginationCurrentPageUrl = pagination[1] === 0 ? url : url + '?page=' + pagination[1]; console.log(paginationCurrentPageUrl);
-    const paginationNextPageUrl = pagination[2] === 0 ? null : url + '?page=' + pagination[2]; console.log(paginationNextPageUrl);
+    const paginationPreviousPageUrl = pagination[0] === 0 ? null : pagination[0] === 1 ? url : url + '?page=' + pagination[0]; console.log(paginationPreviousPageUrl);
+    const paginationCurrentPageUrl = url + '?page=' + pagination[1];
+    const paginationNextPageUrl = pagination[2] === 0 ? null : url + '?page=' + pagination[2];
     const wordNext = {fr: 'suivant', ja: '次', en: 'next'};
     const wordPrevious = {fr: 'précédent', ja: '前', en: 'previous'};
-    
+    const prevNextUrlLink = paginationPreviousPageUrl !== null && paginationNextPageUrl !== null ? '<link rel="prev" href="' + paginationPreviousPageUrl + '"><link rel="next" href="' + paginationNextPageUrl + '">' : paginationPreviousPageUrl === null ? '<link rel="next" href="' + paginationNextPageUrl + '">' : '<link rel="prev" href="' + paginationPreviousPageUrl + '">';
+
   export let data4;
   const rootTitle = data4.rootTitle;
   const rootUrl = '/' + lang;
@@ -171,16 +172,16 @@
   const pathLevelThreeTitle = data4.pathLevelThreeTitle[path.split('/')[2]];
   const pathLevelThreeUrl = '/' + section + '/' + lang + '/' + path.split('/');[0] + '/' + path.split('/')[1] + '/' + path.split('/')[2];
 
-  const langUrlArrayLink = [];
+  const langUrlArrayLink = []; //pagination??
   const langUrlArrayRelated = [];
   for (let i of ['fr', 'ja', 'en']) {
     let langUrlPrefix = '<link rel="';
     let langUrlMiddle = '" href="';
-    let langUrlLink = '/' + section + '/' + i + '/' + path + '/' + slug;
+    let langUrlLink = pageNumber ? '/' + section + '/' + i + '/' + path + '/' + slug +  '?page=' + pageNumber : '/' + section + '/' + i + '/' + path + '/' + slug;
     let langUrlHreflang = '" hreflang="' + i + '" />';
     const langUrlAlternate = langUrlPrefix + 'alternate' + langUrlMiddle + langUrlLink + langUrlHreflang;
     if ( lang === i) {
-      langUrlCanonical = langUrlPrefix + 'canonical' + langUrlMiddle + langUrlLink + langUrlHreflang;
+      let langUrlCanonical = langUrlPrefix + 'canonical' + langUrlMiddle + langUrlLink + langUrlHreflang;
       langUrlArrayLink.push(langUrlCanonical);
     }
     else {
@@ -188,7 +189,7 @@
     };
     langUrlArrayLink.push(langUrlAlternate);
   }
-  const pageSchema = `<script type="application/ld+json">` + JSON.stringify([{ "@context": "http://schema.org", "@type": ["WebPageElement", itemPage], "url": url, "description": description, "relatedLink": langUrlArrayRelated, "significantLink": significantLinks, "specialty": specialty, "datePublished": formatToDateIso(date), "dateModified": formatToDateIso(modified), "mainEntityOfPage": { "@type": "ItemPage", url }, "headline": title, "author": { "@type": "Person", "name": "François VIDIT", "url": "/profile/" + lang }, "image": {	"@type": "ImageObject", "url": imageUrl, "name": imageFileName,	"width": imageWidth,	"height": imageHeight }, 	"publisher": { "@type": "Organization", "name": "francois-vidit.com", "logo": { "@type": "ImageObject", "url": "/francois-vidit-com_600x60.png"}}}, { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{		"@type": "ListItem", "position": 1, "item": { "@id": rootUrl, "@type": "CollectionPage", "name": rootTitle } }, { "@type": "ListItem", "position": 2, "item": { "@id": sectionUrl, "@type": "CollectionPage", "name": sectionTitle } }, { "@type": "ListItem", "position": 3, "item": {  "@id": pathLevelOneUrl, "@type": "CollectionPage", "name": pathLevelOneTitle } }, { "@type": "ListItem",   "position": 4, "item": { "@id": pathLevelTwoUrl, "@type": "CollectionPage",	"name": pathLevelTwoTitle }	}, { "@type": "ListItem", "position": 5, "item": { "@id": pathLevelThreeUrl, "@type": "CollectionPage", "name": pathLevelThreeTitle } }, { "@type": "ListItem", "position": 6, "item": { "@type": "ItemPage", "name": title }	}]}]) + `<\/script>`;
+  const pageSchema = `<script type="application/ld+json">` + JSON.stringify([{ "@context": "http://schema.org", "@type": itemPage, "url": url, "description": description, "relatedLink": langUrlArrayRelated, "significantLink": significantLinks, "specialty": specialty, "datePublished": formatToDateIso(date), "dateModified": formatToDateIso(modified), "mainEntityOfPage": { "@type": "ItemPage", url }, "headline": title, "author": { "@type": "Person", "name": "François VIDIT", "url": "/profile/" + lang }, "image": {	"@type": "ImageObject", "url": imageUrl, "name": imageFileName,	"width": imageWidth,	"height": imageHeight }, 	"publisher": { "@type": "Organization", "name": "francois-vidit.com", "logo": { "@type": "ImageObject", "url": "/francois-vidit-com_600x60.png"}}}, { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{		"@type": "ListItem", "position": 1, "item": { "@id": rootUrl, "@type": "CollectionPage", "name": rootTitle } }, { "@type": "ListItem", "position": 2, "item": { "@id": sectionUrl, "@type": "CollectionPage", "name": sectionTitle } }, { "@type": "ListItem", "position": 3, "item": {  "@id": pathLevelOneUrl, "@type": "CollectionPage", "name": pathLevelOneTitle } }, { "@type": "ListItem",   "position": 4, "item": { "@id": pathLevelTwoUrl, "@type": "CollectionPage",	"name": pathLevelTwoTitle }	}, { "@type": "ListItem", "position": 5, "item": { "@id": pathLevelThreeUrl, "@type": "CollectionPage", "name": pathLevelThreeTitle } }, { "@type": "ListItem", "position": 6, "item": { "@type": "ItemPage", "name": title }	}]}]) + `<\/script>`;
 </script>
 
 <svelte:head>
@@ -214,6 +215,7 @@
     <meta name="google" content="notranslate" />
 
   {@html langUrlArrayLink}
+  {@html prevNextUrlLink}
   {@html pageSchema}
 </svelte:head>
 
@@ -257,15 +259,15 @@ and articleBody:
       {#if pagination[0] !== 0 }
       {#if pagination[0] >= 2 }
       <li><a href={url}>1</a></li>
-      {#if pagination[0] >= 3 }<li class="gap">…</li>{/if}
+      {#if pagination[0] >= 3 }<li>…</li>{/if}
       {/if}
       <li><a href={paginationPreviousPageUrl} rel="preload previous">{wordPrevious[lang]} &laquo; {pagination[0]}</a></li>
       {/if}
       <li><a href={paginationCurrentPageUrl}>{pagination[1]}</a></li>
       {#if pagination[2] !== 0 }
       <li><a href={paginationNextPageUrl} rel="preload next">{pagination[2]} &raquo; {wordNext[lang]}</li>
-      {#if pagination[2] <= totalPageNumber - 2}<li class="gap">…</li>{/if}
-      {#if pagination[2] <= totalPageNumber - 1}<li class="gap"><a href={url + '?page=' + totalPageNumber}>{totalPageNumber}</a></li>{/if}
+      {#if pagination[2] <= totalPageNumber - 2}<li>…</li>{/if}
+      {#if pagination[2] <= totalPageNumber - 1}<li><a href={url + '?page=' + totalPageNumber}>{totalPageNumber}</a></li>{/if}
     {/if}
     </ul>
   </nav>
