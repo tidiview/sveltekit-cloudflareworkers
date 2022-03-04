@@ -1,0 +1,16 @@
+{
+  "commonFrontmatter": {
+    "created": "03-03-2021, 21:02",
+    "date": "03-03-2021, 21:02",
+    "modified": "03-03-2021, 21:02",
+    "itemPage": "CollectionPage",
+    "metadata": {
+      "imageFileName": "reference_700x426.png",
+      "twitterCard": "summary"
+    },
+    "sitemap": {
+      "changefreq": "yearly",
+      "priority": 0.3
+    }
+  }
+}

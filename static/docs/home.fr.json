@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Docs",
+    "menu": "docs",
+    "created": "15-01-2016, 07:10",
+    "date": "19-08-2016, 17:58",
+    "modified": "20-03-2018, 23:48",
+    "metadata": {
+      "description": "la section Documents propose des documents afin d'approfondir certains aspects d'œuvres présentés durant les visites de monuments historiques importants de France.",
+      "keywords": "Documents, Section Document",
+      "imageTitle": "bleu",
+      "imageLegend": "couleur bleue de la section Documents du site francois-vidit.com."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/chapter.fr.md"],
+    "specialty": ["Histoire de France"]
+  },
+  "articleBody": "<h1>Table des Ma<wbr>tières</h1>\n<p>Dans cette section, se trouve des documents qui permettent d'approfondir les visites.<br>\nN'hésitez pas à consulter!</p>"
+}

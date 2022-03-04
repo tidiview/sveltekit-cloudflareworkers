@@ -1,0 +1,18 @@
+{
+  "frontmatter": {
+    "title": "Documents",
+    "menu": "docs",
+    "created": "15-01-2016, 07:10",
+    "date": "19-08-2016, 17:58",
+    "modified": "20-03-2018, 23:52",
+    "metadata": {
+      "description": "Documents section offers documents to get deeper into some aspects of a work of arts presented during the visits of some important historical monuments in France.",
+      "keywords": "Documents, Documents section",
+      "imageTitle": "blue",
+      "imageLegend": "Blue colour of the documents section of site francois-vidit.com."
+    },
+    "significantLinks": ["https://github.com/tidiview/francois-vidit.com/blob/develop/user/sites/docs/pages/01.home/chapter.en.md"],
+    "specialty": ["History of France"]
+  },
+  "articleBody": "<h1>Table of Con<wbr>tents</h1>\n<p>In this section, are documents to get deeper into visits.<br>\nPlease, feel free to have a look!</p>"
+}
