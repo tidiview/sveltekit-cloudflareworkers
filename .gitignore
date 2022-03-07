@@ -1,7 +1,9 @@
 .DS_Store
 node_modules
 /build
+/worker-site
 /.svelte-kit
 /package
 .env
 .vscode/settings.json
+wrangler.toml
