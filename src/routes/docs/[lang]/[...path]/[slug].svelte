@@ -198,7 +198,7 @@
       otherLangNameAndUrlArray.push({ url: langUrlLink, name: languageNameObject[lang][i] });
     };
     langUrlArrayString = langUrlArrayString + langUrlAlternate;
-  }; console.log(langUrlArrayString)
+  }; // console.log(langUrlArrayString)
   let itemPageSchema;
     if( itemPage === 'Article') {
       itemPageSchema = `<script type="application/ld+json">` + JSON.stringify({ "@context": "http://schema.org", "@type": itemPage, "url": urlWithQueryPageIfNecessary, "description": description, "relatedLink": langUrlArrayRelated, "significantLink": significantLinks, "specialty": specialty, "datePublished": formatToDateIso(date), "dateModified": formatToDateIso(modified), "mainEntityOfPage": { "@type": "ItemPage", "url": urlWithQueryPageIfNecessary }, "headline": title, "author": { "@type": "Person", "name": "François VIDIT", "url": "/profile/" + lang }, "image": {	"@type": "ImageObject", "url": imageUrl, "name": imageFileName,	"width": imageWidth,	"height": imageHeight }, 	"publisher": { "@type": "Organization", "name": "francois-vidit.com", "logo": { "@type": "ImageObject", "url": "/francois-vidit-com_600x60.png"}}}) + `<\/script>`;

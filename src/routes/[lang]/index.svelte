@@ -6,13 +6,13 @@
         
 		const lang = page.params.lang;
         
-		if (!valid_langs.has(lang)) {
+		/* if (!valid_langs.has(lang)) {
 			console.log(`invalid lang parameter ${lang}`);
 			return {
 				status: 404,
 				error: 'Not found'
 			};
-		}
+		} */
 		
 		// /${lang}.json
 		// /ja.json
@@ -98,7 +98,7 @@
 		// const specialty = frontmatter.specialty;
 		const body = data3.articleBody;
 	// titles
-	rootTitleLang = {fr: "Accueil", ja: "ホーム", en: "Home"}
+	const rootTitleLang = {fr: "Accueil", ja: "ホーム", en: "Home"}
 	const rootTitle = rootTitleLang[lang];
 	// urls
 	const rootUrl = '/' + lang;
