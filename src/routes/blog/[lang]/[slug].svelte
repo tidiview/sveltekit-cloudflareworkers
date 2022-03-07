@@ -5,6 +5,7 @@
 	
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ page, fetch }) {
+
     const lang = page.params.lang;
     const slug = page.params.slug;
     var paramsString = page.query;
@@ -22,22 +23,20 @@
   
     // /${params.section}/${params.lang}/${params.slug}.json
     // /blog/ja/rousi
-    const url = `${page.path}.json`;
+    const url = '/blog/' + data.params.slug + '.json';
     const res = await fetch(url);
 
-    if (!res.ok)
-    return {
+    if (!res.ok) return {
       status: res.status,
       error: new Error(`Could not load ${url}`)
     };
 
     const data = await res.json()
     // docs/vasari.json
-    const url2 = `/blog/` + data.params.slug + `/` + data.params.slug + `.json`;
+    const url2 = '/blog/' + data.params.slug + '/' + data.params.slug + '.json';
     const res2 = await fetch(url2);
 
-    if (!res2.ok)
-    return {
+    if (!res2.ok) return {
       status: res2.status,
       error: new Error(`Could not load ${url2}`)
     }
@@ -48,8 +47,7 @@
     const url3 = queryPage ? '/blog/' + data.params.slug + '/' + data.params.slug + queryPage + '.' + data.params.lang + '.json' : '/blog/' + data.params.slug + '/' + data.params.slug + '.' + data.params.lang + '.json';
     const res3 = await fetch(url3);
 
-    if (!res3.ok)
-    return {
+    if (!res3.ok) return {
       status: res3.status,
       error: new Error(`Could not load ${url3}`)
     }
@@ -61,8 +59,7 @@
     const url4 = '/blog/breadcrumb.' + data.params.lang + '.json';
     const res4 = await fetch(url4);
 
-    if (!res4.ok)
-    return {
+    if (!res4.ok) return {
       status: res4.status,
       error: new Error(`Could not load ${url4}`)
     }
@@ -72,10 +69,8 @@
       fallthrough: true,
       props: {
         data,
-        section: 'blog',
         data2,
         data3,
-        pageNumber: pageNumber,
         data4
       }
     };
@@ -161,7 +156,7 @@
   };
   const breadrumbArray = [ {name: rootTitle, url: rootUrl}, {name: sectionTitle, url: sectionUrl}, {name: pathLevelOneTitle, url: pathLevelOneUrl} ];
 
-  const langUrlArrayLink = [];
+  let langUrlArrayString = '';
   const langUrlArrayRelated = [];
   for (let i of ['fr', 'ja', 'en']) {
     let langUrlPrefix = '<link rel="';
@@ -171,12 +166,12 @@
     const langUrlAlternate = langUrlPrefix + 'alternate' + langUrlMiddle + langUrlLink + langUrlHreflang;
     if ( lang === i) {
       let langUrlCanonical = langUrlPrefix + 'canonical' + langUrlMiddle + langUrlLink + langUrlHreflang;
-      langUrlArrayLink.push(langUrlCanonical);
+      langUrlArrayString = langUrlArrayString + langUrlCanonical;
     }
     else {
       langUrlArrayRelated.push(langUrlLink);
     };
-    langUrlArrayLink.push(langUrlAlternate);
+    langUrlArrayString = langUrlArrayString + langUrlAlternate;
   }
   const pageSchema = `<script type="application/ld+json">` + JSON.stringify([{ "@context": "http://schema.org", "@type": itemPage, "url": url, "description": description, "relatedLink": langUrlArrayRelated, "significantLink": significantLinks, "specialty": specialty, "datePublished": formatToDateIso(date), "dateModified": formatToDateIso(modified), "mainEntityOfPage": { "@type": "ItemPage", url }, "headline": title, "author": { "@type": "Person", "name": "François VIDIT", "url": "/profile/" + lang }, "image": {	"@type": "ImageObject", "url": imageUrl, "name": imageFileName,	"width": imageWidth,	"height": imageHeight }, 	"publisher": { "@type": "Organization", "name": "francois-vidit.com", "logo": { "@type": "ImageObject", "url": "/francois-vidit-com_600x60.png"}}}, { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{		"@type": "ListItem", "position": 1, "item": { "@id": rootUrl, "@type": "CollectionPage", "name": rootTitle } }, { "@type": "ListItem", "position": 2, "item": { "@id": sectionUrl, "@type": "CollectionPage", "name": sectionTitle } }, { "@type": "ListItem", "position": 3, "item": {  "@id": pathLevelOneUrl, "@type": "CollectionPage", "name": pathLevelOneTitle }	}]}]) + `<\/script>`;
 </script>
@@ -210,7 +205,7 @@
 		<link rel="alternate" href="https://francois-vidit.com/{section}/{i}/{slug}" hreflang="{i}" />
     {/each} -->
 
-    {@html langUrlArrayLink}
+    {@html langUrlArrayString}
     {@html prevNextUrlLink}
 </svelte:head>
 
