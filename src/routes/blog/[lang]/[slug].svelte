@@ -1,104 +1,98 @@
 <script context='module'>
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
-	export const prerender = false;
-
-  const valid_sections = new Set(['docs']);
+  const valid_sections = new Set(['blog']);
   const valid_langs = new Set(['fr', 'ja', 'en']);
-	const valid_path = new Set(['paris', 'paris/louvre', 'paris/louvre/la-joconde', 'paris/place-vendome', 'versailles', 'versailles/palais', 'versailles/jardins', 'versailles/trianon', 'versailles/marly', 'reims', 'chateaux-de-la-loire', 'chateaux-de-la-loire/chenonceau', 'chateaux-de-la-loire/cheverny', 'mont-saint-michel', 'mont-saint-michel/arch-michel', 'bruges', 'bruges/hopital-saint-jean']);
-	const valid_slug = new Set(['louvre', 'la-joconde', 'vasari', 'gautier', 'place-vendome', 'palais', 'hercule', 'jardins', 'latone', 'phaeton', 'trianon', 'arachnee', 'tiresias', 'iris', 'flore', 'marly', 'pierre-denis-martin', 'remes', 'saint-remi', 'chenonceau', 'diane', 'cheverny', 'adonis', 'perseus', 'arch-michel', 'nom', 'apocalypse', 'autre-docs', 'legende-doree', 'hopital-saint-jean', 'saint-jean', 'sainte-ursule', 'martin']);
+	const valid_slug = new Set(['phedre', 'priscus', 'diotime', 'marivaux', 'ihoujin', 'rousi', 'psyche', 'onnadaigaku', 'fontenelle', 'benalla', 'roiyarukakumei', 'la-marseillaise', 'robespierre', 'rimbaud', 'iohane', 'bokusi', 'kakumei', 'syusigaku', 'iehamotomoto', 'louis-xiv']);
 	
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ page, fetch }) {
-		
-        const section = page.params.section;
-        const lang = page.params.lang;
-		    const path = page.params.path;
-        const slug = page.params.slug;
-        var paramsString = page.query;
-        var searchParams = new URLSearchParams(paramsString);
-        const queryPage = searchParams.get('page');
+    const lang = page.params.lang;
+    const slug = page.params.slug;
+    var paramsString = page.query;
+    var searchParams = new URLSearchParams(paramsString);
+    const queryPage = searchParams.get('page');
 
-        if (!valid_langs.has(lang) || !valid_sections.has(section) || !valid_path.has(path) || !valid_slug.has(slug)) {
-			console.log(`invalid parameter: or section: ${section} or lang: ${lang} or path: ${path} or slug: ${slug}`);
-			return {
-				status: 404,
-				error: 'Not found'
-			};
-		}
-		
-		// /section/lang/path/slug.json
-		// docs/ja/paris/louvre/la-joconde/vasari.json
-		const url1 = '/' + section + '/' + lang + '/'  + path + '/'  + slug + '.json';
-		const res = await fetch(url1);
+    if (!valid_langs.has(lang) || !valid_slug.has(slug)) {
+      console.log(`invalid parameter or lang: ${lang} or slug: ${slug}`);
+      return {
+        status: 404,
+        error: 'Not found'
+      };
+    }
+    console.log(page.path);
+  
+    // /${params.section}/${params.lang}/${params.slug}.json
+    // /blog/ja/rousi
+    const url = `${page.path}.json`;
+    const res = await fetch(url);
 
-		if (!res.ok)
-			return {
-				status: res.status,
-				error: new Error(`Could not load ${url1}`)
-			};
+    if (!res.ok)
+    return {
+      status: res.status,
+      error: new Error(`Could not load ${url}`)
+    };
 
-		const data = await res.json()
+    const data = await res.json()
+    // docs/vasari.json
+    const url2 = `/blog/` + data.params.slug + `/` + data.params.slug + `.json`;
+    const res2 = await fetch(url2);
 
-		// docs/vasari.json
-		const url2 = '/' + data.params.section + '/' + data.params.slug + '/' + data.params.slug + '.json';
-		const res2 = await fetch(url2);
+    if (!res2.ok)
+    return {
+      status: res2.status,
+      error: new Error(`Could not load ${url2}`)
+    }
 
-		if (!res2.ok)
-			return {
-				status: res2.status,
-				error: new Error(`Could not load ${url2}`)
-			}
+    const data2 = await res2.json();
 
-		const data2 = await res2.json();
+    // docs/vasari.ja.json or docs/vasari2.ja.json
+    const url3 = queryPage ? '/blog/' + data.params.slug + '/' + data.params.slug + queryPage + '.' + data.params.lang + '.json' : '/blog/' + data.params.slug + '/' + data.params.slug + '.' + data.params.lang + '.json';
+    const res3 = await fetch(url3);
 
-		// docs/vasari.ja.json or docs/vasari2.ja.json
-		const url3 = queryPage ? '/' + data.params.section + '/' + data.params.slug + '/' + data.params.slug + queryPage + '.' + data.params.lang + '.json' : '/' + data.params.section + '/' + data.params.slug + '/' + data.params.slug + '.' + data.params.lang + '.json';
-		const res3 = await fetch(url3);
-
-		if (!res3.ok)
-		return {
-			status: res3.status,
-			error: new Error(`Could not load ${url3}`)
-		}
+    if (!res3.ok)
+    return {
+      status: res3.status,
+      error: new Error(`Could not load ${url3}`)
+    }
 
     const pageNumber = queryPage;
-		const data3 = await res3.json();
+    const data3 = await res3.json();
 
-		// docs/breadcrumb.ja.json breadcrumb
-		const url4 = '/' + data.params.section + '/breadcrumb.' + data.params.lang + '.json';
-		const res4 = await fetch(url4);
+    // docs/breadcrumb.ja.json breadcrumb
+    const url4 = '/blog/breadcrumb.' + data.params.lang + '.json';
+    const res4 = await fetch(url4);
 
-		if (!res4.ok)
-		return {
-			status: res4.status,
-			error: new Error(`Could not load ${url4}`)
-		}
-		const data4 = await res4.json();
+    if (!res4.ok)
+    return {
+      status: res4.status,
+      error: new Error(`Could not load ${url4}`)
+    }
+    const data4 = await res4.json();
 
-		return {
-			fallthrough: true,
-			props: {
-				data,
-				data2,
-				data3,
-        pageNumber,
+    return {
+      fallthrough: true,
+      props: {
+        data,
+        section: 'blog',
+        data2,
+        data3,
+        pageNumber: pageNumber,
         data4
-			}
-		};
-	}
+      }
+    };
+  }
 </script>
 
 <script>
+  import { formatToDateIso } from '$lib/dateIso';
 	export let data;
     const params = data.params;
-	  const section = params.section;
+	export let section;
     const lang = params.lang;
     const path = params.path;
-    const pathLevelDepth = path.split('/').length;
+    const pathLevelDepth = path == undefined ? 0 : path.split('/').length;
     const slug = params.slug;
 	export let data2;
-	const commonFrontmatter = data2.commonFrontmatter;
+	let commonFrontmatter = data2.commonFrontmatter;
     const totalPageNumber = Number(commonFrontmatter.totalPageNumber);
     const itemPage = commonFrontmatter.itemPage;
 	const commonMetadata = commonFrontmatter.metadata;
@@ -117,29 +111,18 @@
     const menu = frontmatter.menu;
     const created = frontmatter.created;
     const date = frontmatter.date;
-    function formatToDateIso(someDate) {
-      const dateDay = String(someDate.split('-')[0]);
-      const dateMonth = String(someDate.split('-')[1]);
-      const dateYear = String(someDate.split('-')[2].split(',')[0]);
-      const dateHour = String(someDate.split(':')[0].split(' ')[1]);
-      const dateMinute = String(someDate.split(':')[1].split(',')[0]);
-      const timezoneOffset = '+01:00';
-      // String such as 2019-01-11T12:37:00+01:00
-      const dateISO = dateYear + '-' + dateMonth + '-' + dateDay + 'T' + dateHour + ':' + dateMinute + ':00' + timezoneOffset;
-      return dateISO;
-    };    
     const modified = frontmatter.modified;
-    const url = '/' + section  + '/' + lang + '/' + path + '/' + slug;
+    const url = section === 'docs' ? '/' + section  + '/' + lang + '/' + path + '/' + slug : '/' + section  + '/' + lang + '/' + slug;
 	const metadata = frontmatter.metadata;
 		const description = metadata.description;const descriptionLength = description.length;
-    	const keywords = metadata.keywords;
-    	const imageTitle = metadata.imageTitle;
-    	const imageLegend = metadata.imageLegend;const imageLegendLength = imageLegend.length;
+    const keywords = metadata.keywords;
+    const imageTitle = metadata.imageTitle;
+    const imageLegend = metadata.imageLegend;const imageLegendLength = imageLegend.length;
     const significantLinks = frontmatter.significantLinks;
     const specialty = frontmatter.specialty;
     const body = data3.articleBody; let bodyLength = body.length;
   
-  export let pageNumber;
+ export let pageNumber; // console.log(pageNumber)
     let pagination = [];
     if ( totalPageNumber !== undefined ) {
       if ( pageNumber == undefined ) {
@@ -153,8 +136,7 @@
         pagination = [Number(pageNumber) - 1, Number(pageNumber), Number(pageNumber) + 1]
       }
     };
-    const paginationPreviousPageUrl = pagination[0] === 0 ? null : pagination[0] === 1 ? url : url + '?page=' + pagination[0]; console.log(paginationPreviousPageUrl);
-    const paginationCurrentPageUrl = url + '?page=' + pagination[1];
+    const paginationPreviousPageUrl = pagination[0] === 0 ? null : pagination[0] === 1 ? url : url + '?page=' + pagination[0];
     const paginationNextPageUrl = pagination[2] === 0 ? null : url + '?page=' + pagination[2];
     const wordNext = {fr: 'suivant', ja: '次', en: 'next'};
     const wordPrevious = {fr: 'précédent', ja: '前', en: 'previous'};
@@ -164,20 +146,27 @@
   const rootTitle = data4.rootTitle;
   const rootUrl = '/' + lang;
   const sectionTitle = data4.docsTitle;
-  const sectionUrl = '/docs/' + lang;
-  const pathLevelOneTitle = data4.pathLevelOneTitle[path.split('/')[0]];
-  const pathLevelOneUrl = '/' + section + '/' + lang + '/' + path.split('/')[0];
-  const pathLevelTwoTitle = data4.pathLevelTwoTitle[path.split('/')[1]];
-  const pathLevelTwoUrl = '/' + section + '/' + lang + '/' + path.split('/')[0] + '/' + path.split('/')[1];
-  const pathLevelThreeTitle = data4.pathLevelThreeTitle[path.split('/')[2]];
-  const pathLevelThreeUrl = '/' + section + '/' + lang + '/' + path.split('/');[0] + '/' + path.split('/')[1] + '/' + path.split('/')[2];
+  const sectionUrl = '/blog/' + lang;
+  const pathLevelOneTitle = data4.pathLevelOneTitle[slug];
+  const pathLevelOneUrl = '/blog/' + lang + '/' + slug;
+  const pathLevelTwoTitle = '';
+  const pathLevelTwoUrl = '';
+  const pathLevelThreeTitle = '';
+  const pathLevelThreeUrl = '';
+  if ( section === 'docs') {
+    pathLevelTwoTitle = data4.pathLevelTwoTitle[path.split('/')[1]];
+    pathLevelTwoUrl = '/blog/' + lang + '/' + path.split('/')[0] + '/' + path.split('/')[1];
+    pathLevelThreeTitle = data4.pathLevelThreeTitle[path.split('/')[2]];
+    pathLevelThreeUrl = '/blog/' + lang + '/' + path.split('/');[0] + '/' + path.split('/')[1] + '/' + path.split('/')[2];
+  };
+  const breadrumbArray = [ {name: rootTitle, url: rootUrl}, {name: sectionTitle, url: sectionUrl}, {name: pathLevelOneTitle, url: pathLevelOneUrl} ];
 
-  const langUrlArrayLink = []; //pagination??
+  const langUrlArrayLink = [];
   const langUrlArrayRelated = [];
   for (let i of ['fr', 'ja', 'en']) {
     let langUrlPrefix = '<link rel="';
     let langUrlMiddle = '" href="';
-    let langUrlLink = pageNumber ? '/' + section + '/' + i + '/' + path + '/' + slug +  '?page=' + pageNumber : '/' + section + '/' + i + '/' + path + '/' + slug;
+    let langUrlLink = pageNumber ? path ? '/blog/' + i + '/' + path + '/' + slug +  '?page=' + pageNumber : '/blog/' + i + '/' + slug +  '?page=' + pageNumber : path ? '/blog/' + i + '/' + path + '/' + slug : '/blog/' + i + '/' + slug;
     let langUrlHreflang = '" hreflang="' + i + '" />';
     const langUrlAlternate = langUrlPrefix + 'alternate' + langUrlMiddle + langUrlLink + langUrlHreflang;
     if ( lang === i) {
@@ -189,7 +178,7 @@
     };
     langUrlArrayLink.push(langUrlAlternate);
   }
-  const pageSchema = `<script type="application/ld+json">` + JSON.stringify([{ "@context": "http://schema.org", "@type": itemPage, "url": url, "description": description, "relatedLink": langUrlArrayRelated, "significantLink": significantLinks, "specialty": specialty, "datePublished": formatToDateIso(date), "dateModified": formatToDateIso(modified), "mainEntityOfPage": { "@type": "ItemPage", url }, "headline": title, "author": { "@type": "Person", "name": "François VIDIT", "url": "/profile/" + lang }, "image": {	"@type": "ImageObject", "url": imageUrl, "name": imageFileName,	"width": imageWidth,	"height": imageHeight }, 	"publisher": { "@type": "Organization", "name": "francois-vidit.com", "logo": { "@type": "ImageObject", "url": "/francois-vidit-com_600x60.png"}}}, { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{		"@type": "ListItem", "position": 1, "item": { "@id": rootUrl, "@type": "CollectionPage", "name": rootTitle } }, { "@type": "ListItem", "position": 2, "item": { "@id": sectionUrl, "@type": "CollectionPage", "name": sectionTitle } }, { "@type": "ListItem", "position": 3, "item": {  "@id": pathLevelOneUrl, "@type": "CollectionPage", "name": pathLevelOneTitle } }, { "@type": "ListItem",   "position": 4, "item": { "@id": pathLevelTwoUrl, "@type": "CollectionPage",	"name": pathLevelTwoTitle }	}, { "@type": "ListItem", "position": 5, "item": { "@id": pathLevelThreeUrl, "@type": "CollectionPage", "name": pathLevelThreeTitle } }, { "@type": "ListItem", "position": 6, "item": { "@type": "ItemPage", "name": title }	}]}]) + `<\/script>`;
+  const pageSchema = `<script type="application/ld+json">` + JSON.stringify([{ "@context": "http://schema.org", "@type": itemPage, "url": url, "description": description, "relatedLink": langUrlArrayRelated, "significantLink": significantLinks, "specialty": specialty, "datePublished": formatToDateIso(date), "dateModified": formatToDateIso(modified), "mainEntityOfPage": { "@type": "ItemPage", url }, "headline": title, "author": { "@type": "Person", "name": "François VIDIT", "url": "/profile/" + lang }, "image": {	"@type": "ImageObject", "url": imageUrl, "name": imageFileName,	"width": imageWidth,	"height": imageHeight }, 	"publisher": { "@type": "Organization", "name": "francois-vidit.com", "logo": { "@type": "ImageObject", "url": "/francois-vidit-com_600x60.png"}}}, { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{		"@type": "ListItem", "position": 1, "item": { "@id": rootUrl, "@type": "CollectionPage", "name": rootTitle } }, { "@type": "ListItem", "position": 2, "item": { "@id": sectionUrl, "@type": "CollectionPage", "name": sectionTitle } }, { "@type": "ListItem", "position": 3, "item": {  "@id": pathLevelOneUrl, "@type": "CollectionPage", "name": pathLevelOneTitle }	}]}]) + `<\/script>`;
 </script>
 
 <svelte:head>
@@ -199,10 +188,10 @@
 	<meta name="description" content="{description}" property="og:description" />
 	<meta property="og:title" content="{title}" />
 	<meta property="og:site_name" content="francois-vidit.com" />
-	<meta property="og:url" content="{url}" />
+	<meta property="og:url" content="/{section}/{lang}/{slug}" />
 	<meta property="og:type" content="article" />
 
-	<meta name="image" content="{imageUrl}" property="og:image" /> 
+	<meta name="image" content="/{slug}/{imageFileName}" property="og:image" /> 
 	<meta content="{imageWidth}" property="og:image:width" /> 
 	<meta content="{imageHeight}" property="og:image:height" /> 
 	<meta content="{imageTitle}" property="og:image:title" />
@@ -214,21 +203,24 @@
 
     <meta name="google" content="notranslate" />
 
-  {@html langUrlArrayLink}
-  {@html prevNextUrlLink}
-  {@html pageSchema}
+	<!-- {#each ['fr', 'ja', 'en'] as i}
+		{#if lang === i}
+		<link rel="canonical" href="https://francois-vidit.com/{section}/{i}/{slug}" hreflang="{i}" />
+		{/if}
+		<link rel="alternate" href="https://francois-vidit.com/{section}/{i}/{slug}" hreflang="{i}" />
+    {/each} -->
+
+    {@html langUrlArrayLink}
+    {@html prevNextUrlLink}
 </svelte:head>
 
-
-
-from [section] / [lang] / [...path] / [slug].svelte,<br/>
+from [section] / [lang] / [slug].svelte,<br/>
 this is: <br/>
-<pre>{section}   /   {lang}    {#if path}/   {path}   {/if}/   {slug}<br/>
-[section]   /   [lang]    {#if path}/   [...path]   {/if}/   [slug]</pre>
+<pre>{section}   /   {lang}    /   {slug}<br/></pre>
+<pre>[section]   /   [lang]    /   [slug]<br/></pre>
 <br/>
-
 with params
-<pre>[section]: {section}<br/>[lang]: {lang}<br/>{#if path}[...path]: {path}<br/>{/if}[slug]: {slug}</pre>
+<pre>[section]: {section}<br/>[lang]: {lang}<br/>[slug]: {slug}</pre>
 
 with commonFrontmatter:
 <pre>[itemPage]: {itemPage}<br/>[imageFileName]: {imageFileName} [imageWidth]: {imageWidth} [imageHeight]: {imageHeight} [imageType]: {imageType}<br/>[twitterCard]: {twitterCard}<br/>[sitemapChangefreq]: {sitemapChangefreq}<br/>[sitemapPriority]: {sitemapPriority}</pre>
@@ -245,7 +237,7 @@ and articleBody:
 
 <nav aria-label="breadcrumb">
   <ul class="breadcrumb">
-    {#each [ {name: rootTitle, url: rootUrl}, {name: sectionTitle, url: sectionUrl}, {name: pathLevelOneTitle, url: pathLevelOneUrl}, {name: pathLevelTwoTitle, url: pathLevelTwoUrl}, {name: pathLevelThreeTitle, url: pathLevelThreeUrl} ] as { name, url }, i}
+    {#each breadrumbArray as { name, url }, i}
       {#if i < pathLevelDepth + 2}
         <li><a href={url}>{name}</a></li>
       {/if}
@@ -276,7 +268,6 @@ and articleBody:
 {/if}
 
 {@html body}
-
 
 <style>
 	:global(.conversation) {

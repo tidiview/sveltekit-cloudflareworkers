@@ -3,7 +3,6 @@
 
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ page, fetch }) {
-        const section = 'blog';
         const lang = page.params.lang;
         if ( !valid_langs.has(lang)) {
 			console.log(`invalid parameter lang: ${lang}`);
@@ -27,7 +26,7 @@
 		const data = await res.json();
 		
 		// blog/route-tree.blog.ja.json
-		const url2 = `/blog/route-tree.` + section + `.` + lang  + `.json`;
+		const url2 = `/blog/route-tree.blog.` + lang  + `.json`;
 		const res2 = await fetch(url2);
 
 		if (!res2.ok)
@@ -50,11 +49,9 @@
 </script>
 
 <script>
-
     export let data;
-    export let section = data.params.section;
+    export let section;
     export let lang = data.params.lang;
-	// export let data2;
 </script>
 
 from [section] / [lang] / index.svelte,<br/>
