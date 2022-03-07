@@ -1,5 +1,4 @@
 <script context='module'>
-  const valid_sections = new Set(['blog']);
   const valid_langs = new Set(['fr', 'ja', 'en']);
 	const valid_slug = new Set(['phedre', 'priscus', 'diotime', 'marivaux', 'ihoujin', 'rousi', 'psyche', 'onnadaigaku', 'fontenelle', 'benalla', 'roiyarukakumei', 'la-marseillaise', 'robespierre', 'rimbaud', 'iohane', 'bokusi', 'kakumei', 'syusigaku', 'iehamotomoto', 'louis-xiv']);
 	
@@ -138,22 +137,12 @@
     const prevNextUrlLink = paginationPreviousPageUrl !== null && paginationNextPageUrl !== null ? '<link rel="prev" href="' + paginationPreviousPageUrl + '"><link rel="next" href="' + paginationNextPageUrl + '">' : paginationPreviousPageUrl === null ? '<link rel="next" href="' + paginationNextPageUrl + '">' : '<link rel="prev" href="' + paginationPreviousPageUrl + '">';
 
   export let data4;
-  const rootTitle = data4.rootTitle;
-  const rootUrl = '/' + lang;
-  const sectionTitle = data4.docsTitle;
-  const sectionUrl = '/blog/' + lang;
-  const pathLevelOneTitle = data4.pathLevelOneTitle[slug];
-  const pathLevelOneUrl = '/blog/' + lang + '/' + slug;
-  const pathLevelTwoTitle = '';
-  const pathLevelTwoUrl = '';
-  const pathLevelThreeTitle = '';
-  const pathLevelThreeUrl = '';
-  if ( section === 'docs') {
-    pathLevelTwoTitle = data4.pathLevelTwoTitle[path.split('/')[1]];
-    pathLevelTwoUrl = '/blog/' + lang + '/' + path.split('/')[0] + '/' + path.split('/')[1];
-    pathLevelThreeTitle = data4.pathLevelThreeTitle[path.split('/')[2]];
-    pathLevelThreeUrl = '/blog/' + lang + '/' + path.split('/');[0] + '/' + path.split('/')[1] + '/' + path.split('/')[2];
-  };
+  let rootTitle = data4.rootTitle;
+  let rootUrl = '/' + lang;
+  let sectionTitle = data4.docsTitle;
+  let sectionUrl = '/blog/' + lang;
+  let pathLevelOneTitle = data4.pathLevelOneTitle[slug];
+  let pathLevelOneUrl = '/blog/' + lang + '/' + slug;
   const breadrumbArray = [ {name: rootTitle, url: rootUrl}, {name: sectionTitle, url: sectionUrl}, {name: pathLevelOneTitle, url: pathLevelOneUrl} ];
 
   let langUrlArrayString = '';
