@@ -1,9 +1,9 @@
 <script>
 	import { page } from '$app/stores';
 	const pathElement = $page.path.split('/'); // docs, ja, etc...
-	const pathLevel = pathElement[1].length > 2 ? 0 : 1; // /docs/ja : /ja
-	const langHeader = pathLevel === 0 ? pathElement[2] : pathElement[1]; // console.log(langHeader);
-	const sectionHeader = pathLevel === 0 ? '/' + pathElement[1] + '/' : '/'; // console.log(sectionHeader);
+	const pathLevel = pathElement[1].length > 2 ? Number(0) : Number(1); // /docs/ja : /ja
+	const langHeader = pathLevel === Number(0) ? pathElement[2] : pathElement[1]; // console.log(langHeader);
+	const sectionHeader = pathLevel === Number(0) ? '/' + pathElement[1] + '/' : '/'; // console.log(sectionHeader);
 	const menuLangTitle = {
 		fr: [ 'Accueil', 'Blogue', 'Profil', 'Docs' ],
 		ja: [ 'ホーム', 'ブログ', 'プロフィール', 'ドックス' ],
