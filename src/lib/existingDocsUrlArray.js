@@ -1,4 +1,4 @@
-export const existingUrlArray = new Set([
+export const existingDocsUrlArray = new Set([
     "/docs/fr",
     "/docs/ja",
     "/docs/en",
