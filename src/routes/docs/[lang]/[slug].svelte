@@ -61,7 +61,6 @@
     const data4 = await res4.json();
 
     return {
-      fallthrough: true,
       props: {
         data,
         data2,
