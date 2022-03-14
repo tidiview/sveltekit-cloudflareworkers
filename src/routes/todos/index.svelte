@@ -22,6 +22,8 @@
 </script>
 
 <script>
+// @ts-nocheck
+
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 

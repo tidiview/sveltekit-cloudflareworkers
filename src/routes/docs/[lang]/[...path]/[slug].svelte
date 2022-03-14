@@ -30,10 +30,10 @@
       error: new Error(`Could not load ${url1}`)
 		};
 
-		const data = await res.json()
+		const data = await res.json();
 
 		// docs/vasari.json
-		const url2 = '/docs/' + slug + '/' + slug + '.json';
+		const url2 = '/docs/' + data.params.slug + '/' + data.params.slug + '.json';
 		const res2 = await fetch(url2);
 
 		if (!res2.ok) return {
@@ -44,7 +44,7 @@
 		const data2 = await res2.json();
 
 		// docs/vasari.ja.json or docs/vasari2.ja.json
-		const url3 = queryPage ? '/docs/' + slug + '/' + slug + queryPage + '.' + lang + '.json' : '/docs/' + slug + '/' + slug + '.' + lang + '.json';
+		const url3 = queryPage ? '/docs/' + data.params.slug + '/' + data.params.slug + queryPage + '.' + data.params.lang + '.json' : '/docs/' + data.params.slug + '/' + data.params.slug + '.' + data.params.lang + '.json';
 		const res3 = await fetch(url3);
 
 		if (!res3.ok) return {
@@ -56,7 +56,7 @@
 		const data3 = await res3.json();
 
 		// docs/breadcrumb.ja.json breadcrumb
-		const url4 = '/docs/breadcrumb.' + lang + '.json';
+		const url4 = '/docs/breadcrumb.' + data.params.lang + '.json';
 		const res4 = await fetch(url4);
 
 		if (!res4.ok)
@@ -67,7 +67,6 @@
 		const data4 = await res4.json();
 
 		return {
-			fallthrough: true,
 			props: {
 				data,
 				data2,
@@ -82,12 +81,11 @@
 <script>
   import { formatToDateIso } from '$lib/dateIso';
 	export let data;
-    const params = data.params;
+    const params = data.params; // console.log(data);
     const lang = params.lang;
-    const path = params.path; // console.log(path);
+    const path = params.path;
     const pathLevelDepth = path.split('/').length; // console.log(pathLevelDepth);
     const slug = params.slug;
-	export let section; // console.log(section);
 	export let data2;
 	const commonFrontmatter = data2.commonFrontmatter;
     const totalPageNumber = commonFrontmatter.totalPageNumber;
@@ -95,8 +93,8 @@
 	const commonMetadata = commonFrontmatter.metadata;
 		const imageFileName = commonMetadata.imageFileName;
       const imageUrl = '/' + slug + '/' + imageFileName;
-			const imageWidth = Number(imageFileName.split('_')[1].split('x')[0]);
-			const imageHeight = Number(imageFileName.split('_')[1].split('x')[1].split('.')[0]);
+			const imageWidth = imageFileName.split('_')[1].split('x')[0];
+			const imageHeight = imageFileName.split('_')[1].split('x')[1].split('.')[0];
 			const imageType = imageFileName.split('.')[1];
     	const twitterCard = commonMetadata.twitterCard;
 	const sitemap = commonFrontmatter.sitemap;
@@ -109,7 +107,7 @@
     const created = frontmatter.created;
     const date = frontmatter.date;
     const modified = frontmatter.modified;
-    const url = '/' + section  + '/' + lang + '/' + path + '/' + slug;
+    const url = '/docs/' + lang + '/' + path + '/' + slug;
 	const metadata = frontmatter.metadata;
 		const description = metadata.description;const descriptionLength = description.length;
     const keywords = metadata.keywords;
@@ -137,7 +135,7 @@
       wordNext = {fr: 'suivant', ja: '次', en: 'next'};
       wordPrevious = {fr: 'précédent', ja: '前', en: 'previous'};
       prevNextUrlLink = paginationPreviousPageUrl !== null && paginationNextPageUrl !== null ? '<link rel="prev" href="' + paginationPreviousPageUrl + '"><link rel="next" href="' + paginationNextPageUrl + '">' : paginationPreviousPageUrl === null ? '<link rel="next" href="' + paginationNextPageUrl + '">' : '<link rel="prev" href="' + paginationPreviousPageUrl + '">';
-      return pagination, paginationPreviousPageUrl, paginationNextPageUrl, prevNextUrlLink, wordNext, wordPrevious, urlWithQueryPageIfNecessary, title;
+      return { pagination, paginationPreviousPageUrl, paginationNextPageUrl, prevNextUrlLink, wordNext, wordPrevious, urlWithQueryPageIfNecessary, title };
     };
 
     if ( totalPageNumber !== undefined ) {createPagination(pageNumber, totalPageNumber, url); };
@@ -235,14 +233,14 @@
 
 
 
-from [section] / [lang] / [...path] / [slug].svelte,<br/>
+from docs / [lang] / [...path] / [slug].svelte,<br/>
 this is: <br/>
-<pre>{section}   /   {lang}    {#if path}/   {path}   {/if}/   {slug}<br/>
-[section]   /   [lang]    {#if path}/   [...path]   {/if}/   [slug]</pre>
+<pre>'docs'   /   {lang}    {#if path}/   {path}   {/if}/   {slug}<br/>
+docs   /   [lang]    {#if path}/   [...path]   {/if}/   [slug]</pre>
 <br/>
 
 with params
-<pre>[section]: {section}<br/>[lang]: {lang}<br/>{#if path}[...path]: {path}<br/>{/if}[slug]: {slug}</pre>
+<pre>'docs': 'docs'<br/>[lang]: {lang}<br/>{#if path}[...path]: {path}<br/>{/if}[slug]: {slug}</pre>
 
 with commonFrontmatter:
 <pre>[itemPage]: {itemPage}<br/>[imageFileName]: {imageFileName} [imageWidth]: {imageWidth} [imageHeight]: {imageHeight} [imageType]: {imageType}<br/>[twitterCard]: {twitterCard}<br/>[sitemapChangefreq]: {sitemapChangefreq}<br/>[sitemapPriority]: {sitemapPriority}</pre>
