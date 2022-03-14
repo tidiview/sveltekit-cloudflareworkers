@@ -2,8 +2,8 @@
     const valid_langs = new Set(['fr', 'ja', 'en']);
 
 	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ page, fetch }) {
-        const lang = page.params.lang;
+	export async function load({ url, params, fetch }) {
+        const lang = params.lang;
         if (!valid_langs.has(lang)) {
 			console.log(`invalid lang parameter ${lang}`);
 			return {
@@ -14,8 +14,8 @@
 		
 		// ${params.lang}
 		// /ja
-		const url = `${page.path}.json`;
-		const res = await fetch(url);
+		const url1 = `${page.path}.json`;
+		const res = await fetch(url1);
 		const data = await res.json();
 
 		if (res.ok) {
@@ -28,7 +28,7 @@
  
 		return {
 			status: res.status,
-			error: new Error(`Could not load ${url}`)
+			error: new Error(`Could not load ${url1}`)
 		};
 
 	}

@@ -2,9 +2,9 @@
     const valid_langs = new Set(['fr', 'ja', 'en']);
 
 	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ page, fetch }) {
+	export async function load({ params, fetch }) {
         
-		const lang = page.params.lang;
+		const lang = params.lang;
         
 		/* if (!valid_langs.has(lang)) {
 			console.log(`invalid lang parameter ${lang}`);

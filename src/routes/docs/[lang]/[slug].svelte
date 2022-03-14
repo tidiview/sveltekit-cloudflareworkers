@@ -2,12 +2,13 @@
   import { existingUrlArray } from '$lib/existingUrlArray.js';
 	
 	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ page, fetch }) {
+	export async function load({ params , fetch }) {
 
-    const lang = page.params.lang;
-    const slug = page.params.slug;
+    const lang = params.lang;
+    const slug = params.slug;
+    const pageUrl = '/docs/' + lang + '/' + slug;
 
-    if (!existingUrlArray.has(page.path)) {
+    if (!existingUrlArray.has(pageUrl)) {
       console.log(`invalid parameter lang: ${lang} or slug: ${slug}`);
       return {
         status: 404,

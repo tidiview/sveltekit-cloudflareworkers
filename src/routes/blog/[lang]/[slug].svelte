@@ -3,11 +3,11 @@
 	const valid_slug = new Set(['phedre', 'priscus', 'diotime', 'marivaux', 'ihoujin', 'rousi', 'psyche', 'onnadaigaku', 'fontenelle', 'benalla', 'roiyarukakumei', 'la-marseillaise', 'robespierre', 'rimbaud', 'iohane', 'bokusi', 'kakumei', 'syusigaku', 'iehamotomoto', 'louis-xiv']);
 	
 	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ page, fetch }) {
+	export async function load({ url, params, fetch }) {
 
-    const lang = page.params.lang;
-    const slug = page.params.slug;
-    var paramsString = page.query;
+    const lang = params.lang;
+    const slug = params.slug;
+    var paramsString = url.searchParams;
     var searchParams = new URLSearchParams(paramsString);
     const queryPage = searchParams.get('page');
 
@@ -18,21 +18,21 @@
         error: 'Not found'
       };
     }
-    console.log(page.path);
+    // console.log(page.path);
   
     // /${params.section}/${params.lang}/${params.slug}.json
     // /blog/ja/rousi
-    const url = '/blog/' + data.params.slug + '.json';
-    const res = await fetch(url);
+    const url1 = '/blog/' + slug + '.json';
+    const res = await fetch(url1);
 
     if (!res.ok) return {
       status: res.status,
-      error: new Error(`Could not load ${url}`)
+      error: new Error(`Could not load ${url1}`)
     };
 
     const data = await res.json()
     // docs/vasari.json
-    const url2 = '/blog/' + data.params.slug + '/' + data.params.slug + '.json';
+    const url2 = '/blog/' + slug + '/' + slug + '.json';
     const res2 = await fetch(url2);
 
     if (!res2.ok) return {
@@ -43,7 +43,7 @@
     const data2 = await res2.json();
 
     // docs/vasari.ja.json or docs/vasari2.ja.json
-    const url3 = queryPage ? '/blog/' + data.params.slug + '/' + data.params.slug + queryPage + '.' + data.params.lang + '.json' : '/blog/' + data.params.slug + '/' + data.params.slug + '.' + data.params.lang + '.json';
+    const url3 = queryPage ? '/blog/' + slug + '/' + slug + queryPage + '.' + lang + '.json' : '/blog/' + slug + '/' + slug + '.' + lang + '.json';
     const res3 = await fetch(url3);
 
     if (!res3.ok) return {
@@ -55,7 +55,7 @@
     const data3 = await res3.json();
 
     // docs/breadcrumb.ja.json breadcrumb
-    const url4 = '/blog/breadcrumb.' + data.params.lang + '.json';
+    const url4 = '/blog/breadcrumb.' + lang + '.json';
     const res4 = await fetch(url4);
 
     if (!res4.ok) return {
@@ -80,14 +80,13 @@
   import { formatToDateIso } from '$lib/dateIso';
 	export let data;
     const params = data.params;
-	export let section;
     const lang = params.lang;
     const path = params.path;
     const pathLevelDepth = path == undefined ? 0 : path.split('/').length;
     const slug = params.slug;
 	export let data2;
 	let commonFrontmatter = data2.commonFrontmatter;
-    const totalPageNumber = Number(commonFrontmatter.totalPageNumber);
+    const totalPageNumber = commonFrontmatter.totalPageNumber;
     const itemPage = commonFrontmatter.itemPage;
 	const commonMetadata = commonFrontmatter.metadata;
 		const imageFileName = commonMetadata.imageFileName;
@@ -106,7 +105,7 @@
     const created = frontmatter.created;
     const date = frontmatter.date;
     const modified = frontmatter.modified;
-    const url = section === 'docs' ? '/' + section  + '/' + lang + '/' + path + '/' + slug : '/' + section  + '/' + lang + '/' + slug;
+    const url = '/blog/' + lang + '/' + slug;
 	const metadata = frontmatter.metadata;
 		const description = metadata.description;const descriptionLength = description.length;
     const keywords = metadata.keywords;
@@ -172,7 +171,7 @@
 	<meta name="description" content="{description}" property="og:description" />
 	<meta property="og:title" content="{title}" />
 	<meta property="og:site_name" content="francois-vidit.com" />
-	<meta property="og:url" content="/{section}/{lang}/{slug}" />
+	<meta property="og:url" content="/blog/{lang}/{slug}" />
 	<meta property="og:type" content="article" />
 
 	<meta name="image" content="/{slug}/{imageFileName}" property="og:image" /> 
@@ -198,13 +197,13 @@
     {@html prevNextUrlLink}
 </svelte:head>
 
-from [section] / [lang] / [slug].svelte,<br/>
+from blog / [lang] / [slug].svelte,<br/>
 this is: <br/>
-<pre>{section}   /   {lang}    /   {slug}<br/></pre>
-<pre>[section]   /   [lang]    /   [slug]<br/></pre>
+<pre>blog   /   {lang}    /   {slug}<br/></pre>
+<pre>section   /   [lang]    /   [slug]<br/></pre>
 <br/>
 with params
-<pre>[section]: {section}<br/>[lang]: {lang}<br/>[slug]: {slug}</pre>
+<pre>section: blog<br/>[lang]: {lang}<br/>[slug]: {slug}</pre>
 
 with commonFrontmatter:
 <pre>[itemPage]: {itemPage}<br/>[imageFileName]: {imageFileName} [imageWidth]: {imageWidth} [imageHeight]: {imageHeight} [imageType]: {imageType}<br/>[twitterCard]: {twitterCard}<br/>[sitemapChangefreq]: {sitemapChangefreq}<br/>[sitemapPriority]: {sitemapPriority}</pre>

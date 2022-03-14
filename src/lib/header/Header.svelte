@@ -2,11 +2,11 @@
 	import { page } from '$app/stores';
 
 	let langHeader = 'fr';
-	let urlPartone = $page.path.split('/')[1]; // console.log(urlPartone);
-	let urlPartwo = $page.path.split('/')[2]; // console.log(urlPartwo);
+	let urlPartone = $page.url.pathname.split('/')[1]; // console.log(urlPartone);
+	let urlPartwo = $page.url.pathname.split('/')[2]; // console.log(urlPartwo);
 	let urlPartoneLength = urlPartone.length; // console.log(urlPartoneLength);
-	 // console.log($page.path);
-	if ( typeof $page.path === 'undefined' || $page.path === '/' || $page.path === '/about' || $page.path === '/todos' ){ langHeader = 'fr' } 
+	 // console.log($page.url.pathname);
+	if ( typeof $page.url.pathname === 'undefined' || $page.url.pathname === '/' || $page.url.pathname === '/about' || $page.url.pathname === '/todos' ){ langHeader = 'fr' } 
 	else if ( urlPartone === 0 || typeof urlPartone === 'undefined' ){ langHeader = 'fr' } 
 	else if ( urlPartwo === 0 || typeof urlPartwo === 'undefined' ){ langHeader = urlPartone } 
 	else if ( urlPartoneLength === 0 ){ langHeader = urlPartone } 
@@ -46,7 +46,7 @@
 		</svg>
 		<ul>
 			{#each urlLangHeaderMenuLangTitle as { url, name }}
-			<li class:active={$page.path === url}><a sveltekit:prefetch href={url}>{name}</a></li>
+			<li class:active={$page.url.pathname === url}><a sveltekit:prefetch href={url}>{name}</a></li>
 			{/each}
 			<li><a href="https://twitter.com/bf7afa37fa974cd"><svg aria-hidden="true" viewBox="0 0 300 300"><path style="fill:black" d="M250 87.974a82.023 82.023 0 0 1-23.566 6.461c8.471-5.078 14.978-13.119 18.041-22.701a82.14 82.14 0 0 1-26.057 9.957c-7.484-7.975-18.148-12.957-29.95-12.957-22.66 0-41.033 18.371-41.033 41.031 0 3.216.363 6.348 1.062 9.351-34.102-1.711-64.336-18.047-84.574-42.872a40.837 40.837 0 0 0-5.556 20.628c0 14.236 7.244 26.795 18.254 34.153a40.87 40.87 0 0 1-18.585-5.132c-.004.171-.004.343-.004.516 0 19.88 14.144 36.464 32.915 40.234a41.076 41.076 0 0 1-18.53.703c5.222 16.301 20.375 28.165 38.331 28.495-14.043 11.006-31.735 17.565-50.96 17.565-3.312 0-6.578-.194-9.788-.574 18.159 11.643 39.727 18.437 62.899 18.437 75.473 0 116.746-62.524 116.746-116.747 0-1.779-.04-3.548-.119-5.309A83.362 83.362 0 0 0 250 87.974z"/></svg></a></li>
 			<li><a href="https://github.com/tidiview/"><svg aria-hidden="true" viewBox="0 0 16 16" version="1.1"><path style="fill:black" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></li>

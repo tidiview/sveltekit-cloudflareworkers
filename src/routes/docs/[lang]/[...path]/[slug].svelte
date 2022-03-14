@@ -3,15 +3,16 @@
 	export const prerender = false;
 	
 	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ page, fetch }) {
+	export async function load({ url, params, fetch }) {
 		
-    const lang = page.params.lang;
-    const path = page.params.path;
-    const slug = page.params.slug;
-    var paramsString = page.query;
+    const lang = params.lang;
+    const path = params.path;
+    const slug = params.slug;
+    var paramsString = url.searchParams;
     var searchParams = new URLSearchParams(paramsString);
     const queryPage = searchParams.get('page');
-    if (!existingUrlArray.has(page.path)) {
+    const pageUrl = '/docs/' + lang + '/' + path + '/' + slug;
+    if (!existingUrlArray.has(pageUrl)) {
       console.log(`invalid parameter lang: ${lang} or path: ${path} or slug: ${slug}`);
       return {
         status: 404,
@@ -32,7 +33,7 @@
 		const data = await res.json()
 
 		// docs/vasari.json
-		const url2 = '/docs/' + data.params.slug + '/' + data.params.slug + '.json';
+		const url2 = '/docs/' + slug + '/' + slug + '.json';
 		const res2 = await fetch(url2);
 
 		if (!res2.ok) return {
@@ -43,7 +44,7 @@
 		const data2 = await res2.json();
 
 		// docs/vasari.ja.json or docs/vasari2.ja.json
-		const url3 = queryPage ? '/docs/' + data.params.slug + '/' + data.params.slug + queryPage + '.' + data.params.lang + '.json' : '/docs/' + data.params.slug + '/' + data.params.slug + '.' + data.params.lang + '.json';
+		const url3 = queryPage ? '/docs/' + slug + '/' + slug + queryPage + '.' + lang + '.json' : '/docs/' + slug + '/' + slug + '.' + lang + '.json';
 		const res3 = await fetch(url3);
 
 		if (!res3.ok) return {
@@ -55,7 +56,7 @@
 		const data3 = await res3.json();
 
 		// docs/breadcrumb.ja.json breadcrumb
-		const url4 = '/docs/breadcrumb.' + data.params.lang + '.json';
+		const url4 = '/docs/breadcrumb.' + lang + '.json';
 		const res4 = await fetch(url4);
 
 		if (!res4.ok)
@@ -69,7 +70,6 @@
 			fallthrough: true,
 			props: {
 				data,
-				section: 'docs',
 				data2,
 				data3,
         pageNumber: pageNumber,
