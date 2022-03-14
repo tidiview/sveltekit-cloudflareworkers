@@ -1,6 +1,6 @@
 <script context='module'>
   import { existingUrlArray } from '$lib/existingUrlArray.js';
-	
+
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ params , fetch }) {
 
@@ -8,7 +8,7 @@
     const slug = params.slug;
     const pageUrl = '/docs/' + lang + '/' + slug;
 
-    if (!existingUrlArray.has(pageUrl)) {
+    if ( !existingUrlArray.has(pageUrl)) {
       console.log(`invalid parameter lang: ${lang} or slug: ${slug}`);
       return {
         status: 404,
@@ -16,7 +16,7 @@
       };
     }
   
-    // /${params.section}/${params.lang}/${params.slug}.json
+    // /docs/${params.lang}/${params.slug}.json
     // /docs/ja/versailles.json
     const url1 = '/docs/' + lang + '/' + slug + '.json';
     const res = await fetch(url1);

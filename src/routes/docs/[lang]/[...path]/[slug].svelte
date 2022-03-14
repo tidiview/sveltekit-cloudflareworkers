@@ -12,7 +12,8 @@
     var searchParams = new URLSearchParams(paramsString);
     const queryPage = searchParams.get('page');
     const pageUrl = '/docs/' + lang + '/' + path + '/' + slug;
-    if (!existingUrlArray.has(pageUrl)) {
+
+    if ( !existingUrlArray.has(pageUrl) ) {
       console.log(`invalid parameter lang: ${lang} or path: ${path} or slug: ${slug}`);
       return {
         status: 404,

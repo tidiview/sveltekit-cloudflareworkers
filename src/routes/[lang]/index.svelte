@@ -16,7 +16,7 @@
 		
 		// /${lang}.json
 		// /ja.json
-		const url1 = lang + '.json';
+		const url1 = '/' + lang + '.json';
 		const res1 = await fetch(url1);
 
 		if (!res1.ok) return {
