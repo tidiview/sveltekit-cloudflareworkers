@@ -9,12 +9,12 @@
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
-    "@sveltejs/adapter-cloudflare": "1.0.0-next.17",
-    "@sveltejs/kit": "1.0.0-next.314",
-    "svelte": "3.47.0"
+    "@sveltejs/adapter-cloudflare": "1.0.0-next.19",
+    "@sveltejs/kit": "1.0.0-next.326",
+    "svelte": "3.48.0"
   },
   "dependencies": {
-    "@fontsource/fira-mono": "4.5.7",
+    "@fontsource/fira-mono": "4.5.8",
     "@lukeed/uuid": "^2.0.0",
     "cookie": "0.5.0"
   }

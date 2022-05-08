@@ -7,8 +7,8 @@
 	let urlPartoneLength = urlPartone.length; // console.log(urlPartoneLength);
 	 // console.log($page.url.pathname);
 	if ( typeof $page.url.pathname === 'undefined' || $page.url.pathname === '/' || $page.url.pathname === '/about' || $page.url.pathname === '/todos' ){ langHeader = 'fr' } 
-	else if ( urlPartone === 0 || typeof urlPartone === 'undefined' ){ langHeader = 'fr' } 
-	else if ( urlPartwo === 0 || typeof urlPartwo === 'undefined' ){ langHeader = urlPartone } 
+	else if ( typeof urlPartone === 'undefined' ){ langHeader = 'fr' } 
+	else if ( typeof urlPartwo === 'undefined' ){ langHeader = urlPartone } 
 	else if ( urlPartoneLength === 0 ){ langHeader = urlPartone } 
 	else if ( urlPartoneLength > 2 ){ langHeader = urlPartwo } 
 	else { urlPartone };
