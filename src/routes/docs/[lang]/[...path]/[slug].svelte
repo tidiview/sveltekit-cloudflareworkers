@@ -234,7 +234,7 @@
 
 
 
-from docs / [lang] / [...path] / [slug].svelte,<br/>
+<!-- from docs / [lang] / [...path] / [slug].svelte,<br/>
 this is: <br/>
 <pre>'docs'   /   {lang}    {#if path}/   {path}   {/if}/   {slug}<br/>
 docs   /   [lang]    {#if path}/   [...path]   {/if}/   [slug]</pre>
@@ -254,7 +254,7 @@ with frontmatter:
 <pre>[significantLinks]: {significantLinks}<br/>[specialty]: {specialty}</pre>
 
 and articleBody:
-<pre>[html body]: see below [bodyLength]: {bodyLength}</pre>
+<pre>[html body]: see below [bodyLength]: {bodyLength}</pre> -->
 
 <nav aria-label="breadcrumb">
   <ul class="breadcrumb">

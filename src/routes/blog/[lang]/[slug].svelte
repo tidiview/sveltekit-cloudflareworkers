@@ -197,7 +197,7 @@
     {@html prevNextUrlLink}
 </svelte:head>
 
-from blog / [lang] / [slug].svelte,<br/>
+<!-- from blog / [lang] / [slug].svelte,<br/>
 this is: <br/>
 <pre>blog   /   {lang}    /   {slug}<br/></pre>
 <pre>section   /   [lang]    /   [slug]<br/></pre>
@@ -216,7 +216,7 @@ with frontmatter:
 <pre>[significantLinks]: {significantLinks}<br/>[specialty]: {specialty}</pre>
 
 and articleBody:
-<pre>[html body]: see below [bodyLength]: {bodyLength}</pre>
+<pre>[html body]: see below [bodyLength]: {bodyLength}</pre> -->
 
 <nav aria-label="breadcrumb">
   <ul class="breadcrumb">

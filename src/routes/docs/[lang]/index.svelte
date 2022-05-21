@@ -189,14 +189,14 @@
     {@html breadcrumbSchema}
 </svelte:head>
 
-from docs / [lang] / index.svelte,<br/>
+<!-- from docs / [lang] / index.svelte,<br/>
 this is: <br/>
 <pre>docs   /   {lang}<br/></pre>
 <pre>docs   /   [lang]<br/></pre>
 <br/>
 with:
 <pre>docs: docs</pre>
-<pre>[lang]: {lang}</pre>
+<pre>[lang]: {lang}</pre> -->
 
 <ol>
 	{#each data5 as data5}

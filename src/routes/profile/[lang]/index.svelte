@@ -181,14 +181,14 @@
     {@html breadcrumbSchema}
 </svelte:head>
 
-from [section] / [lang] / index.svelte,<br/>
+<!-- from [section] / [lang] / index.svelte,<br/>
 this is: <br/>
 <pre>section   /   {lang}<br/></pre>
 <pre>section   /   [lang]<br/></pre>
 <br/>
 with:
 <pre>section: section</pre>
-<pre>[lang]: {lang}</pre>
+<pre>[lang]: {lang}</pre> -->
 
 <nav aria-label="breadcrumb">
 	<ul aria-label="lang">

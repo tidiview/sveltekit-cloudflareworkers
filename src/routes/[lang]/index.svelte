@@ -153,11 +153,11 @@
     {@html breadcrumbSchema}
 </svelte:head>
 
-this is: <br/>
+<!-- this is: <br/>
 <pre>{lang}<br/></pre>
 <pre>[lang]<br/></pre>
 <br/>
 with:
-<pre>[lang]: {lang}</pre>
+<pre>[lang]: {lang}</pre> -->
 
 {@html body}

@@ -184,7 +184,7 @@
     {@html breadcrumbSchema}
 </svelte:head>
 
-from docs / [lang] / [slug].svelte,<br/>
+<!-- from docs / [lang] / [slug].svelte,<br/>
 this is: <br/>
 <pre>docs   /   {lang}    /   {slug}<br/></pre>
 <pre>docs   /   [lang]    /   [slug]<br/></pre>
@@ -203,7 +203,7 @@ with frontmatter:
 <pre>[significantLinks]: {significantLinks}<br/>[specialty]: {specialty}</pre>
 
 and articleBody:
-<pre>[html body]: see below [bodyLength]: {bodyLength}</pre>
+<pre>[html body]: see below [bodyLength]: {bodyLength}</pre> -->
 
 <nav aria-label="breadcrumb">
   <ul class="breadcrumb">
