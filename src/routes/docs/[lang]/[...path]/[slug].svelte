@@ -219,7 +219,7 @@
 	<meta content="{imageHeight}" property="og:image:height" /> 
 	<meta content="{imageTitle}" property="og:image:title" />
 	<meta content="{imageLegend}" property="og:image:alt" /> 
-	<meta content="image/jpeg" property="og:image:type" />
+	<meta content="image/{imageType}" property="og:image:type" />
 
 	<meta content="{twitterCard}" property="twitter:card" />
 	<meta content="@bf7afa37fa94ja" property="twitter:site:id" />
