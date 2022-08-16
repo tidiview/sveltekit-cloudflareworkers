@@ -10,6 +10,7 @@
 
 <svelte:head>
 	<title>Home</title>
+	<meta name="google-site-verification" content="ErE2RxRlsGFf8X-oB6aenxgSTGV-uWXDpFfFztN40Ww" />
 </svelte:head>
 
 <section>
